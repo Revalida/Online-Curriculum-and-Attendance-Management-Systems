@@ -21,8 +21,12 @@
                         <td> <img src="{{item.image}}" alt={{item.title}} height="100px" width="100px"> </td>
                         <td> {{item.description}} </td>
                         <td> {{item.price | currency: '&#8369;' : 'code'}} </td>
-                        <td> {{item.quantity}} </td>
-                        <td> {{item.total}} </td>
+                        <td> 
+                            <button type="button" class="btn" (click) = "dec(item)"><i class="fa fa-minus"></i></button>
+                            <span>{{item.quantity}}</span> 
+                            <button type="button" class="btn" (click) = "inc(item)"><i class="fa fa-plus"></i></button>
+                        </td>
+                        <td> {{item.total | currency: '&#8369;' : 'code'}} </td>
                         <td>
                             <button class="btn btn-danger" (click)="removeItem(item)"> <i class="fas fa-trash-alt"></i></button>
                         </td>

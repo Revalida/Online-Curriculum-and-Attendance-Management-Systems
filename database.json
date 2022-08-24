@@ -48,7 +48,7 @@
       "password": "min"
     }
   ],
-  "users": []
+  "users": [],
   
     "products": [
         {
@@ -483,6 +483,9 @@
         "category": "skechers",
         "image": "assets/images/products/shoes/skechers/arch.png"
     }
+    ],
+    "cart":[
+
     ]
   }
   
