@@ -31,7 +31,7 @@ import { HomeComponent } from './component/home/home.component';
     AdminDashboardComponent,
     LoginComponent,
     SignupComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
     NavComponent,
     HomeComponent
 
@@ -43,6 +43,7 @@ import { HomeComponent } from './component/home/home.component';
     FormsModule,
     ReactiveFormsModule
   ],
+  exports:[HeaderComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

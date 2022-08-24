@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CartService } from 'src/app/service/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,7 @@ export class HeaderComponent implements OnInit {
   public totalItem : number = 0;
   public searchTerm: string = "";
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private router: Router) { }
 
   ngOnInit(): void {
     this.cartService.getProducts().subscribe(data => {
@@ -27,4 +28,5 @@ export class HeaderComponent implements OnInit {
   clear(){
     this.searchTerm = "";
   }
+
 }
