@@ -27,6 +27,10 @@ export class CartComponent implements OnInit {
       this.cartService.removeCartItem(item);
       alert("Item deleted successfully");
       this.grandTotal = this.cartService.getTotalPrice();
+    }else if (item.quantity === 0){
+      item.quantity = 1;
+      item.total = item.quantity * item.price;
+      this.grandTotal = this.cartService.getTotalPrice();
     }
   }
 
@@ -50,5 +54,18 @@ export class CartComponent implements OnInit {
       this.cartService.minusToCart(item)
     }
     this.grandTotal = this.cartService.getTotalPrice();
+  }
+
+  updateQty(item : any){
+    if(item.quantity<=0){
+      this.removeItem(item);
+    }else{
+      this.cartService.uniqueItems.map((a: any, index:any) => {
+        if(a.id === item.id){
+          a.total = a.quantity * a.price;
+        }
+        this.grandTotal = this.cartService.getTotalPrice();
+      })
+    }
   }
 }

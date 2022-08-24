@@ -37,8 +37,9 @@ export class CartService {
     return this.uniqueProductList.asObservable();
   }
 
+
   getProducts(){
-    return this.productList.asObservable();
+    return this.uniqueProductList.asObservable();
   }
 
   getTotalPrice(): number{
@@ -60,10 +61,13 @@ export class CartService {
   }
 
   minusToCart(product: any){
-    this.uniqueItems.map((a: any) => {
-      product.quantity = a.quantity -1;
-      product.total = product.price * product.quantity;
-      this.uniqueProductList.next(this.uniqueItems);
+    this.uniqueItems.map((a: any, index:any) => {
+      if(a.id === product.id){
+        a.quantity = a.quantity - 1;
+        a.total = a.price * a.quantity;
+      }
     })
+    console.log(this.uniqueItems)
+    this.uniqueProductList.next(this.uniqueItems);
   }
 }
