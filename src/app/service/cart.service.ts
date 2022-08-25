@@ -11,8 +11,8 @@ export class CartService {
   public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);
   public search = new BehaviorSubject<string>("");
-  public uniqueItems: any = [];
-  public uniqueProductList = new BehaviorSubject<any>([]);
+  public uniqueItems: any = this.getCartFromLocalStorage();
+  public uniqueProductList = new BehaviorSubject<any>(this.uniqueItems);
 
   constructor(private http: HttpClient) {
 
@@ -20,17 +20,16 @@ export class CartService {
 
   addToCart(product: any){
     if(this.cartItemList.includes(product)){
-      console.log("includes")
       product.quantity++;
       product.total = product.price * product.quantity;   
     }else{
-      console.log("unique")
       this.uniqueItems.push(product);
       this.uniqueProductList.next(this.uniqueItems);
       this.http.post(`${environment.url}/cart`, {product});
     }
     this.cartItemList.push(product);
     this.productList.next(this.cartItemList);
+    this.setCartToLocalStorage();
   }
 
   getUniqueProducts(){
@@ -53,11 +52,13 @@ export class CartService {
   removeCartItem(product: any){
     this.uniqueItems.splice(this.uniqueItems.indexOf(product),1);
     this.uniqueProductList.next(this.uniqueItems);
+    this.setCartToLocalStorage();
   }
 
   emptyCart(){
     this.uniqueItems = [];
     this.uniqueProductList.next(this.uniqueItems);
+    this.setCartToLocalStorage();
   }
 
   minusToCart(product: any){
@@ -67,7 +68,21 @@ export class CartService {
         a.total = a.price * a.quantity;
       }
     })
-    console.log(this.uniqueItems)
     this.uniqueProductList.next(this.uniqueItems);
+    this.setCartToLocalStorage();
+  }
+
+  private setCartToLocalStorage(): void{
+    const cartJson = JSON.stringify(this.uniqueItems);
+    localStorage.setItem('Cart', cartJson)
+  }
+
+  private getCartFromLocalStorage(): void{
+    const cartJson = localStorage.getItem('Cart');
+    return cartJson? JSON.parse(cartJson) : [];
+  }
+
+  getCart(){
+    return this.uniqueProductList.value;
   }
 }

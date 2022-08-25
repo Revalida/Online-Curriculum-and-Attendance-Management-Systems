@@ -1,7 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CartService } from 'src/app/service/cart.service';
 import { Router } from '@angular/router';
-import { map } from 'rxjs/operators'
 
 @Component({
   selector: 'app-header',

@@ -6,6 +6,7 @@ import { ProductComponent } from './component/product/product.component';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
+import { CheckOutComponent } from './component/check-out/check-out.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: "forgot-password",
     component: ForgotPasswordComponent
+  },
+  {
+    path: "checkout",
+    component: CheckOutComponent
   },
 ];
 

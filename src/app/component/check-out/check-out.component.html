@@ -1,0 +1,60 @@
+<ng-container *ngIf="visibility">
+        <div class="mb-3">
+            <label for="fullname">Full Name</label><br/>
+            <input type="text" [(ngModel)]="fullname" id="fullname" aria-describedby="emailHelp">
+         </div>
+
+        <div class="form-group mb-3">
+          <div class="form-group mb-3">
+              <label for="mobilenumber">Mobile Number</label><br/>
+              <input type="text" [(ngModel)]="mobile" id="mobilenumber" aria-describedby="emailHelp">
+          </div>
+      </div>
+      <div class="form-group mb-3">
+          <div class="form-group mb-3">
+              <label for="address">Complete Address</label><br/>
+              <input type="text" [(ngModel)]="address" id="address" aria-describedby="emailHelp">
+          </div>
+      </div>
+      <button type="submit" class="btn btn-primary" (click) = save()>Save</button>  
+</ng-container>
+<ng-container *ngIf="!visibility">
+    <h6>Full Name: {{fullname}}</h6>
+    <h6>Mobile Number: {{mobile}}</h6>
+    <h6>Address:{{address}}</h6>
+</ng-container>
+<br/>
+<h4>Order Lists</h4>
+<ng-container *ngIf="products.length != 0">
+    <div class="card-table">
+        <div class="cart-product">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"> Sr. No </th>
+                        <th scope="col"> Product Name </th>
+                        <th scope="col"> Product Image </th>
+                        <th scope="col"> Price </th>
+                        <th scope="col"> Quantity </th>
+                        <th scope="col"> Total </th>
+                    </tr>
+                </thead>
+                <tbody>  
+                    <tr *ngFor="let item of products; let i = index">
+                        <td> {{i+1}} </td>
+                        <td> {{item.title}} </td>
+                        <td> <img src="{{item.image}}" alt={{item.title}} height="100px" width="100px"> </td>
+                        <td> {{item.price | currency: '&#8369;' : 'code'}} </td>
+                        <td>{{item.quantity}}</td>
+                        <td> {{item.total | currency: '&#8369;' : 'code'}} </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grand Total: {{grandTotal | currency: '&#8369;' : 'code'}}</strong></td>
+                        <td><button class="btn btn-danger" (click)="placeOrder()">Place Order</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</ng-container>
+
