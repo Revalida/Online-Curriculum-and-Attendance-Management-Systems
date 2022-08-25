@@ -1,13 +1,13 @@
 <app-categories (actionEmitter) = "filter($event)"></app-categories>
-<div class="card-top container-fluid">
-    <table class="filt">
+<div class="card-top container-fluid"><br>
+    <table class="filteritem">
         <tr>
-            <th><label> Sort by </label><br></th>
+            <th><label> Sort by </label></th>
             <th><span> Filter by Price Range</span></th>
         </tr>
         <tr>
             <td>
-                <select [(ngModel)] = "SortbyParam">
+                <select class="sortitem" [(ngModel)] = "SortbyParam">
                     <option value="price"> Price </option>
                     <option value="title"> Name </option>
                 </select>
@@ -16,7 +16,7 @@
                     <i *ngIf="SortDirection === 'desc'" class="fas fa-sort-down"></i>
                 </button>
             </td>
-            <td>
+            <td><br>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Min</span>
                     <input [(ngModel)] = "min" type="number" id="min" class="form-control" min="0"><br>
@@ -30,16 +30,21 @@
 <ng-container *ngIf="(filterByCategory | filter:searchKey:'title') as result">    
     <div class="card shadow-sm">
         <div class=" row" >
-            <ng-container *ngFor="let item of result | pricefilter:[min, max] | sort:[SortbyParam, SortDirection]">
-                <div class="card col-md-4">
-                    <h3> {{item.name}}</h3>
+
+            <ng-container *ngFor="let item of filterByCategory | filter:searchKey:'title' | pricefilter:[min, max] | sort:[SortbyParam, SortDirection]">
+                <div class="card col-md-2">
+
+                    <h4> {{item.name}}</h4>
                         <img src="{{item.image}}" alt="{{item.title}}">
-                        <h4> {{item.title}} </h4>
+                        <h6> {{item.title}} </h6>
                         <p><strong> {{item.price | currency: '&#8369;' : 'code'}} </strong></p>
                         <div class="d-grid gap-2 d-md-block">
-                            <button class="btn btn-primary" (click) = addToCart(item)> Add to cart </button>
-                            <button class="btn btn-info" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                View Description</button>
+                            <button type="button" class="btn btn-primary"
+                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                            (click) = addToCart(item)> Add to cart </button>
+                            <button class="btn btn-info" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"
+                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                View Details</button>
                             <div class="collapse" id="collapseExample">
                                 <div class="card card-body">
                                     {{item.description}}
