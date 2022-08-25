@@ -1,6 +1,6 @@
 <app-categories (actionEmitter) = "filter($event)"></app-categories>
 <div class="card-top container-fluid">
-    <table class="filt">
+    <table>
         <tr>
             <th><label> Sort by </label><br></th>
             <th><span> Filter by Price Range</span></th>
@@ -30,8 +30,10 @@
 <ng-container *ngIf="(filterByCategory | filter:searchKey:'title') as result">    
     <div class="card shadow-sm">
         <div class=" row" >
-            <ng-container *ngFor="let item of result | pricefilter:[min, max] | sort:[SortbyParam, SortDirection]">
-                <div class="card col-md-4">
+
+            <ng-container *ngFor="let item of filterByCategory | filter:searchKey:'title' | pricefilter:[min, max] | sort:[SortbyParam, SortDirection]">
+                <div class="card col-md-3">
+
                     <h3> {{item.name}}</h3>
                         <img src="{{item.image}}" alt="{{item.title}}">
                         <h4> {{item.title}} </h4>
@@ -39,7 +41,7 @@
                         <div class="d-grid gap-2 d-md-block">
                             <button class="btn btn-primary" (click) = addToCart(item)> Add to cart </button>
                             <button class="btn btn-info" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                View Description</button>
+                                View Details</button>
                             <div class="collapse" id="collapseExample">
                                 <div class="card card-body">
                                     {{item.description}}
