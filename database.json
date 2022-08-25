@@ -1,54 +1,39 @@
-
 {
   "post": [
     {
-      "id": 4,
-      "firstname": "admin",
-      "middlename": "admin",
-      "lastname": "admin123",
-      "username": "admin2",
-      "email": "admin@gmail.com",
-      "password": "min"
+      "username": "admin212",
+      "password": "user",
+      "firstname": "fafas",
+      "middlename": "",
+      "lastname": "",
+      "email": "",
+      "role": "user",
+      "id": 12
     },
     {
-      "username": "admin",
-      "password": "afsdga",
-      "firstname": "admin",
-      "middlename": "admin",
-      "lastname": "admin",
-      "email": "admin@gmail.com",
-      "id": 5
-    },
-    {
-      "username": "admin",
-      "password": "admin",
-      "firstname": "admin",
-      "middlename": "admin",
-      "lastname": "admin",
-      "email": "admin@gmail.com",
-      "id": 1,
-      "role": "admin"
-    },
-    {
-      "username": "admin21",
-      "password": "admin",
-      "firstname": "asdaga",
-      "middlename": "FASDGAGA",
-      "lastname": "safafafa",
-      "email": "admin@gmail.com",
-      "id": 6
-    },
-    {
-      "id": 7,
-      "firstname": "asafsa",
-      "middlename": "afdsfa",
-      "lastname": "agdsgsa",
-      "username": "admin21",
-      "email": "admin@gmail.com",
-      "password": "min"
+      "username": "",
+      "password": "",
+      "firstname": "",
+      "middlename": "",
+      "lastname": "",
+      "email": "",
+      "mobilenumber": "",
+      "role": "user",
+      "id": 13
     }
   ],
-  "users": [],
+  "user": [
+    {
+      "username": "admin",
+      "password": "admin",
+      "firstname": "admin",
+      "middlename": "admin",
+      "lastname": "admin",
+      "email": "admin@gmail.com",
+      "role": "admin",
+      "id": 13
+    }
+  ],
   
     "products": [
         {
@@ -543,4 +528,3 @@
     ]
   }
   
-
