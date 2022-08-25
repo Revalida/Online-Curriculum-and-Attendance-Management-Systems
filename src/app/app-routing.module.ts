@@ -23,7 +23,7 @@ const routes: Routes = [
   },
   {
     path: "admin-dashboard",
-    component: AdminDashboardComponent
+    component: AdminDashboardComponent,
   },
   {
     path: "login",
@@ -36,7 +36,7 @@ const routes: Routes = [
   {
     path: "forgot-password",
     component: ForgotPasswordComponent
-  }
+  },
 ];
 
 @NgModule({

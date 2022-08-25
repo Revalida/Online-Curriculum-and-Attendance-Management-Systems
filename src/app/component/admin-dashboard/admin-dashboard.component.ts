@@ -27,6 +27,7 @@ export class AdminDashboardComponent implements OnInit {
       middlename: [''],
       lastname: [''],
       email: [''],
+      role: [''],
     })
     this.getAllUser();
   }
@@ -43,6 +44,7 @@ export class AdminDashboardComponent implements OnInit {
     this.dashboardObj.middlename = this.formValue.value.middlename;
     this.dashboardObj.lastname = this.formValue.value.lastname;
     this.dashboardObj.password = this.formValue.value.password;
+    this.dashboardObj.role = 'user';
 
     this.api.postUser(this.dashboardObj)
       .subscribe((res: any) => {

@@ -14,9 +14,10 @@ import { SortPipe } from './filter/sort.pipe';
 import { AdminDashboardComponent } from './component/admin-dashboard/admin-dashboard.component';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
-import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 import { NavComponent } from './component/nav/nav.component';
 import { HomeComponent } from './component/home/home.component';
+import { ProfileComponent } from './component/profile/profile.component';
+import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -31,9 +32,10 @@ import { HomeComponent } from './component/home/home.component';
     AdminDashboardComponent,
     LoginComponent,
     SignupComponent,
-    ForgotPasswordComponent
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileComponent,
+    ForgotPasswordComponent,
 
   ],
   imports: [
