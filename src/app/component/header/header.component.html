@@ -16,9 +16,12 @@
         <li class="nav-item">
           <a routerLink="/cart" >
             <i class="fas fa-cart-plus"></i>
-          </a>s
+          </a>
             <span><sup>{{totalItem}}</sup></span>
         </li>
+          <input id="sb" type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search Products">
+          <button id="sb" class="btn btn-outline-success" type="button" (click) = "clear()">CLEAR</button>
+        
       </ul>
     </div>
   </header>
