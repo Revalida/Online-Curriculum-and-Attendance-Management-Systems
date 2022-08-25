@@ -27,11 +27,13 @@
         </tr>
     </table>
      <br/>
-    
+<ng-container *ngIf="(filterByCategory | filter:searchKey:'title') as result">    
     <div class="card shadow-sm">
         <div class=" row" >
+
             <ng-container *ngFor="let item of filterByCategory | filter:searchKey:'title' | pricefilter:[min, max] | sort:[SortbyParam, SortDirection]">
                 <div class="card col-md-3">
+
                     <h3> {{item.name}}</h3>
                         <img src="{{item.image}}" alt="{{item.title}}">
                         <h4> {{item.title}} </h4>
@@ -50,4 +52,6 @@
             </ng-container>
         </div>
     </div>
+    <app-not-found [visible]="result.length<=0"></app-not-found>
+    </ng-container>
 </div>
