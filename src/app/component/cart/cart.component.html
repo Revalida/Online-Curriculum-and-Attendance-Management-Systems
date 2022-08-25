@@ -23,7 +23,6 @@
                         <td> {{item.price | currency: '&#8369;' : 'code'}} </td>
                         <td> 
                             <button type="button" class="btn" (click) = "dec(item)"><i class="fa fa-minus"></i></button>
-                            <!-- <span>{{item.quantity}}</span> (change)="updateQty(item)  [(ngModel)] = "item.quantity"" {{item.quantity}}   -->
                             <input id="qty" type="number" min="1" [(ngModel)] = "item.quantity" (change)="updateQty(item)">               
                             <button type="button" class="btn" (click) = "inc(item)"><i class="fa fa-plus"></i></button>
                         </td>

@@ -17,6 +17,7 @@ import { SignupComponent } from './component/signup/signup.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 import { NavComponent } from './component/nav/nav.component';
 import { HomeComponent } from './component/home/home.component';
+import { PriceFilterPipe } from './filter/pricefilter.pipe';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { HomeComponent } from './component/home/home.component';
     CategoriesComponent,
     FilterPipe,
     SortPipe,
+    PriceFilterPipe,
     AdminDashboardComponent,
     LoginComponent,
     SignupComponent,
