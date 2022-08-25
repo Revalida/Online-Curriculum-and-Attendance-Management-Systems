@@ -12,18 +12,22 @@
                             <label for="exampleInputUsername">Username</label>
                             <input formControlName="username" type="text" class="form-control" id="exampleInputUsername"
                                 aria-describedby="emailHelp" placeholder="Username">
+                            <small class="text-danger">Username is required</small>
                         </div>
                         <div class="form-group md-6">
                             <label for="exampleInputPassword1">Password</label>
-                            <input formControlName="password" [type]="changetype?'password':'text'" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            <span class="eye" (click)="viewpass()" >
+                            <input formControlName="password" [type]="changetype?'password':'text'" class="form-control"
+                                id="exampleInputPassword1" placeholder="Password">
+                            <span class="eye" (click)="viewpass()">
                                 <i [ngClass]="visible ? 'fa fa-eye' : 'fa fa-eye-slash'" id="hide1"></i>
-                                
+
                             </span>
                         </div>
                         <br>
                         <button type="submit" class="btn btn-primary">Login</button>
                     </form>
+                    <a style="color: #fff; " routerLink="../forgot-password" class="btn btn-link">Forgot Password</a>
+                    <br>
                     <a style="color: #fff; " routerLink="../signup" class="btn btn-link">Don't have account yet? Click
                         to register.</a>
                 </form>
