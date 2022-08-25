@@ -38,6 +38,7 @@
     "products": [
         {
             "id": 1,
+            "name": "Adidas",
             "title": "SuperStar",
             "price": 5300.00,
             "description": "Originally designed to protect your toes, now a signature streetwear feature. Unmistakably adidas.",
@@ -46,6 +47,7 @@
         },
         {
             "id": 2,
+            "name": "Adidas",
             "title": "Stan Smith",
             "price": 5300.00,
             "description": "Stan Smith logos on the tongue and heel tab are paired with perforated stripes.",
@@ -54,6 +56,7 @@
         },
         {
             "id": 3,
+            "name": "Adidas",
             "title": "NMD S1",
             "price": 9000.00,
             "description": "The supportive BOOST cushioning and sleek textile upper keep you comfy every step of the way.",
@@ -62,6 +65,7 @@
         },
         {
           "id": 4,
+          "name": "Adidas",
           "title": "Forum 84 Low AEC",
           "price": 8000.00,
           "description": "The premium leather upper is hand-treated and detailed with nylon and synthetic leather accents.",
@@ -70,6 +74,7 @@
       },
       {
           "id": 5,
+          "name": "Adidas",
           "title": "Continental 80",
           "price": 5300.00,
           "description": "The split rubber cupsole and swooping two-tone stripe nail the look. French terry lining completes the throwback feel.",
@@ -78,6 +83,7 @@
       },
       {
           "id": 6,
+          "name": "Adidas",
           "title": "T-Mac 3 Restomod",
           "price": 7300.00,
           "description": "The synthetic upper is finished with all the elements that made the old school T-Mac trainer the best of the best.",
@@ -86,6 +92,7 @@
       },
       {
           "id": 7,
+          "name": "Nike",
           "title": "Vast Grey",
           "price": 5500.00,
           "description": "The all-over suede upper adds a premium, cozy touch to a Dunk Low that's ready to step out of the void and complete your fit.",
@@ -94,6 +101,7 @@
       },
       {
         "id": 8,
+        "name": "Nike",
         "title": "White and Tart",
         "price": 6500.00,
         "description": "A padded, high-top design gives you an unmistakable silhouette, while Max Air units keep the fit feeling comfortable.",
@@ -102,6 +110,7 @@
     },
     {
         "id": 9,
+        "name": "Nike",
         "title": "Air Force 1 Low Retro",
         "price": 7500.00,
         "description": "Every time you rock your AF1s, be sure to think of the visionary shopkeepers in Baltimore that made it all happen.",
@@ -110,6 +119,7 @@
     },
     {
         "id": 10,
+        "name": "Nike",
         "title": "Air Force 1 West Indies",
         "price": 7500.00,
         "description": "Crisp leather, embroidered details and island-hopping insoles reinforce its appeal while the mesh collar, woven tongue label and West Indies dubrae up your game with off-court allure.",
@@ -118,6 +128,7 @@
     },
     {
         "id": 11,
+        "name": "Nike",
         "title": "Air Jordan 13",
         "price": 10000.00,
         "description": "Capping it off, the green cat's eye emblem on the back and panther paw-inspired outsole honor MJ's slick Black Cat alter ego.",
@@ -126,6 +137,7 @@
     },
     {
         "id": 12,
+        "name": "Nike",
         "title": "Air Max 97",
         "price": 9250.00,
         "description": "Pops of Pink Foam throughout deliver bolts of energy and a gum outsole (infused with 10% cork) refines your look. Underfoot, full-length Nike Air cushioning is a first class ride to your destination.",
@@ -134,6 +146,7 @@
     },
     {
         "id": 13,
+        "name": "Vans",
         "title": "Old Skool Stackform",
         "price": 4000.00,
         "description": "The Old Skool Stackform refreshes our iconic sidestripe silhouette with an even chunkier take on the platform aesthetic. Constructed with a 34 mm sidewall height, this platform shoe elevates a classic favorite while bringing a new “Off The Wall” style to your look.",
@@ -142,6 +155,7 @@
     },
     {
         "id": 14,
+        "name": "Vans",
         "title": "Sk8-Hi Tapered",
         "price": 4250.00,
         "description": "They're thinner material than the normal hi tops. These are made of like canvas material and aren't lined with leather.",
@@ -150,6 +164,7 @@
     },
     {
         "id": 15,
+        "name": "Vans",
         "title": "Classic Slip-On",
         "price": 3250.00,
         "description": "This iconic slip-on shoe also includes supportive padded collars, elastic side accents, and signature rubber waffle outsoles. Vans’ iconic slip-on shoe Low profile canvas uppers Allover print Supportive padded collars Elastic side accents Signature rubber waffle outsoles.",
@@ -158,6 +173,7 @@
     },
     {
         "id": 16,
+        "name": "Vans",
         "title": "Checkerboard Slip-On",
         "price": 3250.00,
         "description": "Featuring the iconic Vans checkerboard print, the Classic Slip-On is an everyday essential with true “Off The Wall” style. This slip-on shoe also includes low profile canvas uppers, supportive padded collars, elastic side accents, and signature rubber waffle outsoles.",
@@ -166,6 +182,7 @@
     },
     {
         "id": 17,
+        "name": "Vans",
         "title": "Authentic",
         "price": 3000.00,
         "description": "Constructed with a simple low top, lace-up profile, this classic shoe also features sturdy canvas uppers, metal eyelets, and signature rubber waffle outsoles.",
@@ -174,6 +191,7 @@
     },
     {
         "id": 18,
+        "name": "Vans",
         "title": "Slip-On",
         "price": 3000.00,
         "description": "The Classic Slip-On features sturdy low profile slip-on canvas uppers, padded collars, elastic side accents, and signature rubber waffle outsoles.",
@@ -182,6 +200,7 @@
     },
     {
         "id": 19,
+        "name": "Converse",
         "title": "One Star Pro Suede",
         "price": 3750.00,
         "description": "The low profile adds total flexibility, while rubber-backed suede builds in another layer of durability and style.",
@@ -190,6 +209,7 @@
     },
     {
         "id": 20,
+        "name": "Converse",
         "title": "Chuck Taylor All Star Seasonal Color",
         "price": 3000.00,
         "description": "The iconic low top, updated in desert-inspired color. You already know the details—the rubber midsole, diamond pattern outsole, and woven All Star tongue label.",
@@ -197,276 +217,310 @@
         "image": "assets/images/products/shoes/converse/ctassc.png"
     },
     {
-      "id": 21,
-      "title": "Run Star Hike Platform Seasonal Color",
-      "price": 5500,
-      "description": "A canvas upper comes together with the classic star ankle patch. With its signature jagged platform outsole to help you stand out in any crowd.",
-      "category": "converse",
-      "image": "assets/images/products/shoes/converse/rshpsc.png"
+        "id": 21,
+        "name": "Converse",
+        "title": "Run Star Hike Platform Seasonal Color",
+        "price": 5500.00,
+        "description": "A canvas upper comes together with the classic star ankle patch. With its signature jagged platform outsole to help you stand out in any crowd.",
+        "category": "converse",
+        "image": "assets/images/products/shoes/converse/rshpsc.png"
     },
     {
-      "id": 22,
-      "title": "Chuck Taylor All Star Lugged 2.0 Jacquard",
-      "price": 4250,
-      "description": "Inspired by natural landscapes, the Desert Camo Chuck Taylor All Star Lugged 2.0 blends iconic design features with sense-soothing textures.",
-      "category": "converse",
-      "image": "assets/images/products/shoes/converse/ctasl2j.png"
+        "id": 22,
+        "name": "Converse",
+        "title": "Chuck Taylor All Star Lugged 2.0 Jacquard",
+        "price": 4250.00,
+        "description": "Inspired by natural landscapes, the Desert Camo Chuck Taylor All Star Lugged 2.0 blends iconic design features with sense-soothing textures.",
+        "category": "converse",
+        "image": "assets/images/products/shoes/converse/ctasl2j.png"
     },
     {
-      "id": 23,
-      "title": "Chuck Taylor All Star Classic",
-      "price": 3250,
-      "description": "We could tell you that it’s the OG basketball shoe, created over 100 years ago. Or that the design has largely stayed the same, because why mess with a good thing.",
-      "category": "converse",
-      "image": "assets/images/products/shoes/converse/ctasc.png"
+        "id": 23,
+        "name": "Converse",
+        "title": "Chuck Taylor All Star Classic",
+        "price": 3250.00,
+        "description": "We could tell you that it’s the OG basketball shoe, created over 100 years ago. Or that the design has largely stayed the same, because why mess with a good thing.",
+        "category": "converse",
+        "image": "assets/images/products/shoes/converse/ctasc.png"
     },
     {
-      "id": 24,
-      "title": "Chuck Taylor All Star Lift Platform Leather",
-      "price": 4000,
-      "description": "Inspired by the iconic looks of '90s girl bands, the Converse Chuck Taylor All Star Clean Platform Leather High Top sneaker is sure to turn heads.",
-      "category": "converse",
-      "image": "assets/images/products/shoes/converse/ctaslpl.png"
+        "id": 24,
+        "name": "Converse",
+        "title": "Chuck Taylor All Star Lift Platform Leather",
+        "price": 4000.00,
+        "description": "Inspired by the iconic looks of '90s girl bands, the Converse Chuck Taylor All Star Clean Platform Leather High Top sneaker is sure to turn heads.",
+        "category": "converse",
+        "image": "assets/images/products/shoes/converse/ctaslpl.png"
     },
     {
-      "id": 25,
-      "title": "Fusion Nitro",
-      "price": 7000,
-      "description": "Full-coverage outside with high-abrasion rubber for enhanced durability and traction",
-      "category": "puma",
-      "image": "assets/images/products/shoes/puma/fsnbs.png"
+        "id": 25,
+        "name": "Puma",
+        "title": "Fusion Nitro",
+        "price": 7000.00,
+        "description": "Full-coverage outside with high-abrasion rubber for enhanced durability and traction",
+        "category": "puma",
+        "image": "assets/images/products/shoes/puma/fsnbs.png"
     },
     {
-      "id": 26,
-      "title": "Court Rider I",
-      "price": 4860,
-      "description": "Basketball shoes are forever pushing the culture of sport and streetstyle forward. And these shoes continue that tradition.",
-      "category": "puma",
-      "image": "assets/images/products/shoes/puma/cri.png"
+        "id": 26,
+        "name": "Puma",
+        "title": "Court Rider I",
+        "price": 4860.00,
+        "description": "Basketball shoes are forever pushing the culture of sport and streetstyle forward. And these shoes continue that tradition.",
+        "category": "puma",
+        "image": "assets/images/products/shoes/puma/cri.png"
     },
     {
-      "id": 27,
-      "title": "Pressing II",
-      "price": 2950,
-      "description": "Mix of synthetic suede and soft yet durable synthetic leather and breathable mesh",
-      "category": "puma",
-      "image": "assets/images/products/shoes/puma/pii.png"
+        "id": 27,
+        "name": "Puma",
+        "title": "Pressing II",
+        "price": 2950.00,
+        "description": "Mix of synthetic suede and soft yet durable synthetic leather and breathable mesh",
+        "category": "puma",
+        "image": "assets/images/products/shoes/puma/pii.png"
     },
     {
-      "id": 28,
-      "title": "Ultra 3.4 FG/AG Youth",
-      "price": 3400,
-      "description": "The ULTRA 3.4 Youth boot comes in a laceless execution so you can slip them on quickly and easily, plus a lightweight mesh upper with an updated SPEEDCAGE fused to a running spike-inspired SpeedUnit outsole – the perfect speed-focused design.",
-      "category": "puma",
-      "image": "assets/images/products/shoes/puma/u34.png"
+        "id": 28,
+        "name": "Puma",
+        "title": "Ultra 3.4 FG/AG Youth",
+        "price": 3400.00,
+        "description": "The ULTRA 3.4 Youth boot comes in a laceless execution so you can slip them on quickly and easily, plus a lightweight mesh upper with an updated SPEEDCAGE fused to a running spike-inspired SpeedUnit outsole – the perfect speed-focused design.",
+        "category": "puma",
+        "image": "assets/images/products/shoes/puma/u34.png"
     },
     {
-      "id": 29,
-      "title": "Scuderia Ferrari IONSpeed",
-      "price": 6700,
-      "description": "This new-look shoe, co-created with Scuderia Ferrari, bridges the worlds of Formula 1 and GT super cars. And just as those cars are engineered for high performance, so have these shoes been, thanks in part to the ProFoam midsole.",
-      "category": "puma",
-      "image": "assets/images/products/shoes/puma/sfi.png"
+        "id": 29,
+        "name": "Puma",
+        "title": "Scuderia Ferrari IONSpeed",
+        "price": 6700.00,
+        "description": "This new-look shoe, co-created with Scuderia Ferrari, bridges the worlds of Formula 1 and GT super cars. And just as those cars are engineered for high performance, so have these shoes been, thanks in part to the ProFoam midsole.",
+        "category": "puma",
+        "image": "assets/images/products/shoes/puma/sfi.png"
     },
     {
-      "id": 30,
-      "title": "BMW M Motorsport R-Cat Machina",
-      "price": 3850,
-      "description": "Inspired by the sleek design elements of the car world, we've retained the iconic wings on the lateral side and added the BMW M Motorsport colours and branding to deliver a shoe that is streets ahead in terms of style and performance.",
-      "category": "puma",
-      "image": "assets/images/products/shoes/puma/bmw.png"
+        "id": 30,
+        "name": "Puma",
+        "title": "BMW M Motorsport R-Cat Machina",
+        "price": 3850.00,
+        "description": "Inspired by the sleek design elements of the car world, we've retained the iconic wings on the lateral side and added the BMW M Motorsport colours and branding to deliver a shoe that is streets ahead in terms of style and performance.",
+        "category": "puma",
+        "image": "assets/images/products/shoes/puma/bmw.png"
     },
     {
-      "id": 31,
-      "title": "ANATOMIC",
-      "price": 1999,
-      "description": "Provides breathability, flexibility, and superior comfort Superior comfort",
-      "category": "worldbalance",
-      "image": "assets/images/products/shoes/worldbalance/anatomic.png"
+        "id": 31,
+        "name": "World Balance",
+        "title": "ANATOMIC",
+        "price": 1999.00,
+        "description": "Provides breathability, flexibility, and superior comfort Superior comfort",
+        "category": "worldbalance",
+        "image": "assets/images/products/shoes/worldbalance/anatomic.png"
     },
     {
-      "id": 32,
-      "title": "REGINALD M",
-      "price": 1599,
-      "description": "REGINALD lifestyle shoes are jazzed up and made for every man. We've created a sneaker with great versatility and style, resulting in comfort and performance that can be worn from day to night.",
-      "category": "worldbalance",
-      "image": "assets/images/products/shoes/worldbalance/reginaldm.png"
+        "id": 32,
+        "name": "World Balance",
+        "title": "REGINALD M",
+        "price": 1599.00,
+        "description": "REGINALD lifestyle shoes are jazzed up and made for every man. We've created a sneaker with great versatility and style, resulting in comfort and performance that can be worn from day to night.",
+        "category": "worldbalance",
+        "image": "assets/images/products/shoes/worldbalance/reginaldm.png"
     },
     {
-      "id": 33,
-      "title": "TRAIL HEAD M",
-      "price": 2099,
-      "description": "Superior comfort prevents heel shock by providing excellent cushioning in every step.",
-      "category": "worldbalance",
-      "image": "assets/images/products/shoes/worldbalance/trailheadm.png"
+        "id": 33,
+        "name": "World Balance",
+        "title": "TRAIL HEAD M",
+        "price": 2099.00,
+        "description": "Superior comfort prevents heel shock by providing excellent cushioning in every step.",
+        "category": "worldbalance",
+        "image": "assets/images/products/shoes/worldbalance/trailheadm.png"
     },
     {
-      "id": 34,
-      "title": "LEVELPLAY KIDS",
-      "price": 2450,
-      "description": "microfiber leather provides durability, full length eva midsole provides superior cushion.",
-      "category": "worldbalance",
-      "image": "assets/images/products/shoes/worldbalance/levelplay.png"
+        "id": 34,
+        "name": "World Balance",
+        "title": "LEVELPLAY KIDS",
+        "price": 2450.00,
+        "description": "microfiber leather provides durability, full length eva midsole provides superior cushion.",
+        "category": "worldbalance",
+        "image": "assets/images/products/shoes/worldbalance/levelplay.png"
     },
     {
-      "id": 35,
-      "title": "HANNIGAN M",
-      "price": 1899,
-      "description": "A good grip isn’t just for active shoes. Your everyday casual should still give you excellent traction and cushion, and the alpha grip outsole of the Hannigan is up for that.",
-      "category": "worldbalance",
-      "image": "assets/images/products/shoes/worldbalance/hanniganm.png"
+        "id": 35,
+        "name": "World Balance",
+        "title": "HANNIGAN M",
+        "price": 1899.00,
+        "description": "A good grip isn’t just for active shoes. Your everyday casual should still give you excellent traction and cushion, and the alpha grip outsole of the Hannigan is up for that.",
+        "category": "worldbalance",
+        "image": "assets/images/products/shoes/worldbalance/hanniganm.png"
     },
     {
-      "id": 36,
-      "title": "DAVENPORT M",
-      "price": 1499,
-      "description": "Allow your feet to experience superior comfort with its bounce pad insole system while being protected on the outside with durable outsoles.",
-      "category": "worldbalance",
-      "image": "assets/images/products/shoes/worldbalance/davenportm.png"
+        "id": 36,
+        "name": "World Balance",
+        "title": "DAVENPORT M",
+        "price": 1499.00,
+        "description": "Allow your feet to experience superior comfort with its bounce pad insole system while being protected on the outside with durable outsoles.",
+        "category": "worldbalance",
+        "image": "assets/images/products/shoes/worldbalance/davenportm.png"
     },
     {
-      "id": 37,
-      "title": "Kid's Scout Water-Resistant Boot Black",
-      "price": 2995,
-      "description": "A sneaker boot so sleek she can wear it everywhere and with everything. Keds' Scout Boot is stain-resistant, lightweight and comfy (just like the adult version). Now you and your mini-me can take on the day in tandem.",
-      "category": "keds",
-      "image": "assets/images/products/shoes/keds/scoutwater.png"
+        "id": 37,
+        "name": "Keds",
+        "title": "Kid's Scout Water-Resistant Boot Black",
+        "price": 2995.00,
+        "description": "A sneaker boot so sleek she can wear it everywhere and with everything. Keds' Scout Boot is stain-resistant, lightweight and comfy (just like the adult version). Now you and your mini-me can take on the day in tandem.",
+        "category": "keds",
+        "image": "assets/images/products/shoes/keds/scoutwater.png"
     },
     {
-      "id": 38,
-      "title": "Kid's Crew Kick '75 Canvas White",
-      "price": 2595,
-      "description": "Inspired by a 1975 sneaker pulled from our archives, this throwback style has an athletic, retro appeal she can't help but love.",
-      "category": "keds",
-      "image": "assets/images/products/shoes/keds/crewkick.png"
+        "id": 38,
+        "name": "Keds",
+        "title": "Kid's Crew Kick '75 Canvas White",
+        "price": 2595.00,
+        "description": "Inspired by a 1975 sneaker pulled from our archives, this throwback style has an athletic, retro appeal she can't help but love.",
+        "category": "keds",
+        "image": "assets/images/products/shoes/keds/crewkick.png"
     },
     {
-      "id": 39,
-      "title": "Big Kid Kickstart Multi-color Eyelets White",
-      "price": 2495,
-      "description": "An easy alternative closure with fixed laces let's her take them on and off herself, while a rubber toe cap adds the durability she needs to explore, play and discover!",
-      "category": "keds",
-      "image": "assets/images/products/shoes/keds/kickstart.png"
+        "id": 39,
+        "name": "Keds",
+        "title": "Big Kid Kickstart Multi-color Eyelets White",
+        "price": 2495.00,
+        "description": "An easy alternative closure with fixed laces let's her take them on and off herself, while a rubber toe cap adds the durability she needs to explore, play and discover!",
+        "category": "keds",
+        "image": "assets/images/products/shoes/keds/kickstart.png"
     },
     {
-      "id": 40,
-      "title": "Women's Demi TRX Leather Black",
-      "price": 4295,
-      "description": "A sleek-and-sporty take on the chunky sneaker trend. The Demi TRX combines luxe materials, shiny metal finishes and a sleek fit with chunky rubber soles for a style that's equal parts bold and beautiful.",
-      "category": "keds",
-      "image": "assets/images/products/shoes/keds/demitrx.png"
+        "id": 40,
+        "name": "Keds",
+        "title": "Women's Demi TRX Leather Black",
+        "price": 4295.00,
+        "description": "A sleek-and-sporty take on the chunky sneaker trend. The Demi TRX combines luxe materials, shiny metal finishes and a sleek fit with chunky rubber soles for a style that's equal parts bold and beautiful.",
+        "category": "keds",
+        "image": "assets/images/products/shoes/keds/demitrx.png"
     },
     {
-      "id": 41,
-      "title": "Women's Alley Leather White",
-      "price": 3495,
-      "description": "Introducing our modern court shoe: the Alley sneaker. Super sleek and super flattering, this minimalist lace-up is sure to become your new best friend.",
-      "category": "keds",
-      "image": "assets/images/products/shoes/keds/alleyleather.png"
+        "id": 41,
+        "name": "Keds",
+        "title": "Women's Alley Leather White",
+        "price": 3495.00,
+        "description": "Introducing our modern court shoe: the Alley sneaker. Super sleek and super flattering, this minimalist lace-up is sure to become your new best friend.",
+        "category": "keds",
+        "image": "assets/images/products/shoes/keds/alleyleather.png"
     },
     {
-      "id": 42,
-      "title": "Women's Chillax Femme Floral Twill",
-      "price": 2795,
-      "description": "The most effortless sneaker ever. The Chillax slip-on is a sneaker with an already broken in feel straight out of the box.",
-      "category": "keds",
-      "image": "assets/images/products/shoes/keds/chillax.png"
+        "id": 42,
+        "name": "Keds",
+        "title": "Women's Chillax Femme Floral Twill",
+        "price": 2795.00,
+        "description": "The most effortless sneaker ever. The Chillax slip-on is a sneaker with an already broken in feel straight out of the box.",
+        "category": "keds",
+        "image": "assets/images/products/shoes/keds/chillax.png"
     },
     {
-      "id": 43,
-      "title": "Fresh Foam X 1080v12",
-      "price": 8000,
-      "description": "Fresh Foam X midsole foam with approximately 3% bio-based content delivers our most cushioned Fresh Foam experience for incredible comfort. Bio-based content is made from renewable resources to help reduce our carbon footprint.",
-      "category": "newbalance",
-      "image": "assets/images/products/shoes/newbalance/freshfoam.png"
+        "id": 43,
+        "name": "New Balance",
+        "title": "Fresh Foam X 1080v12",
+        "price": 8000.00,
+        "description": "Fresh Foam X midsole foam with approximately 3% bio-based content delivers our most cushioned Fresh Foam experience for incredible comfort. Bio-based content is made from renewable resources to help reduce our carbon footprint.",
+        "category": "newbalance",
+        "image": "assets/images/products/shoes/newbalance/freshfoam.png"
     },
     {
-      "id": 44,
-      "title": "574 Legacy",
-      "price": 5000,
-      "description": "Lightweight EVA foam cushioning in the midsole and heel increases comfort.",
-      "category": "newbalance",
-      "image": "assets/images/products/shoes/newbalance/legacy.png"
+        "id": 44,
+        "name": "New Balance",
+        "title": "574 Legacy",
+        "price": 5000.00,
+        "description": "Lightweight EVA foam cushioning in the midsole and heel increases comfort.",
+        "category": "newbalance",
+        "image": "assets/images/products/shoes/newbalance/legacy.png"
     },
     {
-      "id": 45,
-      "title": "MADE in USA 990v5 Core",
-      "price": 9250,
-      "description": "ENCAP midsole cushioning combines lightweight foam with a durable polyurethane rim to deliver all-day support.",
-      "category": "newbalance",
-      "image": "assets/images/products/shoes/newbalance/usa.png"
+        "id": 45,
+        "name": "New Balance",
+        "title": "MADE in USA 990v5 Core",
+        "price": 9250.00,
+        "description": "ENCAP midsole cushioning combines lightweight foam with a durable polyurethane rim to deliver all-day support.",
+        "category": "newbalance",
+        "image": "assets/images/products/shoes/newbalance/usa.png"
     },
     {
-      "id": 46,
-      "title": "Bodega x New Balance 574 Legacy",
-      "price": 6500,
-      "description": "Mesh upper with suede overlays, Tongue and vamp underlays, Lace closure with Bodega branded aglets.",
-      "category": "newbalance",
-      "image": "assets/images/products/shoes/newbalance/bodega.png"
+        "id": 46,
+        "name": "New Balance",
+        "title": "Bodega x New Balance 574 Legacy",
+        "price": 6500.00,
+        "description": "Mesh upper with suede overlays, Tongue and vamp underlays, Lace closure with Bodega branded aglets.",
+        "category": "newbalance",
+        "image": "assets/images/products/shoes/newbalance/bodega.png"
     },
     {
-      "id": 47,
-      "title": "MINIMUS TR",
-      "price": 6500,
-      "description": "Midsole with full rubber coverage delivers added cushioning for enhanced comfort and impressive support.",
-      "category": "newbalance",
-      "image": "assets/images/products/shoes/newbalance/minimus.png"
+        "id": 47,
+        "name": "New Balance",
+        "title": "MINIMUS TR",
+        "price": 6500.00,
+        "description": "Midsole with full rubber coverage delivers added cushioning for enhanced comfort and impressive support.",
+        "category": "newbalance",
+        "image": "assets/images/products/shoes/newbalance/minimus.png"
     },
     {
-      "id": 48,
-      "title": "FuelCell SuperComp Trainer",
-      "price": 9000,
-      "description": "Features Energy Arc: Energy Arc pairs sport-specific carbon fiber plate geometry with strategic midsole voids, designed to increase stored energy to deliver a higher amount of total energy returned.",
-      "category": "newbalance",
-      "image": "assets/images/products/shoes/newbalance/fuelcell.png"
+        "id": 48,
+        "name": "New Balance",
+        "title": "FuelCell SuperComp Trainer",
+        "price": 9000.00,
+        "description": "Features Energy Arc: Energy Arc pairs sport-specific carbon fiber plate geometry with strategic midsole voids, designed to increase stored energy to deliver a higher amount of total energy returned.",
+        "category": "newbalance",
+        "image": "assets/images/products/shoes/newbalance/fuelcell.png"
     },
     {
-      "id": 49,
-      "title": "Skechers GO WALK Massage Fit",
-      "price": 5500,
-      "description": "Engineered mesh and synthetic upper with lace-up front, Durable dual-density traction outsole for stability.",
-      "category": "skechers",
-      "image": "assets/images/products/shoes/skechers/massage.png"
+        "id": 49,
+        "name": "Skechers",
+        "title": "Skechers GO WALK Massage Fit",
+        "price": 5500.00,
+        "description": "Engineered mesh and synthetic upper with lace-up front, Durable dual-density traction outsole for stability.",
+        "category": "skechers",
+        "image": "assets/images/products/shoes/skechers/massage.png"
     },
     {
-      "id": 50,
-      "title": "GO RUN Glide-Step Flex - Echo",
-      "price": 5000,
-      "description": "Glide-Step® geometric midsole designed to provide natural momentum with every step.",
-      "category": "skechers",
-      "image": "assets/images/products/shoes/skechers/echo.png"
+        "id": 50,
+        "name": "Skechers",
+        "title": "GO RUN Glide-Step Flex - Echo",
+        "price": 5000.00,
+        "description": "Glide-Step® geometric midsole designed to provide natural momentum with every step.",
+        "category": "skechers",
+        "image": "assets/images/products/shoes/skechers/echo.png"
     },
     {
-      "id": 51,
-      "title": "Glide-Step Flex - Blados",
-      "price": 4000,
-      "description": "Smooth leather, synthetic and mesh upper with lace-up front.",
-      "category": "skechers",
-      "image": "assets/images/products/shoes/skechers/blados.png"
+        "id": 51,
+        "name": "Skechers",
+        "title": "Glide-Step Flex - Blados",
+        "price": 4000.00,
+        "description": "Smooth leather, synthetic and mesh upper with lace-up front.",
+        "category": "skechers",
+        "image": "assets/images/products/shoes/skechers/blados.png"
     },
     {
-      "id": 52,
-      "title": "Skechers Glide-Step Flex",
-      "price": 4500,
-      "description": "Skechers Memory Foam™ Gel-Infused comfort insole, Engineered mesh upper.",
-      "category": "skechers",
-      "image": "assets/images/products/shoes/skechers/glide.png"
+        "id": 52,
+        "name": "Skechers",
+        "title": "Skechers Glide-Step Flex",
+        "price": 4500.00,
+        "description": "Skechers Memory Foam™ Gel-Infused comfort insole, Engineered mesh upper.",
+        "category": "skechers",
+        "image": "assets/images/products/shoes/skechers/glide.png"
     },
     {
-      "id": 53,
-      "title": "Skechers GO RUN Swirl Tech - Breeze",
-      "price": 5500,
-      "description": "Skechers Max Cushioning™ design for exceptional comfort and support.",
-      "category": "skechers",
-      "image": "assets/images/products/shoes/skechers/swirl.png"
+        "id": 53,
+        "name": "Skechers",
+        "title": "Skechers GO RUN Swirl Tech - Breeze",
+        "price": 5500.00,
+        "description": "Skechers Max Cushioning™ design for exceptional comfort and support.",
+        "category": "skechers",
+        "image": "assets/images/products/shoes/skechers/swirl.png"
     },
     {
-      "id": 54,
-      "title": "Skechers Max Cushioning Arch Fit - Rugged Man",
-      "price": 5500,
-      "description": "Removable insole helps mold to your foot to reduce shock and increase weight dispersion.",
-      "category": "skechers",
-      "image": "assets/images/products/shoes/skechers/arch.png"
+        "id": 54,
+        "name": "Skechers",
+        "title": "Skechers Max Cushioning Arch Fit - Rugged Man",
+        "price": 5500.00,
+        "description": "Removable insole helps mold to your foot to reduce shock and increase weight dispersion.",
+        "category": "skechers",
+        "image": "assets/images/products/shoes/skechers/arch.png"
     }
     ],
     "cart":[

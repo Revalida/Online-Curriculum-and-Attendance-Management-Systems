@@ -1,31 +1,51 @@
 <app-categories (actionEmitter) = "filter($event)"></app-categories>
 <div class="card-top container-fluid">
-    <label> Sort by </label>
-    <select [(ngModel)] = "SortbyParam">
-        <option value="price"> Price </option>
-        <option value="title"> Name </option>
-    </select>
-    <button type="button" (click) = "onSortDirection()"> 
-        <i *ngIf="SortDirection === 'asc'" class="fas fa-sort-up"></i>
-        <i *ngIf="SortDirection === 'desc'" class="fas fa-sort-down"></i>
-    </button> <br/>
-    <span> Filter by Price Range</span>
-        <div class="form-group">
-                <label for="min"> Min </label>
-                <input [(ngModel)] = "min" type="number" id="min" class="form-control" min="0">
-                <label for="max"> Max </label>
-                <input [(ngModel)] = "max" type="number" id="max" class="form-control" min="0">
-                <button type="submit"> Filter </button>
-        </div>
+    <table class="filt">
+        <tr>
+            <th><label> Sort by </label><br></th>
+            <th><span> Filter by Price Range</span></th>
+        </tr>
+        <tr>
+            <td>
+                <select [(ngModel)] = "SortbyParam">
+                    <option value="price"> Price </option>
+                    <option value="title"> Name </option>
+                </select>
+                <button type="button" (click) = "onSortDirection()"> 
+                    <i *ngIf="SortDirection === 'asc'" class="fas fa-sort-up"></i>
+                    <i *ngIf="SortDirection === 'desc'" class="fas fa-sort-down"></i>
+                </button>
+            </td>
+            <td>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Min</span>
+                    <input [(ngModel)] = "min" type="number" id="min" class="form-control" min="0"><br>
+                    <span class="input-group-text" id="basic-addon1">Max</span>
+                    <input [(ngModel)] = "max" type="number" id="max" class="form-control" min="0">
+            </div>
+            </td>
+        </tr>
+    </table>
+     <br/>
+    
     <div class="card shadow-sm">
         <div class=" row" >
             <ng-container *ngFor="let item of filterByCategory | filter:searchKey:'title' | pricefilter:[min, max] | sort:[SortbyParam, SortDirection]">
-                <div class="card col-md-3">
+                <div class="card col-md-4">
+                    <h3> {{item.name}}</h3>
                         <img src="{{item.image}}" alt="{{item.title}}">
                         <h4> {{item.title}} </h4>
-                        <p> {{item.description}} </p>
                         <p><strong> {{item.price | currency: '&#8369;' : 'code'}} </strong></p>
-                        <button class="btn btn-primary" (click) = addToCart(item)> Add to cart </button>
+                        <div class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-primary" (click) = addToCart(item)> Add to cart </button>
+                            <button class="btn btn-info" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                View Description</button>
+                            <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                    {{item.description}}
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </ng-container>
         </div>

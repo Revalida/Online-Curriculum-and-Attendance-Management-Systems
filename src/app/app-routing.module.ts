@@ -10,7 +10,7 @@ import { ForgotPasswordComponent } from './component/forgot-password/forgot-pass
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "home",
+    redirectTo: "product",
     pathMatch: "full"
   },
   {
