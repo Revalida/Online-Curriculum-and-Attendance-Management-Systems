@@ -102,11 +102,11 @@
       {
         "id": 8,
         "name": "Nike",
-        "title": "White and Tart",
+        "title": "Zoom Vapor",
         "price": 6500.00,
         "description": "A padded, high-top design gives you an unmistakable silhouette, while Max Air units keep the fit feeling comfortable.",
         "category": "nike",
-        "image": "assets/images/products/shoes/nike/whiteandtart.png"
+        "image": "assets/images/products/shoes/nike/zoomvapor.png"
     },
     {
         "id": 9,
