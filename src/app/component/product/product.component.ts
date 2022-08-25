@@ -57,13 +57,4 @@ export class ProductComponent implements OnInit {
       this.SortDirection = 'desc';
     }
   }
-
-  filterByPrice(min: any, max:any){
-  //   this.filterByPriceList = this.pricefilter.transform(value, args[min, max]);
-  console.log("min")
-    console.log(min)
-    console.log("max")
-    console.log(max)
-  }
-
 }
