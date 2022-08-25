@@ -16,8 +16,11 @@ import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { NavComponent } from './component/nav/nav.component';
 import { HomeComponent } from './component/home/home.component';
+
 import { ProfileComponent } from './component/profile/profile.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
+
+import { PriceFilterPipe } from './filter/pricefilter.pipe';
 
 
 @NgModule({
@@ -29,9 +32,11 @@ import { ForgotPasswordComponent } from './component/forgot-password/forgot-pass
     CategoriesComponent,
     FilterPipe,
     SortPipe,
+    PriceFilterPipe,
     AdminDashboardComponent,
     LoginComponent,
     SignupComponent,
+    ForgotPasswordComponent,
     NavComponent,
     HomeComponent,
     ProfileComponent,
@@ -45,6 +50,7 @@ import { ForgotPasswordComponent } from './component/forgot-password/forgot-pass
     FormsModule,
     ReactiveFormsModule
   ],
+  exports:[HeaderComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

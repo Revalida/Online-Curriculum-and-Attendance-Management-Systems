@@ -8,10 +8,18 @@
     <button type="button" (click) = "onSortDirection()"> 
         <i *ngIf="SortDirection === 'asc'" class="fas fa-sort-up"></i>
         <i *ngIf="SortDirection === 'desc'" class="fas fa-sort-down"></i>
-    </button>
+    </button> <br/>
+    <span> Filter by Price Range</span>
+        <div class="form-group">
+                <label for="min"> Min </label>
+                <input [(ngModel)] = "min" type="number" id="min" class="form-control" min="0">
+                <label for="max"> Max </label>
+                <input [(ngModel)] = "max" type="number" id="max" class="form-control" min="0">
+                <button type="submit"> Filter </button>
+        </div>
     <div class="card shadow-sm">
         <div class=" row" >
-            <ng-container *ngFor="let item of filterByCategory | filter:searchKey:'title' | sort:[SortbyParam, SortDirection]">
+            <ng-container *ngFor="let item of filterByCategory | filter:searchKey:'title' | pricefilter:[min, max] | sort:[SortbyParam, SortDirection]">
                 <div class="card col-md-3">
                         <img src="{{item.image}}" alt="{{item.title}}">
                         <h4> {{item.title}} </h4>

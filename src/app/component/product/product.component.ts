@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/service/api.service';
 import { CartService } from 'src/app/service/cart.service';
+import { Pipe, PipeTransform } from '@angular/core';
+import { min } from 'rxjs';
 
 @Component({
   selector: 'app-product',
@@ -14,6 +16,10 @@ export class ProductComponent implements OnInit {
   public filterByCategory: any;
   SortbyParam = '';
   SortDirection = 'asc';
+  public filterByPriceList: any;
+  min = 0;
+  max = 0;
+
 
   constructor(private api: ApiService, private cartService: CartService) { }
 
@@ -32,9 +38,8 @@ export class ProductComponent implements OnInit {
   }
 
   addToCart(item: any){
-    console.log("add to cart item")
-    console.log(item)
     this.cartService.addToCart(item);
+    console.log(item)
   }
 
   filter(category: string){
@@ -52,4 +57,13 @@ export class ProductComponent implements OnInit {
       this.SortDirection = 'desc';
     }
   }
+
+  filterByPrice(min: any, max:any){
+  //   this.filterByPriceList = this.pricefilter.transform(value, args[min, max]);
+  console.log("min")
+    console.log(min)
+    console.log("max")
+    console.log(max)
+  }
+
 }

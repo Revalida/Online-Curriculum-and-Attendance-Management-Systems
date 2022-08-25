@@ -14,15 +14,14 @@
           <a class="nav-link" href="/product">Products</a>
         </li>
         <li class="nav-item">
-          <a routerLink="/cart">
+          <a routerLink="/cart" >
             <i class="fas fa-cart-plus"></i>
           </a>
-            <span>{{totalItem}}</span>
+            <span><sup>{{totalItem}}</sup></span>
         </li>
       </ul>
       <!-- if logged in -->
 
-        <span>{{totalItem}}</span>
       <button routerLink="/login" class="btn btn-danger mx-2">Logout</button>
 
       

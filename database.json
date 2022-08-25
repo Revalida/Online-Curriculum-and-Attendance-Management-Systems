@@ -34,166 +34,167 @@
       "id": 13
     }
   ],
-  "products": [
-    {
-      "id": 1,
-      "title": "SuperStar",
-      "price": 5300,
-      "description": "Originally designed to protect your toes, now a signature streetwear feature. Unmistakably adidas.",
-      "category": "adidas",
-      "image": "assets/images/products/shoes/adidas/superstar.png"
+  
+    "products": [
+        {
+            "id": 1,
+            "title": "SuperStar",
+            "price": 5300.00,
+            "description": "Originally designed to protect your toes, now a signature streetwear feature. Unmistakably adidas.",
+            "category": "adidas",
+            "image": "assets/images/products/shoes/adidas/superstar.png"
+        },
+        {
+            "id": 2,
+            "title": "Stan Smith",
+            "price": 5300.00,
+            "description": "Stan Smith logos on the tongue and heel tab are paired with perforated stripes.",
+            "category": "adidas",
+            "image": "assets/images/products/shoes/adidas/stansmith.png"
+        },
+        {
+            "id": 3,
+            "title": "NMD S1",
+            "price": 9000.00,
+            "description": "The supportive BOOST cushioning and sleek textile upper keep you comfy every step of the way.",
+            "category": "adidas",
+            "image": "assets/images/products/shoes/adidas/nmd_s1.png"
+        },
+        {
+          "id": 4,
+          "title": "Forum 84 Low AEC",
+          "price": 8000.00,
+          "description": "The premium leather upper is hand-treated and detailed with nylon and synthetic leather accents.",
+          "category": "adidas",
+          "image": "assets/images/products/shoes/adidas/forum84.png"
+      },
+      {
+          "id": 5,
+          "title": "Continental 80",
+          "price": 5300.00,
+          "description": "The split rubber cupsole and swooping two-tone stripe nail the look. French terry lining completes the throwback feel.",
+          "category": "adidas",
+          "image": "assets/images/products/shoes/adidas/continental80.png"
+      },
+      {
+          "id": 6,
+          "title": "T-Mac 3 Restomod",
+          "price": 7300.00,
+          "description": "The synthetic upper is finished with all the elements that made the old school T-Mac trainer the best of the best.",
+          "category": "adidas",
+          "image": "assets/images/products/shoes/adidas/tmac3.png"
+      },
+      {
+          "id": 7,
+          "title": "Vast Grey",
+          "price": 5500.00,
+          "description": "The all-over suede upper adds a premium, cozy touch to a Dunk Low that's ready to step out of the void and complete your fit.",
+          "category": "nike",
+          "image": "assets/images/products/shoes/nike/vastgrey.png"
+      },
+      {
+        "id": 8,
+        "title": "White and Tart",
+        "price": 6500.00,
+        "description": "A padded, high-top design gives you an unmistakable silhouette, while Max Air units keep the fit feeling comfortable.",
+        "category": "nike",
+        "image": "assets/images/products/shoes/nike/whiteandtart.png"
     },
     {
-      "id": 2,
-      "title": "Stan Smith",
-      "price": 5300,
-      "description": "Stan Smith logos on the tongue and heel tab are paired with perforated stripes.",
-      "category": "adidas",
-      "image": "assets/images/products/shoes/adidas/stansmith.png"
+        "id": 9,
+        "title": "Air Force 1 Low Retro",
+        "price": 7500.00,
+        "description": "Every time you rock your AF1s, be sure to think of the visionary shopkeepers in Baltimore that made it all happen.",
+        "category": "nike",
+        "image": "assets/images/products/shoes/nike/af1lr.png"
     },
     {
-      "id": 3,
-      "title": "NMD S1",
-      "price": 9000,
-      "description": "The supportive BOOST cushioning and sleek textile upper keep you comfy every step of the way.",
-      "category": "adidas",
-      "image": "assets/images/products/shoes/adidas/nmd_s1.png"
+        "id": 10,
+        "title": "Air Force 1 West Indies",
+        "price": 7500.00,
+        "description": "Crisp leather, embroidered details and island-hopping insoles reinforce its appeal while the mesh collar, woven tongue label and West Indies dubrae up your game with off-court allure.",
+        "category": "nike",
+        "image": "assets/images/products/shoes/nike/af1wi.png"
     },
     {
-      "id": 4,
-      "title": "Forum 84 Low AEC",
-      "price": 8000,
-      "description": "The premium leather upper is hand-treated and detailed with nylon and synthetic leather accents.",
-      "category": "adidas",
-      "image": "assets/images/products/shoes/adidas/forum84.png"
+        "id": 11,
+        "title": "Air Jordan 13",
+        "price": 10000.00,
+        "description": "Capping it off, the green cat's eye emblem on the back and panther paw-inspired outsole honor MJ's slick Black Cat alter ego.",
+        "category": "nike",
+        "image": "assets/images/products/shoes/nike/aj13.png"
     },
     {
-      "id": 5,
-      "title": "Continental 80",
-      "price": 5300,
-      "description": "The split rubber cupsole and swooping two-tone stripe nail the look. French terry lining completes the throwback feel.",
-      "category": "adidas",
-      "image": "assets/images/products/shoes/adidas/continental80.png"
+        "id": 12,
+        "title": "Air Max 97",
+        "price": 9250.00,
+        "description": "Pops of Pink Foam throughout deliver bolts of energy and a gum outsole (infused with 10% cork) refines your look. Underfoot, full-length Nike Air cushioning is a first class ride to your destination.",
+        "category": "nike",
+        "image": "assets/images/products/shoes/nike/am97.png"
     },
     {
-      "id": 6,
-      "title": "T-Mac 3 Restomod",
-      "price": 7300,
-      "description": "The synthetic upper is finished with all the elements that made the old school T-Mac trainer the best of the best.",
-      "category": "adidas",
-      "image": "assets/images/products/shoes/adidas/tmac3.png"
+        "id": 13,
+        "title": "Old Skool Stackform",
+        "price": 4000.00,
+        "description": "The Old Skool Stackform refreshes our iconic sidestripe silhouette with an even chunkier take on the platform aesthetic. Constructed with a 34 mm sidewall height, this platform shoe elevates a classic favorite while bringing a new “Off The Wall” style to your look.",
+        "category": "vans",
+        "image": "assets/images/products/shoes/vans/ols.png"
     },
     {
-      "id": 7,
-      "title": "Vast Grey",
-      "price": 5500,
-      "description": "The all-over suede upper adds a premium, cozy touch to a Dunk Low that's ready to step out of the void and complete your fit.",
-      "category": "nike",
-      "image": "assets/images/products/shoes/nike/vastgrey.png"
+        "id": 14,
+        "title": "Sk8-Hi Tapered",
+        "price": 4250.00,
+        "description": "They're thinner material than the normal hi tops. These are made of like canvas material and aren't lined with leather.",
+        "category": "vans",
+        "image": "assets/images/products/shoes/vans/s8ht.png"
     },
     {
-      "id": 8,
-      "title": "White and Tart",
-      "price": 6500,
-      "description": "A padded, high-top design gives you an unmistakable silhouette, while Max Air units keep the fit feeling comfortable.",
-      "category": "nike",
-      "image": "assets/images/products/shoes/nike/whiteandtart.png"
+        "id": 15,
+        "title": "Classic Slip-On",
+        "price": 3250.00,
+        "description": "This iconic slip-on shoe also includes supportive padded collars, elastic side accents, and signature rubber waffle outsoles. Vans’ iconic slip-on shoe Low profile canvas uppers Allover print Supportive padded collars Elastic side accents Signature rubber waffle outsoles.",
+        "category": "vans",
+        "image": "assets/images/products/shoes/vans/cso.png"
     },
     {
-      "id": 9,
-      "title": "Air Force 1 Low Retro",
-      "price": 7500,
-      "description": "Every time you rock your AF1s, be sure to think of the visionary shopkeepers in Baltimore that made it all happen.",
-      "category": "nike",
-      "image": "assets/images/products/shoes/nike/af1lr.png"
+        "id": 16,
+        "title": "Checkerboard Slip-On",
+        "price": 3250.00,
+        "description": "Featuring the iconic Vans checkerboard print, the Classic Slip-On is an everyday essential with true “Off The Wall” style. This slip-on shoe also includes low profile canvas uppers, supportive padded collars, elastic side accents, and signature rubber waffle outsoles.",
+        "category": "vans",
+        "image": "assets/images/products/shoes/vans/cbso.png"
     },
     {
-      "id": 10,
-      "title": "Air Force 1 West Indies",
-      "price": 7500,
-      "description": "Crisp leather, embroidered details and island-hopping insoles reinforce its appeal while the mesh collar, woven tongue label and West Indies dubrae up your game with off-court allure.",
-      "category": "nike",
-      "image": "assets/images/products/shoes/nike/af1wi.png"
+        "id": 17,
+        "title": "Authentic",
+        "price": 3000.00,
+        "description": "Constructed with a simple low top, lace-up profile, this classic shoe also features sturdy canvas uppers, metal eyelets, and signature rubber waffle outsoles.",
+        "category": "vans",
+        "image": "assets/images/products/shoes/vans/authentic.png"
     },
     {
-      "id": 11,
-      "title": "Air Jordan 13",
-      "price": 10000,
-      "description": "Capping it off, the green cat's eye emblem on the back and panther paw-inspired outsole honor MJ's slick Black Cat alter ego.",
-      "category": "nike",
-      "image": "assets/images/products/shoes/nike/aj13.png"
+        "id": 18,
+        "title": "Slip-On",
+        "price": 3000.00,
+        "description": "The Classic Slip-On features sturdy low profile slip-on canvas uppers, padded collars, elastic side accents, and signature rubber waffle outsoles.",
+        "category": "vans",
+        "image": "assets/images/products/shoes/vans/so.png"
     },
     {
-      "id": 12,
-      "title": "Air Max 97",
-      "price": 9250,
-      "description": "Pops of Pink Foam throughout deliver bolts of energy and a gum outsole (infused with 10% cork) refines your look. Underfoot, full-length Nike Air cushioning is a first class ride to your destination.",
-      "category": "nike",
-      "image": "assets/images/products/shoes/nike/am97.png"
+        "id": 19,
+        "title": "One Star Pro Suede",
+        "price": 3750.00,
+        "description": "The low profile adds total flexibility, while rubber-backed suede builds in another layer of durability and style.",
+        "category": "converse",
+        "image": "assets/images/products/shoes/converse/osps.png"
     },
     {
-      "id": 13,
-      "title": "Old Skool Stackform",
-      "price": 4000,
-      "description": "The Old Skool Stackform refreshes our iconic sidestripe silhouette with an even chunkier take on the platform aesthetic. Constructed with a 34 mm sidewall height, this platform shoe elevates a classic favorite while bringing a new “Off The Wall” style to your look.",
-      "category": "vans",
-      "image": "assets/images/products/shoes/vans/ols.png"
-    },
-    {
-      "id": 14,
-      "title": "Sk8-Hi Tapered",
-      "price": 4250,
-      "description": "They're thinner material than the normal hi tops. These are made of like canvas material and aren't lined with leather.",
-      "category": "vans",
-      "image": "assets/images/products/shoes/vans/s8ht.png"
-    },
-    {
-      "id": 15,
-      "title": "Classic Slip-On",
-      "price": 3250,
-      "description": "This iconic slip-on shoe also includes supportive padded collars, elastic side accents, and signature rubber waffle outsoles. Vans’ iconic slip-on shoe Low profile canvas uppers Allover print Supportive padded collars Elastic side accents Signature rubber waffle outsoles.",
-      "category": "vans",
-      "image": "assets/images/products/shoes/vans/cso.png"
-    },
-    {
-      "id": 16,
-      "title": "Checkerboard Slip-On",
-      "price": 3250,
-      "description": "Featuring the iconic Vans checkerboard print, the Classic Slip-On is an everyday essential with true “Off The Wall” style. This slip-on shoe also includes low profile canvas uppers, supportive padded collars, elastic side accents, and signature rubber waffle outsoles.",
-      "category": "vans",
-      "image": "assets/images/products/shoes/vans/cbso.png"
-    },
-    {
-      "id": 17,
-      "title": "Authentic",
-      "price": 3000,
-      "description": "Constructed with a simple low top, lace-up profile, this classic shoe also features sturdy canvas uppers, metal eyelets, and signature rubber waffle outsoles.",
-      "category": "vans",
-      "image": "assets/images/products/shoes/vans/authentic.png"
-    },
-    {
-      "id": 18,
-      "title": "Slip-On",
-      "price": 3000,
-      "description": "The Classic Slip-On features sturdy low profile slip-on canvas uppers, padded collars, elastic side accents, and signature rubber waffle outsoles.",
-      "category": "vans",
-      "image": "assets/images/products/shoes/vans/so.png"
-    },
-    {
-      "id": 19,
-      "title": "One Star Pro Suede",
-      "price": 3750,
-      "description": "The low profile adds total flexibility, while rubber-backed suede builds in another layer of durability and style.",
-      "category": "converse",
-      "image": "assets/images/products/shoes/converse/osps.png"
-    },
-    {
-      "id": 20,
-      "title": "Chuck Taylor All Star Seasonal Color",
-      "price": 3000,
-      "description": "The iconic low top, updated in desert-inspired color. You already know the details—the rubber midsole, diamond pattern outsole, and woven All Star tongue label.",
-      "category": "converse",
-      "image": "assets/images/products/shoes/converse/ctassc.png"
+        "id": 20,
+        "title": "Chuck Taylor All Star Seasonal Color",
+        "price": 3000.00,
+        "description": "The iconic low top, updated in desert-inspired color. You already know the details—the rubber midsole, diamond pattern outsole, and woven All Star tongue label.",
+        "category": "converse",
+        "image": "assets/images/products/shoes/converse/ctassc.png"
     },
     {
       "id": 21,
@@ -467,5 +468,9 @@
       "category": "skechers",
       "image": "assets/images/products/shoes/skechers/arch.png"
     }
-  ]
-}
+    ],
+    "cart":[
+
+    ]
+  }
+  
