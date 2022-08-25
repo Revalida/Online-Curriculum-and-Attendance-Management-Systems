@@ -21,6 +21,7 @@ import { ProfileComponent } from './component/profile/profile.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 
 import { PriceFilterPipe } from './filter/pricefilter.pipe';
+import { AcknowledgementComponent } from './component/acknowledgement/acknowledgement.component';
 
 
 @NgModule({
@@ -41,6 +42,8 @@ import { PriceFilterPipe } from './filter/pricefilter.pipe';
     HomeComponent,
     ProfileComponent,
     ForgotPasswordComponent,
+    AcknowledgementComponent,
+
 
   ],
   imports: [

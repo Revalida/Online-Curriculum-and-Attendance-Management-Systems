@@ -20,12 +20,11 @@
                                 id="exampleInputPassword1" placeholder="Password">
                             <span class="eye" (click)="viewpass()">
                                 <i [ngClass]="visible ? 'fa fa-eye' : 'fa fa-eye-slash'" id="hide1"></i>
-
                             </span>
                             <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">Password is required</span>
                         </div>
                         <br>
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button [disabled]="!loginForm.valid" type="submit" class="btn btn-primary">Login</button>
                     </form>
                     <a style="color: #fff; " routerLink="../forgot-password" class="btn btn-link">Forgot Password</a>
                     <br>

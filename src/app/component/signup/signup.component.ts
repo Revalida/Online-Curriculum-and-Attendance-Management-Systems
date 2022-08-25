@@ -22,9 +22,9 @@ export class SignupComponent implements OnInit {
       firstname : ['',Validators.required],
       middlename : ['',Validators.required],
       lastname : ['',Validators.required],
-      email : ['',Validators.required],
-      mobilenumber : ['',Validators.required],
-      role : ['',Validators.required],
+      email : ['',[Validators.required,Validators.email]],
+      mobilenumber : ['',[Validators.required, Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
+      role : ['user']
     }) 
   }
   signUp(){

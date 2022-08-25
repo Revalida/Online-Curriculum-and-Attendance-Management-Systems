@@ -6,5 +6,6 @@ export class EmployeeModel{
     username : string = '';
     email : string = '';
     password : string = '';
+    mobilenumber : number = 0;
     role : string = '';
 }

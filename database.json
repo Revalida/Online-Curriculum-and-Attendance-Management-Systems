@@ -21,6 +21,50 @@
       "mobilenumber": "",
       "role": "user",
       "id": 2
+    },
+    {
+      "username": "admin",
+      "password": "adasd",
+      "firstname": "admin",
+      "middlename": "admin",
+      "lastname": "admin",
+      "email": "sdada",
+      "mobilenumber": "12345678901",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "username": "admin2",
+      "password": "dasda",
+      "firstname": "John",
+      "middlename": "admin",
+      "lastname": "admin",
+      "email": "eqwewq",
+      "mobilenumber": "12345678901",
+      "role": "user",
+      "id": 4
+    },
+    {
+      "username": "admin",
+      "password": "1234567890",
+      "firstname": "John",
+      "middlename": "admin",
+      "lastname": "admin1",
+      "email": "fasfsa@gmail.com",
+      "mobilenumber": 12345678901,
+      "role": "user",
+      "id": 5
+    },
+    {
+      "username": "admin",
+      "password": "1234567890",
+      "firstname": "admin",
+      "middlename": "fasfa",
+      "lastname": "admin",
+      "email": "user@yahoo.com",
+      "mobilenumber": "1234567890",
+      "role": "user",
+      "id": 6
     }
   ],
   "user": [

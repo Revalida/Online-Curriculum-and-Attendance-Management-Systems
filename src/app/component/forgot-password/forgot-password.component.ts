@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 
@@ -11,33 +11,39 @@ import { Router } from '@angular/router';
 })
 export class ForgotPasswordComponent implements OnInit {
   forgotPassword !: FormGroup;
+  password : string = '';
+  @Output() actionEmitter = new EventEmitter<any>()
 
   constructor(private http: HttpClient, private router: Router, private formbuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.forgotPassword = this.formbuilder.group({
-      username: [''],
-      email: [''],
-      mobilenumber: ['']
+      username: ['',Validators.required],
+      email: ['',[Validators.required,Validators.email]],
+      mobilenumber: ['',[Validators.required, Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
     })
   }
 
-  login() {
+  submit() {
     this.http.get<any>("http://localhost:3000/post" && "http://localhost:3000/user")
       .subscribe(res => {
         const user = res.find((a: any) => {
           return a.username === this.forgotPassword.value.username &&
-            a.email === this.forgotPassword.value.email && 
-            a.mobilenumber === this.forgotPassword.value.mobilenumber
+             a.email === this.forgotPassword.value.email 
         });
-        if(user){
-          console.log(this.forgotPassword.value.username)
-          console.log(user)
-        }else{
-          alert("Wrong input")
-          console.log(user)
-        }}, err => {
-          alert("Something went wrong!")
-        })
+        if (user) {
+            console.log(user.password)
+            this.router.navigate(['acknowledgement'])
+            user.password = this.password
+        }
+        else{
+          alert("Input is invalid")
+        }
+      }, err => {
+        alert("Something went wrong!")
+      })
+  }
+  sendAction(){
+    this.actionEmitter.emit(this.password)
   }
 }
