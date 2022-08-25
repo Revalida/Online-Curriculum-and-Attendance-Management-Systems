@@ -12,7 +12,10 @@ img {
 
 .card {
     padding: 20px;
-    margin: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 89px;
+    margin-right: 89px;
 }
 
 .card img:hover {
@@ -21,11 +24,11 @@ img {
 }
 
 .card img {
-    width: 200px;
-    height: 200px;
+    width: 320px;
+    height: 320px;
     margin-bottom: 15px;
     margin-top: 15px;
-    transition: 0.3s ease-in-out 
+    transition: 0.3s ease-in-out;
 }
 
 input::-webkit-outer-spin-button,
@@ -41,3 +44,12 @@ input[type=number] {
 #min, #max {
     width: 75px;
 }
+
+.btn {
+    margin-right: 10px;
+}
+
+h3 {
+    align-self: center;
+}
+

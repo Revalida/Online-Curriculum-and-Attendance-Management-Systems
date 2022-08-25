@@ -1,17 +1,17 @@
 <ng-container *ngIf="products.length != 0">
     <div class="card-table">
         <div class="cart-product">
-            <table clss="table table-responsive">
+            <table class="table">
                 <thead>
                     <tr>
-                        <th> Sr. No </th>
-                        <th> Product Name </th>
-                        <th> Product Image </th>
-                        <th> Description </th>
-                        <th> Price </th>
-                        <th> Quantity </th>
-                        <th> Total </th>
-                        <th> Action </th>
+                        <th scope="col"> Sr. No </th>
+                        <th scope="col"> Product Name </th>
+                        <th scope="col"> Product Image </th>
+                        <th scope="col"> Description </th>
+                        <th scope="col"> Price </th>
+                        <th scope="col"> Quantity </th>
+                        <th scope="col"> Total </th>
+                        <th scope="col"> Action </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -22,20 +22,25 @@
                         <td> {{item.description}} </td>
                         <td> {{item.price | currency: '&#8369;' : 'code'}} </td>
                         <td> 
-                            <button type="button" class="btn" (click) = "dec(item)"><i class="fa fa-minus"></i></button>
+                            <a id="minmax" type="button" class="btn" (click) = "dec(item)"><i class="fa fa-minus"></i></a>
                             <input id="qty" type="number" min="1" [(ngModel)] = "item.quantity" (change)="updateQty(item)">               
-                            <button type="button" class="btn" (click) = "inc(item)"><i class="fa fa-plus"></i></button>
+                            <a id="minmax" type="button" class="btn" (click) = "inc(item)"><i class="fa fa-plus"></i></a>
                         </td>
                         <td> {{item.total | currency: '&#8369;' : 'code'}} </td>
                         <td>
                             <button class="btn btn-danger" (click)="removeItem(item)"> <i class="fas fa-trash-alt"></i></button>
                         </td>
                     </tr>
-                    <br/>
-                    <td><button class="btn btn-danger" (click)="emptyCart()">Empty Cart</button></td>
-                    <td><button routerLink="/product">Shop More</button></td>
-                    <td><button>Check out</button></td>
-                    <td><strong>Grand Total: {{grandTotal | currency: '&#8369;' : 'code'}}</strong></td>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><button class="btn btn-primary" type="button" routerLink="/product">Shop_More</button></td>
+                        <td></td>
+                        <td><strong>Grand Total: {{grandTotal | currency: '&#8369;' : 'code'}}</strong></td>
+                        <td><button class="btn btn-success" type="button">Check_Out</button></td>
+                        <td><button class="btn btn-danger" (click)="emptyCart()">Empty_Cart</button></td>
+                        <td></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
