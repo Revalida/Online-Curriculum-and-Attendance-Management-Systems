@@ -22,7 +22,7 @@ import { ForgotPasswordComponent } from './component/forgot-password/forgot-pass
 
 import { PriceFilterPipe } from './filter/pricefilter.pipe';
 import { NotFoundComponent } from './component/not-found/not-found.component';
-
+import { CheckOutComponent } from './component/check-out/check-out.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +43,7 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
     ProfileComponent,
     ForgotPasswordComponent,
     NotFoundComponent,
+    CheckOutComponent,
 
   ],
   imports: [

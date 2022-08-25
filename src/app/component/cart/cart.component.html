@@ -37,7 +37,7 @@
                         <td><button class="btn btn-primary" type="button" routerLink="/product">Shop_More</button></td>
                         <td></td>
                         <td><strong>Grand Total: {{grandTotal | currency: '&#8369;' : 'code'}}</strong></td>
-                        <td><button class="btn btn-success" type="button">Check_Out</button></td>
+                        <td><button class="btn btn-success" type="button" routerLink="/checkout">Check_Out</button></td>
                         <td><button class="btn btn-danger" (click)="emptyCart()">Empty_Cart</button></td>
                         <td></td>
                     </tr>
