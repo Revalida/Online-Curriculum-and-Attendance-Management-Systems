@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 
 
@@ -10,8 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcknowledgementComponent implements OnInit {
 
-  password : string = '';
   constructor() { }
+  @Input() password : string | undefined
 
   ngOnInit(): void {
     

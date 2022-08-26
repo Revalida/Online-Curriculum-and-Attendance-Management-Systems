@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   submitted:boolean = false;
   loading = false;
 
-  loginForm !: FormGroup;
+  public loginForm !: FormGroup;
   constructor(private formbuilder: FormBuilder, private http: HttpClient, private router: Router) { }
 
   viewpass() {
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
 
   login() {
-    this.http.get<any>("http://localhost:3000/post" && "http://localhost:3000/user")
+    this.http.get<any>("http://localhost:3000/post" || "http://localhost:3000/user")
       .subscribe(res => {
         const user = res.find((a: any) => {
           return a.username === this.loginForm.value.username &&
@@ -41,8 +41,10 @@ export class LoginComponent implements OnInit {
         if (user && user.role == 'admin') {
             this.loginForm.reset();
             this.router.navigate(['admin-dashboard'])
+            console.log(user.role)
         }else if(user && user.role == 'user'){
           this.loginForm.reset();
+          console.log(user.role)
           this.router.navigate(['product'])
         } 
         else{
