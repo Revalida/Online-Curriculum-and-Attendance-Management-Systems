@@ -8,6 +8,6 @@ export class EmployeeModel{
     username : string = '';
     email : string = '';
     password : string = '';
-    mobilenumber : number = 0;
+    mobilenumber : string = '';
     role :string = 'user'
 }
