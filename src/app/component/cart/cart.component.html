@@ -37,7 +37,7 @@
                         <td><button class="btn btn-primary" type="button" routerLink="/product">Shop_More</button></td>
                         <td></td>
                         <td><strong>Grand Total: {{grandTotal | currency: '&#8369;' : 'code'}}</strong></td>
-                        <td><button class="btn btn-success" type="button">Check_Out</button></td>
+                        <td><button class="btn btn-success" type="button" routerLink="/checkout">Check_Out</button></td>
                         <td><button class="btn btn-danger" (click)="emptyCart()">Empty_Cart</button></td>
                         <td></td>
                     </tr>
@@ -48,10 +48,8 @@
 </ng-container>
 <ng-container *ngIf="products.length == 0">
     <div class="container">
-        <div class="card">
-            <h5 clss="card-title"> My Cart </h5>
-        </div>
         <div class="center">
+            <h1 class="card-title"> My Cart </h1>
             <img src="{{image_url}}/cart.png" alt="">
             <h4> Your cart is empty! </h4>
             <h5> Add item to it now. </h5>

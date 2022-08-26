@@ -45,6 +45,7 @@
                                 id="exampleInputNumber1" maxlength="11" placeholder="Mobile Number">
                                 <span class="text-danger" *ngIf="signupForm.controls['mobilenumber'].dirty && signupForm.hasError('required','mobilenumber')">Mobile Number is required</span>
                         </div>
+
                         <br>
                         <button [disabled]="!signupForm.valid" type="submit" class="btn btn-primary">Sign Up</button>
 

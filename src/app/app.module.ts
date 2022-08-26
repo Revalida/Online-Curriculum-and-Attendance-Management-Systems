@@ -21,7 +21,10 @@ import { ProfileComponent } from './component/profile/profile.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 
 import { PriceFilterPipe } from './filter/pricefilter.pipe';
+
 import { AcknowledgementComponent } from './component/acknowledgement/acknowledgement.component';
+import { NotFoundComponent } from './component/not-found/not-found.component';
+import { CheckOutComponent } from './component/check-out/check-out.component';
 
 
 @NgModule({
@@ -43,8 +46,8 @@ import { AcknowledgementComponent } from './component/acknowledgement/acknowledg
     ProfileComponent,
     ForgotPasswordComponent,
     AcknowledgementComponent,
-
-
+    NotFoundComponent,
+    CheckOutComponent
   ],
   imports: [
     BrowserModule,

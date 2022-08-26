@@ -8,6 +8,9 @@ import { SignupComponent } from './component/signup/signup.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 import { AcknowledgementComponent } from './component/acknowledgement/acknowledgement.component';
 
+import { CheckOutComponent } from './component/check-out/check-out.component';
+
+
 const routes: Routes = [
   {
     path: "",
@@ -41,6 +44,10 @@ const routes: Routes = [
   {
     path: "acknowledgement",
     component: AcknowledgementComponent
+},
+{
+    path: "checkout",
+    component: CheckOutComponent
   },
 ];
 
