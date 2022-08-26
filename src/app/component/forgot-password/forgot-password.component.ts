@@ -25,7 +25,7 @@ export class ForgotPasswordComponent implements OnInit {
   }
 
   submit() {
-    this.http.get<any>("http://localhost:3000/post" && "http://localhost:3000/user")
+    this.http.get<any>("http://localhost:3000/post")
       .subscribe(res => {
         const user = res.find((a: any) => {
           return a.username === this.forgotPassword.value.username &&

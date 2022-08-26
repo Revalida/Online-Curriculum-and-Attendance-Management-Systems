@@ -1,48 +1,26 @@
 {
   "post": [
     {
-      "username": "admin212",
-      "password": "user",
-      "firstname": "fafas",
-      "middlename": "",
-      "lastname": "",
-      "email": "",
-      "role": "user",
-      "id": 12
-    },
-    {
-      "username": "",
-      "password": "",
-      "firstname": "",
-      "middlename": "",
-      "lastname": "",
-      "email": "",
-      "mobilenumber": "",
-      "role": "user",
-      "id": 13
-    },
-    {
       "username": "chuapogi",
       "password": "chuapogi",
       "firstname": "edrick",
       "middlename": "chua",
       "lastname": "carreon",
       "email": "edrickpogi@gmail.com",
-      "mobilenumber": "",
+      "mobilenumber": "1234567890",
       "role": "user",
       "id": 14
-    }
-  ],
-  "user": [
+    },
     {
       "username": "admin",
       "password": "admin",
-      "firstname": "admin",
-      "middlename": "admin",
-      "lastname": "admin",
-      "email": "admin@gmail.com",
+      "firstname": "edrick",
+      "middlename": "chua",
+      "lastname": "carreon",
+      "email": "edrickpogi@gmail.com",
+      "mobilenumber": "12345678",
       "role": "admin",
-      "id": 13
+      "id": 1
     }
   ],
   "products": [
@@ -451,5 +429,5 @@
       "category": "skechers",
       "image": "assets/images/products/shoes/skechers/swirl.png"
     }
-]
+  ]
 }
