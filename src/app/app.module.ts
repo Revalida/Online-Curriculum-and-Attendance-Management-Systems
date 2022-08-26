@@ -25,6 +25,7 @@ import { PriceFilterPipe } from './filter/pricefilter.pipe';
 import { AcknowledgementComponent } from './component/acknowledgement/acknowledgement.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { CheckOutComponent } from './component/check-out/check-out.component';
+import { ProductAdminDashboardComponent } from './component/product-admin-dashboard/product-admin-dashboard.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { CheckOutComponent } from './component/check-out/check-out.component';
     ForgotPasswordComponent,
     AcknowledgementComponent,
     NotFoundComponent,
-    CheckOutComponent
+    CheckOutComponent,
+    ProductAdminDashboardComponent
   ],
   imports: [
     BrowserModule,
