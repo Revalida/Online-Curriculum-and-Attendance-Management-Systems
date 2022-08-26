@@ -1,3 +1,5 @@
+
+
 export class EmployeeModel{
     id : number = 0;
     firstname : string = '';
@@ -6,5 +8,6 @@ export class EmployeeModel{
     username : string = '';
     email : string = '';
     password : string = '';
-    role : string = '';
+    mobilenumber : number = 0;
+    role :string = 'user'
 }
