@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -15,11 +16,11 @@ export class LoginComponent implements OnInit {
   loading = false;
 
   loginForm !: FormGroup;
-  constructor(private formbuilder: FormBuilder, private http: HttpClient, private router: Router) { }
+  constructor(private formbuilder: FormBuilder, private http: HttpClient, private router: Router, public authService: AuthService) { }
 
   viewpass() {
-    this.visible != this.visible;
-    this.changetype != this.changetype;
+    this.visible = !this.visible;
+    this.changetype = !this.changetype;
   }
 
   ngOnInit(): void {
@@ -46,6 +47,7 @@ export class LoginComponent implements OnInit {
           this.loginForm.reset();
           console.log(user.role)
           this.router.navigate(['product'])
+          localStorage.setItem('token', '*****')
         } 
         else{
           alert("User not found!")
