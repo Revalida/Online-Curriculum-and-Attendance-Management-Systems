@@ -21,6 +21,28 @@
       "mobilenumber": "12345678",
       "role": "admin",
       "id": 1
+    },
+    {
+      "username": "",
+      "password": "",
+      "firstname": "",
+      "middlename": "",
+      "lastname": "",
+      "email": "",
+      "mobilenumber": "",
+      "role": "user",
+      "id": 15
+    },
+    {
+      "username": "jaz",
+      "password": "alohahello",
+      "firstname": "ja",
+      "middlename": "ruz",
+      "lastname": "cruz",
+      "email": "jcruzem@gmail.com",
+      "mobilenumber": "09164567890",
+      "role": "user",
+      "id": 16
     }
   ],
   "products": [
@@ -31,7 +53,9 @@
       "price": 5300,
       "description": "Originally designed to protect your toes, now a signature streetwear feature. Unmistakably adidas.",
       "category": "adidas",
-      "image": "assets/images/products/shoes/adidas/superstar.png"
+      "image": "assets/images/products/shoes/adidas/superstar.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 2,
@@ -40,7 +64,9 @@
       "price": 5300,
       "description": "Stan Smith logos on the tongue and heel tab are paired with perforated stripes.",
       "category": "adidas",
-      "image": "assets/images/products/shoes/adidas/stansmith.png"
+      "image": "assets/images/products/shoes/adidas/stansmith.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 3,
@@ -49,7 +75,9 @@
       "price": 9000,
       "description": "The supportive BOOST cushioning and sleek textile upper keep you comfy every step of the way.",
       "category": "adidas",
-      "image": "assets/images/products/shoes/adidas/nmd_s1.png"
+      "image": "assets/images/products/shoes/adidas/nmd_s1.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 4,
@@ -58,7 +86,9 @@
       "price": 8000,
       "description": "The premium leather upper is hand-treated and detailed with nylon and synthetic leather accents.",
       "category": "adidas",
-      "image": "assets/images/products/shoes/adidas/forum84.png"
+      "image": "assets/images/products/shoes/adidas/forum84.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 5,
@@ -67,7 +97,9 @@
       "price": 7300,
       "description": "The synthetic upper is finished with all the elements that made the old school T-Mac trainer the best of the best.",
       "category": "adidas",
-      "image": "assets/images/products/shoes/adidas/tmac3.png"
+      "image": "assets/images/products/shoes/adidas/tmac3.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 6,
@@ -76,7 +108,9 @@
       "price": 5500,
       "description": "The all-over suede upper adds a premium, cozy touch to a Dunk Low that's ready to step out of the void and complete your fit.",
       "category": "nike",
-      "image": "assets/images/products/shoes/nike/vastgrey.png"
+      "image": "assets/images/products/shoes/nike/vastgrey.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 7,
@@ -85,7 +119,9 @@
       "price": 6500,
       "description": "A padded, high-top design gives you an unmistakable silhouette, while Max Air units keep the fit feeling comfortable.",
       "category": "nike",
-      "image": "assets/images/products/shoes/nike/zoomvapor.png"
+      "image": "assets/images/products/shoes/nike/zoomvapor.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 8,
@@ -94,7 +130,9 @@
       "price": 7500,
       "description": "Every time you rock your AF1s, be sure to think of the visionary shopkeepers in Baltimore that made it all happen.",
       "category": "nike",
-      "image": "assets/images/products/shoes/nike/af1lr.png"
+      "image": "assets/images/products/shoes/nike/af1lr.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 9,
@@ -103,7 +141,9 @@
       "price": 7500,
       "description": "Crisp leather, embroidered details and island-hopping insoles reinforce its appeal while the mesh collar, woven tongue label and West Indies dubrae up your game with off-court allure.",
       "category": "nike",
-      "image": "assets/images/products/shoes/nike/af1wi.png"
+      "image": "assets/images/products/shoes/nike/af1wi.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 10,
@@ -112,7 +152,9 @@
       "price": 10000,
       "description": "Capping it off, the green cat's eye emblem on the back and panther paw-inspired outsole honor MJ's slick Black Cat alter ego.",
       "category": "nike",
-      "image": "assets/images/products/shoes/nike/aj13.png"
+      "image": "assets/images/products/shoes/nike/aj13.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 11,
@@ -121,7 +163,9 @@
       "price": 4000,
       "description": "The Old Skool Stackform refreshes our iconic sidestripe silhouette with an even chunkier take on the platform aesthetic. Constructed with a 34 mm sidewall height, this platform shoe elevates a classic favorite while bringing a new “Off The Wall” style to your look.",
       "category": "vans",
-      "image": "assets/images/products/shoes/vans/ols.png"
+      "image": "assets/images/products/shoes/vans/ols.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 12,
@@ -130,7 +174,9 @@
       "price": 3250,
       "description": "This iconic slip-on shoe also includes supportive padded collars, elastic side accents, and signature rubber waffle outsoles. Vans’ iconic slip-on shoe Low profile canvas uppers Allover print Supportive padded collars Elastic side accents Signature rubber waffle outsoles.",
       "category": "vans",
-      "image": "assets/images/products/shoes/vans/cso.png"
+      "image": "assets/images/products/shoes/vans/cso.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 13,
@@ -139,7 +185,9 @@
       "price": 3250,
       "description": "Featuring the iconic Vans checkerboard print, the Classic Slip-On is an everyday essential with true “Off The Wall” style. This slip-on shoe also includes low profile canvas uppers, supportive padded collars, elastic side accents, and signature rubber waffle outsoles.",
       "category": "vans",
-      "image": "assets/images/products/shoes/vans/cbso.png"
+      "image": "assets/images/products/shoes/vans/cbso.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 14,
@@ -148,7 +196,9 @@
       "price": 3000,
       "description": "Constructed with a simple low top, lace-up profile, this classic shoe also features sturdy canvas uppers, metal eyelets, and signature rubber waffle outsoles.",
       "category": "vans",
-      "image": "assets/images/products/shoes/vans/authentic.png"
+      "image": "assets/images/products/shoes/vans/authentic.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 15,
@@ -157,7 +207,9 @@
       "price": 3000,
       "description": "The Classic Slip-On features sturdy low profile slip-on canvas uppers, padded collars, elastic side accents, and signature rubber waffle outsoles.",
       "category": "vans",
-      "image": "assets/images/products/shoes/vans/so.png"
+      "image": "assets/images/products/shoes/vans/so.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 16,
@@ -166,7 +218,9 @@
       "price": 3750,
       "description": "The low profile adds total flexibility, while rubber-backed suede builds in another layer of durability and style.",
       "category": "converse",
-      "image": "assets/images/products/shoes/converse/osps.png"
+      "image": "assets/images/products/shoes/converse/osps.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 17,
@@ -175,7 +229,9 @@
       "price": 3000,
       "description": "The iconic low top, updated in desert-inspired color. You already know the details—the rubber midsole, diamond pattern outsole, and woven All Star tongue label.",
       "category": "converse",
-      "image": "assets/images/products/shoes/converse/ctassc.png"
+      "image": "assets/images/products/shoes/converse/ctassc.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 18,
@@ -184,7 +240,9 @@
       "price": 4250,
       "description": "Inspired by natural landscapes, the Desert Camo Chuck Taylor All Star Lugged 2.0 blends iconic design features with sense-soothing textures.",
       "category": "converse",
-      "image": "assets/images/products/shoes/converse/ctasl2j.png"
+      "image": "assets/images/products/shoes/converse/ctasl2j.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 19,
@@ -193,7 +251,9 @@
       "price": 3250,
       "description": "We could tell you that it’s the OG basketball shoe, created over 100 years ago. Or that the design has largely stayed the same, because why mess with a good thing.",
       "category": "converse",
-      "image": "assets/images/products/shoes/converse/ctasc.png"
+      "image": "assets/images/products/shoes/converse/ctasc.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 20,
@@ -202,7 +262,9 @@
       "price": 4000,
       "description": "Inspired by the iconic looks of '90s girl bands, the Converse Chuck Taylor All Star Clean Platform Leather High Top sneaker is sure to turn heads.",
       "category": "converse",
-      "image": "assets/images/products/shoes/converse/ctaslpl.png"
+      "image": "assets/images/products/shoes/converse/ctaslpl.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 21,
@@ -211,7 +273,10 @@
       "price": 7000,
       "description": "Full-coverage outside with high-abrasion rubber for enhanced durability and traction",
       "category": "puma",
-      "image": "assets/images/products/shoes/puma/fsnbs.png"
+      "image": "assets/images/products/shoes/puma/fsnbs.png",
+      "totalItemSale": 0,
+      "stock" : 50
+
     },
     {
       "id": 22,
@@ -220,7 +285,9 @@
       "price": 4860,
       "description": "Basketball shoes are forever pushing the culture of sport and streetstyle forward. And these shoes continue that tradition.",
       "category": "puma",
-      "image": "assets/images/products/shoes/puma/cri.png"
+      "image": "assets/images/products/shoes/puma/cri.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 23,
@@ -229,7 +296,9 @@
       "price": 2950,
       "description": "Mix of synthetic suede and soft yet durable synthetic leather and breathable mesh",
       "category": "puma",
-      "image": "assets/images/products/shoes/puma/pii.png"
+      "image": "assets/images/products/shoes/puma/pii.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 24,
@@ -238,7 +307,9 @@
       "price": 3400,
       "description": "The ULTRA 3.4 Youth boot comes in a laceless execution so you can slip them on quickly and easily, plus a lightweight mesh upper with an updated SPEEDCAGE fused to a running spike-inspired SpeedUnit outsole – the perfect speed-focused design.",
       "category": "puma",
-      "image": "assets/images/products/shoes/puma/u34.png"
+      "image": "assets/images/products/shoes/puma/u34.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 25,
@@ -247,7 +318,9 @@
       "price": 3850,
       "description": "Inspired by the sleek design elements of the car world, we've retained the iconic wings on the lateral side and added the BMW M Motorsport colours and branding to deliver a shoe that is streets ahead in terms of style and performance.",
       "category": "puma",
-      "image": "assets/images/products/shoes/puma/bmw.png"
+      "image": "assets/images/products/shoes/puma/bmw.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 26,
@@ -256,7 +329,9 @@
       "price": 1999,
       "description": "Provides breathability, flexibility, and superior comfort Superior comfort",
       "category": "worldbalance",
-      "image": "assets/images/products/shoes/worldbalance/anatomic.png"
+      "image": "assets/images/products/shoes/worldbalance/anatomic.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 27,
@@ -265,7 +340,9 @@
       "price": 1599,
       "description": "REGINALD lifestyle shoes are jazzed up and made for every man. We've created a sneaker with great versatility and style, resulting in comfort and performance that can be worn from day to night.",
       "category": "worldbalance",
-      "image": "assets/images/products/shoes/worldbalance/reginaldm.png"
+      "image": "assets/images/products/shoes/worldbalance/reginaldm.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 28,
@@ -274,7 +351,9 @@
       "price": 2099,
       "description": "Superior comfort prevents heel shock by providing excellent cushioning in every step.",
       "category": "worldbalance",
-      "image": "assets/images/products/shoes/worldbalance/trailheadm.png"
+      "image": "assets/images/products/shoes/worldbalance/trailheadm.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 29,
@@ -283,7 +362,9 @@
       "price": 1899,
       "description": "A good grip isn’t just for active shoes. Your everyday casual should still give you excellent traction and cushion, and the alpha grip outsole of the Hannigan is up for that.",
       "category": "worldbalance",
-      "image": "assets/images/products/shoes/worldbalance/hanniganm.png"
+      "image": "assets/images/products/shoes/worldbalance/hanniganm.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 30,
@@ -292,7 +373,9 @@
       "price": 1499,
       "description": "Allow your feet to experience superior comfort with its bounce pad insole system while being protected on the outside with durable outsoles.",
       "category": "worldbalance",
-      "image": "assets/images/products/shoes/worldbalance/davenportm.png"
+      "image": "assets/images/products/shoes/worldbalance/davenportm.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 31,
@@ -301,7 +384,9 @@
       "price": 2995,
       "description": "A sneaker boot so sleek she can wear it everywhere and with everything. Keds' Scout Boot is stain-resistant, lightweight and comfy (just like the adult version). Now you and your mini-me can take on the day in tandem.",
       "category": "keds",
-      "image": "assets/images/products/shoes/keds/scoutwater.png"
+      "image": "assets/images/products/shoes/keds/scoutwater.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 32,
@@ -310,7 +395,9 @@
       "price": 2595,
       "description": "Inspired by a 1975 sneaker pulled from our archives, this throwback style has an athletic, retro appeal she can't help but love.",
       "category": "keds",
-      "image": "assets/images/products/shoes/keds/crewkick.png"
+      "image": "assets/images/products/shoes/keds/crewkick.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 33,
@@ -319,7 +406,9 @@
       "price": 4295,
       "description": "A sleek-and-sporty take on the chunky sneaker trend. The Demi TRX combines luxe materials, shiny metal finishes and a sleek fit with chunky rubber soles for a style that's equal parts bold and beautiful.",
       "category": "keds",
-      "image": "assets/images/products/shoes/keds/demitrx.png"
+      "image": "assets/images/products/shoes/keds/demitrx.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 34,
@@ -328,7 +417,9 @@
       "price": 3495,
       "description": "Introducing our modern court shoe: the Alley sneaker. Super sleek and super flattering, this minimalist lace-up is sure to become your new best friend.",
       "category": "keds",
-      "image": "assets/images/products/shoes/keds/alleyleather.png"
+      "image": "assets/images/products/shoes/keds/alleyleather.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 35,
@@ -337,7 +428,9 @@
       "price": 2795,
       "description": "The most effortless sneaker ever. The Chillax slip-on is a sneaker with an already broken in feel straight out of the box.",
       "category": "keds",
-      "image": "assets/images/products/shoes/keds/chillax.png"
+      "image": "assets/images/products/shoes/keds/chillax.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 36,
@@ -346,7 +439,9 @@
       "price": 8000,
       "description": "Fresh Foam X midsole foam with approximately 3% bio-based content delivers our most cushioned Fresh Foam experience for incredible comfort. Bio-based content is made from renewable resources to help reduce our carbon footprint.",
       "category": "newbalance",
-      "image": "assets/images/products/shoes/newbalance/freshfoam.png"
+      "image": "assets/images/products/shoes/newbalance/freshfoam.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 37,
@@ -355,7 +450,9 @@
       "price": 5000,
       "description": "Lightweight EVA foam cushioning in the midsole and heel increases comfort.",
       "category": "newbalance",
-      "image": "assets/images/products/shoes/newbalance/legacy.png"
+      "image": "assets/images/products/shoes/newbalance/legacy.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 38,
@@ -364,7 +461,9 @@
       "price": 9250,
       "description": "ENCAP midsole cushioning combines lightweight foam with a durable polyurethane rim to deliver all-day support.",
       "category": "newbalance",
-      "image": "assets/images/products/shoes/newbalance/usa.png"
+      "image": "assets/images/products/shoes/newbalance/usa.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 39,
@@ -373,7 +472,9 @@
       "price": 6500,
       "description": "Midsole with full rubber coverage delivers added cushioning for enhanced comfort and impressive support.",
       "category": "newbalance",
-      "image": "assets/images/products/shoes/newbalance/minimus.png"
+      "image": "assets/images/products/shoes/newbalance/minimus.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 40,
@@ -382,7 +483,9 @@
       "price": 9000,
       "description": "Features Energy Arc: Energy Arc pairs sport-specific carbon fiber plate geometry with strategic midsole voids, designed to increase stored energy to deliver a higher amount of total energy returned.",
       "category": "newbalance",
-      "image": "assets/images/products/shoes/newbalance/fuelcell.png"
+      "image": "assets/images/products/shoes/newbalance/fuelcell.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 41,
@@ -391,7 +494,9 @@
       "price": 5500,
       "description": "Engineered mesh and synthetic upper with lace-up front, Durable dual-density traction outsole for stability.",
       "category": "skechers",
-      "image": "assets/images/products/shoes/skechers/massage.png"
+      "image": "assets/images/products/shoes/skechers/massage.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 42,
@@ -400,7 +505,9 @@
       "price": 5000,
       "description": "Glide-Step® geometric midsole designed to provide natural momentum with every step.",
       "category": "skechers",
-      "image": "assets/images/products/shoes/skechers/echo.png"
+      "image": "assets/images/products/shoes/skechers/echo.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 43,
@@ -409,7 +516,9 @@
       "price": 4000,
       "description": "Smooth leather, synthetic and mesh upper with lace-up front.",
       "category": "skechers",
-      "image": "assets/images/products/shoes/skechers/blados.png"
+      "image": "assets/images/products/shoes/skechers/blados.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 44,
@@ -418,7 +527,9 @@
       "price": 4500,
       "description": "Skechers Memory Foam™ Gel-Infused comfort insole, Engineered mesh upper.",
       "category": "skechers",
-      "image": "assets/images/products/shoes/skechers/glide.png"
+      "image": "assets/images/products/shoes/skechers/glide.png",
+      "totalItemSale": 0,
+      "stock" : 50
     },
     {
       "id": 45,
@@ -427,7 +538,9 @@
       "price": 5500,
       "description": "Skechers Max Cushioning™ design for exceptional comfort and support.",
       "category": "skechers",
-      "image": "assets/images/products/shoes/skechers/swirl.png"
+      "image": "assets/images/products/shoes/skechers/swirl.png",
+      "totalItemSale": 0,
+      "stock" : 50
     }
   ]
 }
