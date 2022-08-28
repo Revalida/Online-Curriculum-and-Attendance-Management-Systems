@@ -10,12 +10,14 @@
         <li class="nav-item">
           <a class="nav-link" href="/product">Products</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="!authService.isLoggedIn()">
+          <a href="/login"></a></li> 
+        <li *ngIf="authService.isLoggedIn()" class="nav-item">
           <a routerLink="/cart" >
             <i class="fas fa-cart-plus"></i>
           </a>
             <span id="qty"><sup>{{totalItem}}</sup></span>
-        </li>        
+               </li> 
       </ul>
     </div>
   </header>
