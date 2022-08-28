@@ -55,7 +55,7 @@ input[type=number] {
 }
 
 #qty {
-    width: 21px;
+    width: 26px;
 }
 
 #minmax {
@@ -67,4 +67,14 @@ input[type=number] {
 .card-title {
     align-self: center;
 }
+
+.tbhead {
+    background-color: rgb(0, 183, 255);
+    text-align: center;
+}
+
+.tbbody {
+    text-align: center;
+}
+
 

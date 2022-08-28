@@ -1,30 +1,34 @@
-<ng-container *ngIf="visibility">
-        <div class="mb-3">
-            <label for="fullname">Full Name</label><br/>
-            <input type="text" [(ngModel)]="fullname" id="fullname" aria-describedby="emailHelp">
-         </div>
-
-        <div class="form-group mb-3">
-          <div class="form-group mb-3">
-              <label for="mobilenumber">Mobile Number</label><br/>
-              <input type="text" [(ngModel)]="mobile" id="mobilenumber" aria-describedby="emailHelp">
+<div class="row">
+    <div class="col-md-2">
+        <ng-container *ngIf="visibility">
+            <div class="mb-3">
+                <label for="fullname">Full Name</label><br/>
+                <input disabled placeholder="Edrick Carreon" type="text" [(ngModel)]="fullname" id="fullname" aria-describedby="emailHelp">
+             </div>
+    
+            <div class="form-group mb-3">
+              <div class="form-group mb-3">
+                  <label for="mobilenumber">Mobile Number</label><br/>
+                  <input disabled placeholder="09123456789" type="text" [(ngModel)]="mobile" id="mobilenumber" aria-describedby="emailHelp">
+              </div>
           </div>
-      </div>
-      <div class="form-group mb-3">
           <div class="form-group mb-3">
-              <label for="address">Complete Address</label><br/>
-              <input type="text" [(ngModel)]="address" id="address" aria-describedby="emailHelp">
+              <div class="form-group mb-3">
+                  <label for="address">Complete Address</label><br/>
+                  <input type="text" [(ngModel)]="address" id="address" aria-describedby="emailHelp">
+              </div>
           </div>
-      </div>
-      <button type="submit" class="btn btn-primary" (click) = save()>Save</button>  
-</ng-container>
-<ng-container *ngIf="!visibility">
-    <h6>Full Name: {{fullname}}</h6>
-    <h6>Mobile Number: {{mobile}}</h6>
-    <h6>Address:{{address}}</h6>
-</ng-container>
-<br/>
-<h4>Order Lists</h4>
+          <button type="submit" class="btn btn-primary" (click) = save()>Save</button>  
+    </ng-container>
+    <ng-container *ngIf="!visibility">
+        <h6>Full Name: {{fullname}}</h6>
+        <h6>Mobile Number: {{mobile}}</h6>
+        <h6>Address:{{address}}</h6>
+    </ng-container>
+    </div>
+  
+    <div class="col-md-10">
+        <h4>Order Lists</h4>
 <ng-container *ngIf="products.length != 0">
     <div class="card-table">
         <div class="cart-product">
@@ -49,7 +53,19 @@
                         <td> {{item.total | currency: '&#8369;' : 'code'}} </td>
                     </tr>
                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td><strong>Grand Total: {{grandTotal | currency: '&#8369;' : 'code'}}</strong></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td><button class="btn btn-danger" (click)="placeOrder()">Place Order</button></td>
                     </tr>
                 </tbody>
@@ -57,4 +73,5 @@
         </div>
     </div>
 </ng-container>
-
+    </div>
+</div>

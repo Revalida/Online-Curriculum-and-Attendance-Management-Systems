@@ -3,10 +3,10 @@
         <div class="cart-product">
             <table class="table">
                 <thead>
-                    <tr>
-                        <th scope="col"> Sr. No </th>
-                        <th scope="col"> Product Name </th>
-                        <th scope="col"> Product Image </th>
+                    <tr class="tbhead">
+                        <th scope="col"> No. </th>
+                        <th scope="col"> Name </th>
+                        <th scope="col"> Image </th>
                         <th scope="col"> Description </th>
                         <th scope="col"> Price </th>
                         <th scope="col"> Quantity </th>
@@ -15,7 +15,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let item of products; let i = index">
+                    <tr class="tbbody" *ngFor="let item of products; let i = index">
                         <td> {{i+1}} </td>
                         <td> {{item.title}} </td>
                         <td> <img src="{{item.image}}" alt={{item.title}} height="100px" width="100px"> </td>
@@ -34,12 +34,22 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td><button class="btn btn-primary" type="button" routerLink="/product">Shop_More</button></td>
                         <td></td>
-                        <td><strong>Grand Total: {{grandTotal | currency: '&#8369;' : 'code'}}</strong></td>
-                        <td><button class="btn btn-success" type="button" routerLink="/checkout">Check_Out</button></td>
+                        <td></td>
+                        <td></td>
+                        <td><strong>Grand Total:</strong></td>
+                        <td><strong>{{grandTotal | currency: '&#8369;' : 'code'}}</strong></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td><button class="btn btn-danger" (click)="emptyCart()">Empty_Cart</button></td>
-                        <td></td>
+                        <td><button class="btn btn-primary" type="button" routerLink="/product">Shop_More</button></td>
+                        <td><button class="btn btn-success" type="button" routerLink="/checkout">Check_Out</button></td>
                     </tr>
                 </tbody>
             </table>
