@@ -54,6 +54,39 @@
       "mobilenumber": "09123456789",
       "role": "user",
       "id": 17
+    },
+    {
+      "username": "belle",
+      "password": "alohahello",
+      "firstname": "belle",
+      "middlename": "l",
+      "lastname": "lala",
+      "email": "jcruzem@gmail.com",
+      "mobilenumber": "09164567890",
+      "role": "user",
+      "id": 17
+    },
+    {
+      "username": "ab",
+      "password": "aloha",
+      "firstname": "anna",
+      "middlename": "r",
+      "lastname": "cruz",
+      "email": "carla@gmail.com",
+      "mobilenumber": "09164567890",
+      "role": "user",
+      "id": 18
+    },
+    {
+      "username": "jaz",
+      "password": "aloha",
+      "firstname": "belle",
+      "middlename": "ruz",
+      "lastname": "carla",
+      "email": "jcruzem@gmail.com",
+      "mobilenumber": "09164567890",
+      "role": "user",
+      "id": 19
     }
   ],
   "products": [
@@ -551,6 +584,66 @@
       "image": "assets/images/products/shoes/skechers/swirl.png",
       "totalItemSale": 0,
       "stock": 50
+    }
+  ],
+  "cart": [
+    {
+      "id": 2,
+      "username": "belle",
+      "password": "alohahello",
+      "orders": [],
+      "cartTotalQuantity": 0,
+      "grandTotal": 0
+    },
+    {
+      "id": 3,
+      "username": "ab",
+      "password": "aloha",
+      "orders": [
+        {
+          "id": 1,
+          "name": "Adidas",
+          "title": "SuperStar",
+          "price": 5300,
+          "description": "Originally designed to protect your toes, now a signature streetwear feature. Unmistakably adidas.",
+          "category": "adidas",
+          "image": "assets/images/products/shoes/adidas/superstar.png",
+          "itemQuantity": 3,
+          "itemTotalPrice": 15900
+        },
+        {
+          "id": 3,
+          "name": "Adidas",
+          "title": "NMD S1",
+          "price": 9000,
+          "description": "The supportive BOOST cushioning and sleek textile upper keep you comfy every step of the way.",
+          "category": "adidas",
+          "image": "assets/images/products/shoes/adidas/nmd_s1.png",
+          "itemQuantity": 1,
+          "itemTotalPrice": 9000
+        },
+        {
+          "id": 4,
+          "name": "Adidas",
+          "title": "Forum 84 Low AEC",
+          "price": 8000,
+          "description": "The premium leather upper is hand-treated and detailed with nylon and synthetic leather accents.",
+          "category": "adidas",
+          "image": "assets/images/products/shoes/adidas/forum84.png",
+          "itemQuantity": 1,
+          "itemTotalPrice": 8000
+        }
+      ],
+      "cartTotalQuantity": 5,
+      "grandTotal": 32900
+    },
+    {
+      "id": 4,
+      "username": "jaz",
+      "password": "aloha",
+      "orders": [],
+      "cartTotalQuantity": 0,
+      "grandTotal": 0
     }
   ]
 }

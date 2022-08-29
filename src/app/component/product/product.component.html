@@ -30,8 +30,7 @@
 <ng-container *ngIf="(filterByCategory | filter:searchKey:'title') as result">    
     <div class="card shadow-sm">
         <div class=" row" >
-
-            <ng-container *ngFor="let item of filterByCategory | filter:searchKey:'title' | pricefilter:[min, max] | sort:[SortbyParam, SortDirection]">
+            <ng-container *ngFor="let item of result | pricefilter:[min, max] | sort:[SortbyParam, SortDirection]">
                 <div class="card col-md-2">
 
                     <h4> {{item.name}}</h4>

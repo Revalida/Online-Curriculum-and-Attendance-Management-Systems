@@ -23,10 +23,10 @@
                         <td> {{item.price | currency: '&#8369;' : 'code'}} </td>
                         <td> 
                             <a id="minmax" type="button" class="btn" (click) = "dec(item)"><i class="fa fa-minus"></i></a>
-                            <input id="qty" type="number" min="1" [(ngModel)] = "item.quantity" (change)="updateQty(item)">               
+                            <input id="qty" type="number" min="1" [(ngModel)] = "item.itemQuantity"  (change)="updateQty(item)">               
                             <a id="minmax" type="button" class="btn" (click) = "inc(item)"><i class="fa fa-plus"></i></a>
                         </td>
-                        <td> {{item.total | currency: '&#8369;' : 'code'}} </td>
+                        <td> {{item.itemTotalPrice | currency: '&#8369;' : 'code'}} </td>
                         <td>
                             <button class="btn btn-danger" (click)="removeItem(item)"> <i class="fas fa-trash-alt"></i></button>
                         </td>

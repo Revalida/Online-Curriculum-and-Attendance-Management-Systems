@@ -10,15 +10,12 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
 
-  public totalItem : number = 0;
   public searchTerm: string = "";
 
   constructor(private cartService: CartService, public authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
-    this.cartService.getUniqueProducts().subscribe(data => {
-      this.totalItem = data.length;
-    });
+
   }
 
   search(event: any){
@@ -30,7 +27,6 @@ export class NavComponent implements OnInit {
     this.searchTerm = "";
   }
 
-  
   logout() {                            
     this.router.navigate(['/product']);
     localStorage.clear();
