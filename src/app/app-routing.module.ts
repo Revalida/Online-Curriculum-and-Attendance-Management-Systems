@@ -9,6 +9,7 @@ import { ForgotPasswordComponent } from './component/forgot-password/forgot-pass
 import { AcknowledgementComponent } from './component/acknowledgement/acknowledgement.component';
 
 import { CheckOutComponent } from './component/check-out/check-out.component';
+import { PendingOrderComponent } from './component/pending-orders/pending-order.component';
 
 
 const routes: Routes = [
@@ -48,7 +49,11 @@ const routes: Routes = [
 {
     path: "checkout",
     component: CheckOutComponent
-  },
+},
+{
+  path: "pendingpage",
+  component: PendingOrderComponent
+},
 ];
 
 @NgModule({

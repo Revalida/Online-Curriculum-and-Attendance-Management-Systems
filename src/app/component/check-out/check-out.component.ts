@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
 import { CartService } from 'src/app/service/cart.service';
 import { UserCartService } from 'src/app/service/userCart.service';
@@ -18,8 +19,8 @@ export class CheckOutComponent implements OnInit {
   public products: any = [];
   public grandTotal : number = 0;
   
-  constructor(private auth: AuthService, private http : HttpClient, 
-    private cartService: CartService, private userCart:UserCartService) { }
+  constructor(private auth: AuthService,private userCart:UserCartService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.city = this.auth.city();
@@ -35,8 +36,10 @@ export class CheckOutComponent implements OnInit {
   }
 
   placeOrder(){
-    console.log("Order")
+    this.router.navigate(['/pendingpage']);
   }
+
+
 
   save(){
     this.visibility = false;
