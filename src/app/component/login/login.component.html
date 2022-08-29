@@ -18,9 +18,6 @@
                             <label for="exampleInputPassword1">Password</label>
                             <input formControlName="password" [type]="changetype?'password':'text'" class="form-control"
                                 id="exampleInputPassword1" placeholder="Password">
-                            <span class="eye" (click)="viewpass()">
-                                <i [ngClass]="visible ? 'fa fa-eye' : 'fa fa-eye-slash'" id="hide1"></i>
-                            </span>
                             <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">Password is required</span>
                         </div>
                         <br>
