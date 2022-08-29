@@ -17,6 +17,21 @@ export class ApiService {
     }))
   }
 
+  postProduct(data : any){
+    return this.http.post<any>("http://localhost:3000/products" , data)
+    .pipe(map((res:any)=>{return res;}))
+  }
+
+  updateProduct(data : any , id : number){
+    return this.http.put<any>("http://localhost:3000/products/"+id , data)
+    .pipe(map((res:any)=>{return res}))
+  }
+  deleteProduct(id : number){
+    return this.http.delete<any>("http://localhost:3000/products/"+id)
+    .pipe(map((res:any)=>{return res}))
+  }
+
+
   postUser(data : any){
     return this.http.post<any>("http://localhost:3000/post" , data)
     .pipe(map((res:any)=>{return res;}))

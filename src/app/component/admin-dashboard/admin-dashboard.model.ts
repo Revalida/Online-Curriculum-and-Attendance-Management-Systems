@@ -10,4 +10,5 @@ export class EmployeeModel{
     password : string = '';
     mobilenumber : string = '';
     role :string = 'user'
+    status : string = 'activated'
 }

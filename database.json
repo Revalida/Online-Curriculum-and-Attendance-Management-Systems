@@ -1,38 +1,43 @@
 {
   "post": [
     {
-      "username": "chuapogi",
-      "password": "chuapogi",
+      "id": 14,
       "firstname": "edrick",
       "middlename": "chua",
       "lastname": "carreon",
+      "username": "admin",
       "email": "edrickpogi@gmail.com",
-      "mobilenumber": "1234567890",
+      "password": "user",
+      "mobilenumber": "09196719638",
       "role": "user",
-      "id": 14
+      "status": "activated"
     },
     {
+      "id": 1,
+      "firstname": "John Hedrick",
+      "middlename": "Magana",
+      "lastname": "Pontilla",
       "username": "admin",
+      "email": "pontzy@gmail.com",
       "password": "admin",
-      "firstname": "edrick",
-      "middlename": "chua",
-      "lastname": "carreon",
-      "email": "edrickpogi@gmail.com",
-      "mobilenumber": "12345678",
+      "mobilenumber": "09196719638",
       "role": "admin",
-      "id": 1
+      "status": "activated"
+    },
+    {
+      "username": "user",
+      "password": "user",
+      "firstname": "John",
+      "middlename": "FASDGAGA",
+      "lastname": "safafafa",
+      "email": "user@yahoo.com",
+      "mobilenumber": "09196719638",
+      "role": "user",
+      "status": "activated",
+      "id": 15
     }
   ],
   "products": [
-    {
-      "id": 1,
-      "name": "Adidas",
-      "title": "SuperStar",
-      "price": 5300,
-      "description": "Originally designed to protect your toes, now a signature streetwear feature. Unmistakably adidas.",
-      "category": "adidas",
-      "image": "assets/images/products/shoes/adidas/superstar.png"
-    },
     {
       "id": 2,
       "name": "Adidas",
