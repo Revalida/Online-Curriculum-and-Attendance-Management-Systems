@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
+
   data : boolean = false;
   constructor() {}
 
@@ -141,3 +142,4 @@ export class AuthService {
     ]
   }
 }
+

@@ -1,96 +1,45 @@
 {
   "post": [
     {
-      "username": "chuapogi",
-      "password": "chuapogi",
+      "id": 14,
       "firstname": "edrick",
       "middlename": "chua",
       "lastname": "carreon",
-      "email": "edrickpogi@gmail.com",
-      "mobilenumber": "1234567890",
-      "role": "user",
-      "id": 14
-    },
-    {
       "username": "admin",
+      "email": "edrickpogi@gmail.com",
+      "password": "user",
+      "mobilenumber": "09196719638",
+      "role": "user",
+      "status": "activated"
+    },
+    {
+      "id": 1,
+      "firstname": "John Hedrick",
+      "middlename": "Magana",
+      "lastname": "Pontilla",
+      "username": "admin",
+      "email": "pontzy@gmail.com",
       "password": "admin",
-      "firstname": "edrick",
-      "middlename": "chua",
-      "lastname": "carreon",
-      "email": "edrickpogi@gmail.com",
-      "mobilenumber": "12345678",
+      "mobilenumber": "09196719638",
       "role": "admin",
-      "id": 1
+      "status": "activated"
     },
     {
-      "username": "",
-      "password": "",
-      "firstname": "",
-      "middlename": "",
-      "lastname": "",
-      "email": "",
-      "mobilenumber": "",
+      "username": "user",
+      "password": "user",
+      "firstname": "John",
+      "middlename": "FASDGAGA",
+      "lastname": "safafafa",
+      "email": "user@yahoo.com",
+      "mobilenumber": "09196719638",
       "role": "user",
+      "status": "activated",
       "id": 15
-    },
-    {
-      "username": "jaz",
-      "password": "alohahello",
-      "firstname": "ja",
-      "middlename": "ruz",
-      "lastname": "cruz",
-      "email": "jcruzem@gmail.com",
-      "mobilenumber": "09164567890",
-      "role": "user",
-      "id": 16
-    },
-    {
-      "username": "edrickpogi",
-      "password": "edrickpogi",
-      "firstname": "edrick",
-      "middlename": "chua",
-      "lastname": "carreon",
-      "email": "edrickpogi@gmail.com",
-      "mobilenumber": "09123456789",
-      "role": "user",
-      "id": 17
-    },
-    {
-      "username": "belle",
-      "password": "alohahello",
-      "firstname": "belle",
-      "middlename": "l",
-      "lastname": "lala",
-      "email": "jcruzem@gmail.com",
-      "mobilenumber": "09164567890",
-      "role": "user",
-      "id": 17
-    },
-    {
-      "username": "ab",
-      "password": "aloha",
-      "firstname": "anna",
-      "middlename": "r",
-      "lastname": "cruz",
-      "email": "carla@gmail.com",
-      "mobilenumber": "09164567890",
-      "role": "user",
-      "id": 18
-    },
-    {
-      "username": "jaz",
-      "password": "aloha",
-      "firstname": "belle",
-      "middlename": "ruz",
-      "lastname": "carla",
-      "email": "jcruzem@gmail.com",
-      "mobilenumber": "09164567890",
-      "role": "user",
-      "id": 19
     }
   ],
   "products": [
     {
+
       "id": 1,
       "name": "Adidas",
       "title": "SuperStar",
