@@ -33,9 +33,10 @@
                   </select>
               </div>
           </div>
-          <button type="submit" class="btn btn-primary" (click) = save()>Save</button>  
+          <button type="submit" class="btn btn-primary" (click) = save()>Confirm</button>  
     </ng-container>
     <ng-container *ngIf="!visibility">
+        <h4>Delivery Information</h4>
         <h6>Full Name: {{fullname}}</h6>
         <h6>Mobile Number: {{mobile}}</h6>
         <h6>Address:{{address}}</h6>
@@ -64,8 +65,8 @@
                         <td> {{item.title}} </td>
                         <td> <img src="{{item.image}}" alt={{item.title}} height="100px" width="100px"> </td>
                         <td> {{item.price | currency: '&#8369;' : 'code'}} </td>
-                        <td>{{item.quantity}}</td>
-                        <td> {{item.total | currency: '&#8369;' : 'code'}} </td>
+                        <td>{{item.itemQuantity}}</td>
+                        <td> {{item.itemTotalPrice | currency: '&#8369;' : 'code'}} </td>
                     </tr>
                     <tr>
                         <td></td>

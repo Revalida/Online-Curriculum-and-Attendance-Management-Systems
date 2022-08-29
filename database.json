@@ -591,9 +591,43 @@
       "id": 2,
       "username": "belle",
       "password": "alohahello",
-      "orders": [],
-      "cartTotalQuantity": 0,
-      "grandTotal": 0
+      "orders": [
+        {
+          "id": 1,
+          "name": "Adidas",
+          "title": "SuperStar",
+          "price": 5300,
+          "description": "Originally designed to protect your toes, now a signature streetwear feature. Unmistakably adidas.",
+          "category": "adidas",
+          "image": "assets/images/products/shoes/adidas/superstar.png",
+          "itemQuantity": 1,
+          "itemTotalPrice": 5300
+        },
+        {
+          "id": 2,
+          "name": "Adidas",
+          "title": "Stan Smith",
+          "price": 5300,
+          "description": "Stan Smith logos on the tongue and heel tab are paired with perforated stripes.",
+          "category": "adidas",
+          "image": "assets/images/products/shoes/adidas/stansmith.png",
+          "itemQuantity": 1,
+          "itemTotalPrice": 5300
+        },
+        {
+          "id": 3,
+          "name": "Adidas",
+          "title": "NMD S1",
+          "price": 9000,
+          "description": "The supportive BOOST cushioning and sleek textile upper keep you comfy every step of the way.",
+          "category": "adidas",
+          "image": "assets/images/products/shoes/adidas/nmd_s1.png",
+          "itemQuantity": 1,
+          "itemTotalPrice": 9000
+        }
+      ],
+      "cartTotalQuantity": 3,
+      "grandTotal": 19600
     },
     {
       "id": 3,

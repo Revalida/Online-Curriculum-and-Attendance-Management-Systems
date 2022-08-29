@@ -26,6 +26,7 @@ import { AcknowledgementComponent } from './component/acknowledgement/acknowledg
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { CheckOutComponent } from './component/check-out/check-out.component';
 import { ProductAdminDashboardComponent } from './component/product-admin-dashboard/product-admin-dashboard.component';
+import { PendingOrderComponent } from './component/pending-orders/pending-order.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { ProductAdminDashboardComponent } from './component/product-admin-dashbo
     AcknowledgementComponent,
     NotFoundComponent,
     CheckOutComponent,
-    ProductAdminDashboardComponent
+    ProductAdminDashboardComponent,
+    PendingOrderComponent
   ],
   imports: [
     BrowserModule,
