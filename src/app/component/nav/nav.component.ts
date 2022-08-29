@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/service/cart.service';
+import { AuthService } from 'src/app/service/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -8,15 +10,12 @@ import { CartService } from 'src/app/service/cart.service';
 })
 export class NavComponent implements OnInit {
 
-  public totalItem : number = 0;
   public searchTerm: string = "";
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, public authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
-    this.cartService.getProducts().subscribe(data => {
-      this.totalItem = data.length;
-    });
+
   }
 
   search(event: any){
@@ -26,5 +25,10 @@ export class NavComponent implements OnInit {
 
   clear(){
     this.searchTerm = "";
+  }
+
+  logout() {                            
+    this.router.navigate(['/product']);
+    localStorage.clear();
   }
 }

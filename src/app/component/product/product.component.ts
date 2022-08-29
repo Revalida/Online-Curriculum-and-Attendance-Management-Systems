@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/service/api.service';
+import { AuthService } from 'src/app/service/auth.service';
 import { CartService } from 'src/app/service/cart.service';
 
 @Component({
@@ -18,16 +20,12 @@ export class ProductComponent implements OnInit {
   min = 0;
   max = 0;
 
-
-  constructor(private api: ApiService, private cartService: CartService) { }
+  constructor(private api: ApiService, private cartService: CartService, private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.api.getProducts().subscribe(data => {
       this.productList = data;
       this.filterByCategory = data;
-      this.productList.forEach((a: any) => {
-        Object.assign(a, {quantity:1, total: a.price});
-      });
     });
 
     this.cartService.search.subscribe((val: any) => {
@@ -36,7 +34,13 @@ export class ProductComponent implements OnInit {
   }
 
   addToCart(item: any){
-    this.cartService.addToCart(item);
+    console.log("productpage")
+    console.log(item)
+    if(this.authService.isLoggedIn()){
+      this.cartService.addToCart(item);
+    }else{
+      this.router.navigate(['/login']);
+    }
   }
 
   filter(category: string){

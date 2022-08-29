@@ -27,6 +27,7 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
 import { CheckOutComponent } from './component/check-out/check-out.component';
 import { ProductAdminDashboardComponent } from './component/product-admin-dashboard/product-admin-dashboard.component';
 import { HasRoleGuard } from './guard/has-role.guard';
+import { PendingOrderComponent } from './component/pending-orders/pending-order.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { HasRoleGuard } from './guard/has-role.guard';
     AcknowledgementComponent,
     NotFoundComponent,
     CheckOutComponent,
-    ProductAdminDashboardComponent
+    ProductAdminDashboardComponent,
+    PendingOrderComponent
   ],
   imports: [
     BrowserModule,

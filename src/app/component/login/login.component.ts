@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/service/auth.service';
+import { UserCartService } from 'src/app/service/userCart.service';
 
 @Component({
   selector: 'app-login',
@@ -15,11 +17,13 @@ export class LoginComponent implements OnInit {
   loading = false;
 
   loginForm !: FormGroup;
-  constructor(private formbuilder: FormBuilder, private http: HttpClient, private router: Router) { }
+  constructor(private formbuilder: FormBuilder, private http: HttpClient,
+    private router: Router, public authService: AuthService,
+    private userCartService: UserCartService) { }
 
   viewpass() {
-    this.visible != this.visible;
-    this.changetype != this.changetype;
+    this.visible = !this.visible;
+    this.changetype = !this.changetype;
   }
 
   ngOnInit(): void {
@@ -32,6 +36,8 @@ export class LoginComponent implements OnInit {
 
 
   login() {
+    const cartName = this.loginForm.value.username;
+    const cartPassword = this.loginForm.value.password;
     this.http.get<any>("http://localhost:3000/post")
       .subscribe(res => {
         const user = res.find((a: any) => {
@@ -49,13 +55,16 @@ export class LoginComponent implements OnInit {
         } else if (user && user.role === 'user') {
           if (user.status === 'activated') {
             this.loginForm.reset();
+            this.userCartService.loadUserCart(cartName, cartPassword),
             this.router.navigate(['product'])
+            localStorage.setItem('token', cartPassword+cartName)
           } else {
             alert("User deactivated!")
             this.loginForm.reset();
           }
         }
         else {
+
           alert("User not found!")
           this.loginForm.reset();
         }

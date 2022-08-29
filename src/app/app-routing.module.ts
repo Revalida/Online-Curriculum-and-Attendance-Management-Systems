@@ -12,6 +12,8 @@ import { CheckOutComponent } from './component/check-out/check-out.component';
 import { ProductAdminDashboardComponent } from './component/product-admin-dashboard/product-admin-dashboard.component';
 import { HasRoleGuard } from './guard/has-role.guard';
 import { ProfileComponent } from './component/profile/profile.component';
+import { PendingOrderComponent } from './component/pending-orders/pending-order.component';
+
 
 
 const routes: Routes = [
@@ -61,6 +63,11 @@ const routes: Routes = [
     path : "profile",
     component : ProfileComponent
   }
+},
+{
+  path: "pendingpage",
+  component: PendingOrderComponent
+},
 ];
 
 @NgModule({

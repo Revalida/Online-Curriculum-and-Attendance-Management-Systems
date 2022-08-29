@@ -5,17 +5,19 @@
           <img src="assets/images/cart/JHE.png" height="45px" alt="Logo">
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/product">JaHeEd Shopping</a>
+          <a class="nav-link active" width="10px" aria-current="page" href="/product">JaHeEd Shopping</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/product">Products</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="!authService.isLoggedIn()">
+          <a href="/login"></a></li> 
+        <li *ngIf="authService.isLoggedIn()" class="nav-item">
           <a routerLink="/cart" >
             <i class="fas fa-cart-plus"></i>
           </a>
-            <span><sup>{{totalItem}}</sup></span>
-        </li>        
+            <span id="qty"><sup>{{totalItem}}</sup></span>
+               </li> 
       </ul>
     </div>
   </header>

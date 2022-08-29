@@ -1,42 +1,62 @@
-<ng-container *ngIf="visibility">
-        <div class="mb-3">
-            <label for="fullname">Full Name</label><br/>
-            <input type="text" [(ngModel)]="fullname" id="fullname" aria-describedby="emailHelp">
-         </div>
-
-        <div class="form-group mb-3">
-          <div class="form-group mb-3">
-              <label for="mobilenumber">Mobile Number</label><br/>
-              <input type="text" [(ngModel)]="mobile" id="mobilenumber" aria-describedby="emailHelp">
+<div class="row">
+    <div class="col-md-2"><br>
+        <ng-container *ngIf="visibility">
+            <div class="mb-3">
+                <label for="fullname">Full Name</label><br/>
+                <input disabled placeholder="{{fullname}}" type="text" [(ngModel)]="fullname" id="fullname" aria-describedby="emailHelp">
+             </div>
+    
+            <div class="form-group mb-3">
+              <div class="form-group mb-3">
+                  <label for="mobilenumber">Mobile Number</label><br/>
+                  <input disabled placeholder="{{mobile}}" type="text" [(ngModel)]="mobile" id="mobilenumber" aria-describedby="emailHelp">
+              </div>
           </div>
-      </div>
-      <div class="form-group mb-3">
           <div class="form-group mb-3">
-              <label for="address">Complete Address</label><br/>
-              <input type="text" [(ngModel)]="address" id="address" aria-describedby="emailHelp">
+              <div class="form-group mb-3">
+                  <!-- <label for="address">Complete Address</label><br/>
+                  <input type="text" [(ngModel)]="address" id="address" aria-describedby="emailHelp"> -->
+                  <label for="city">House No</label><br>
+                  <input type="text" [(ngModel)]="address" id="houseno" aria-describedby="emailHelp">
+                  <label for="city">Street</label><br>
+                  <input type="text" [(ngModel)]="address" id="street" aria-describedby="emailHelp">
+                  <label for="city">City</label><br>
+                  <select (change)="onSelect($event)">
+                    <option>Select City</option>
+                    <option *ngFor="let cities of city" value="{{ cities.id }}">{{ cities.name }}</option>
+                  </select>
+                  <br>
+                  <label for="barangay">Barangay</label><br>
+                  <select>
+                    <option>Select Barangay</option>
+                    <option *ngFor="let barangays of barangay">{{ barangays.name }}</option>
+                  </select>
+              </div>
           </div>
-      </div>
-      <button type="submit" class="btn btn-primary" (click) = save()>Save</button>  
-</ng-container>
-<ng-container *ngIf="!visibility">
-    <h6>Full Name: {{fullname}}</h6>
-    <h6>Mobile Number: {{mobile}}</h6>
-    <h6>Address:{{address}}</h6>
-</ng-container>
-<br/>
-<h4>Order Lists</h4>
+          <button type="submit" class="btn btn-primary" (click) = save()>Confirm</button>  
+    </ng-container>
+    <ng-container *ngIf="!visibility">
+        <h4>Delivery Information</h4>
+        <h6>Full Name: {{fullname}}</h6>
+        <h6>Mobile Number: {{mobile}}</h6>
+        <h6>Address:{{address}}</h6>
+    </ng-container>
+    </div>
+  
+    <div class="col-md-10">
+        <h4>Order Lists</h4>
 <ng-container *ngIf="products.length != 0">
     <div class="card-table">
         <div class="cart-product">
-            <table class="table">
-                <thead>
+            <table class="tablecheck">
+                <thead class="tbhead">
                     <tr>
-                        <th scope="col"> Sr. No </th>
-                        <th scope="col"> Product Name </th>
-                        <th scope="col"> Product Image </th>
-                        <th scope="col"> Price </th>
-                        <th scope="col"> Quantity </th>
-                        <th scope="col"> Total </th>
+                        <th scope="col"> No &nbsp; &nbsp; </th>
+                        <th scope="col"> Product Name &nbsp; </th>
+                        <th scope="col"> Product Image &nbsp;</th>
+                        <th scope="col"> Price &nbsp; </th>
+                        <th scope="col"> Quantity &nbsp;</th>
+                        <th scope="col"> Total &nbsp;</th>
                     </tr>
                 </thead>
                 <tbody>  
@@ -45,16 +65,29 @@
                         <td> {{item.title}} </td>
                         <td> <img src="{{item.image}}" alt={{item.title}} height="100px" width="100px"> </td>
                         <td> {{item.price | currency: '&#8369;' : 'code'}} </td>
-                        <td>{{item.quantity}}</td>
-                        <td> {{item.total | currency: '&#8369;' : 'code'}} </td>
+                        <td>{{item.itemQuantity}}</td>
+                        <td> {{item.itemTotalPrice | currency: '&#8369;' : 'code'}} </td>
                     </tr>
                     <tr>
-                        <td><strong>Grand Total: {{grandTotal | currency: '&#8369;' : 'code'}}</strong></td>
-                        <td><button class="btn btn-danger" (click)="placeOrder()">Place Order</button></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><strong>Grand Total:</strong></td>
+                        <td><strong> {{grandTotal | currency: '&#8369;' : 'code'}}</strong></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="btn btn-primary" (click)="placeOrder()">Place Order</button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </ng-container>
-
+    </div>
+</div>
