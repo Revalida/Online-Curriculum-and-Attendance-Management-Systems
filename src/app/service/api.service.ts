@@ -17,6 +17,18 @@ export class ApiService {
     }))
   }
 
+  updateProducts(id : number, product : any) : Observable<any>{
+    return this.http.put<any>(`${environment.url}/products/${id}`, product).pipe(map((data:any) => {
+      return data;
+    }))
+  }
+
+  updateUserCart(product: any, id: number){
+    this.http.put<any>(`${environment.url}/cart/${id}` , product).subscribe(res => {
+      console.log(res)}, err=>{alert("Something went wrong!")
+    });
+  }
+
   postUser(data : any){
     return this.http.post<any>("http://localhost:3000/post" , data)
     .pipe(map((res:any)=>{return res;}))

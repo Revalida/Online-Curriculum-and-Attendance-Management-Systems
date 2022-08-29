@@ -20,16 +20,12 @@ export class ProductComponent implements OnInit {
   min = 0;
   max = 0;
 
-
   constructor(private api: ApiService, private cartService: CartService, private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.api.getProducts().subscribe(data => {
       this.productList = data;
       this.filterByCategory = data;
-      this.productList.forEach((a: any) => {
-        Object.assign(a, {quantity:1, total: a.price, orderNo:0});
-      });
     });
 
     this.cartService.search.subscribe((val: any) => {

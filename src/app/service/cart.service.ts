@@ -2,130 +2,164 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { UserCartService } from './userCart.service';
+import { ApiService } from './api.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  public cartItemList: any = [];
-  public productList = new BehaviorSubject<any>([]);
+  
+  public orderNumberSubject = new BehaviorSubject<number>(0)
   public search = new BehaviorSubject<string>("");
-  public uniqueItems: any = this.getCartFromLocalStorage();;
-  public uniqueProductList = new BehaviorSubject<any>([]);
-  public orderNumber: number = 0;
-  public orderNumberSubject = new BehaviorSubject<number>(this.orderNumber)
+  public OrderProduct: any = {}
 
-  constructor(private http: HttpClient) {
-    // this.uniqueItems = this.getCartFromLocalStorage();
-    // this.uniqueProductList.next(this.uniqueItems);
+  constructor(private http: HttpClient, private userCartService: UserCartService,
+    private apiService: ApiService) {}
+
+  ngOnInIt(): void{
+
   }
 
-  addToCart(product: any){
-    console.log("product")
-    console.log(product)
-    console.log("uniqueItem")
-    console.log(this.uniqueItems)
-    this.orderNumber++
+  addToCart(product : any){
     product.stock--;
     product.totalItemSale++; 
-    if(this.uniqueItems.includes(product)){
-      console.log("includes")
-      product.quantity++;
-      product.total = product.price * product.quantity;    
-    }else{
-      this.uniqueItems.push(product);
-      this.uniqueProductList.next(this.uniqueItems);
-      this.http.post(`${environment.url}/cart`, {product});
-    }
-    console.log(this.uniqueItems)
-    this.cartItemList.push(product);
-    this.productList.next(this.cartItemList);
-    this.orderNumberSubject.next(this.orderNumber);
+    let status = "";
+    let index = 0;
+    // let orderProduct: any;
+    this.userCartService.getUserCart().subscribe((data:any) => {
+      let item = data;
+      item.cartTotalQuantity = data.cartTotalQuantity + 1;
+      item.grandTotal += product.price; 
+      if(Object.keys(data.orders).length>0){  
+        for(let a of data.orders){
+          if(a.id === product.id){
+            status = "existing"
+            this.OrderProduct = this.updateOrderProduct(a, 1);
+            index = item.orders.indexOf(a);
+            break;
+          }else{
+            status = "new";
+            this.OrderProduct = this.addNewOrderProduct(product);
+          }  
+        }
+      }else{
+        this.OrderProduct = this.addNewOrderProduct(product);
+        item.grandTotal = product.price;
+      }
+
+      if(status === "existing"){
+        item.orders.splice(index,1, this.OrderProduct)
+      }else{
+        item.orders.push(this.OrderProduct)
+      }
+      
+      this.apiService.updateUserCart(item, data.id)
+      this.orderNumberSubject.next(item.cartTotalQuantity);
+    })
     this.setCartToLocalStorage();
   }
 
-  getUniqueProducts(){
-    return this.uniqueProductList.asObservable();
+  updateOrderProduct(product: any, factor: number){
+    let orderProduct = {
+      id: product.id,
+      name: product.name,
+      title: product.title,
+      price: product.price,
+      description: product.description,
+      category: product.category,
+      image: product.image,
+      itemQuantity: product.itemQuantity + factor,
+      itemTotalPrice: product.price * (product.itemQuantity + factor),
+    }
+    return orderProduct;
   }
 
-  setUniqueProducts(){
-
-  }
-
-  // getProducts(){
-  //   return this.uniqueProductList.asObservable();
-  // }
-
-  getTotalPrice(): number{
-    let grandTotal = 0;
-    this.uniqueItems.map((a: any) => {
-      grandTotal += a.price * a.quantity;
-    })
-    return grandTotal;
+  addNewOrderProduct(product: any){
+    let orderProduct = {
+      id: product.id,
+      name: product.name,
+      title: product.title,
+      price: product.price,
+      description: product.description,
+      category: product.category,
+      image: product.image,
+      itemQuantity: 1,
+      itemTotalPrice: product.price,
+    }
+    return orderProduct;
   }
 
   removeCartItem(product: any){
-    this.orderNumber = this.orderNumber - product.quantity
-    product.stock = product.stock + product.quantity;
-    product.totalItemSale = product.totalItemSale - product.quantity; 
-    this.uniqueItems.splice(this.uniqueItems.indexOf(product),1);
-    this.uniqueProductList.next(this.uniqueItems);
+    this.userCartService.getUserCart().subscribe((data:any) => {
+      let item = data;
+      // let orderProduct: any;
+      for(let a of data.orders){
+        if(a.id === product.id){
+         item.grandTotal -= a.itemTotalPrice;
+         this.OrderProduct = this.updateOrderProduct(a, -(a.itemQuantity)); 
+         product.stock = product.stock + a.itemQuantity;
+         product.totalItemSale = product.totalItemSale - a.itemQuantity; 
+         item.cartTotalQuantity = data.cartTotalQuantity - a.itemQuantity;   
+         item.orders.splice(item.orders.indexOf(a), 1)
+        }
+      }
+      this.apiService.updateUserCart(item, data.id)
+      this.orderNumberSubject.next(item.cartTotalQuantity);
+    })
     this.setCartToLocalStorage();
-    console.log(this.uniqueItems)
-    this.orderNumberSubject.next(this.orderNumber);
+    // this.updateProductApi(product.productid, product)
   }
 
   emptyCart(){
-    let x = 0;
-    while(this.uniqueItems.length>0){
-      this.removeCartItem(this.uniqueItems[x])
-    }
-    console.log(this.uniqueItems)
-    // this.uniqueItems = [];
-    // this.uniqueProductList.next(this.uniqueItems);
-    // this.setCartToLocalStorage();
+    let productQuantity = 0;
+    this.userCartService.getUserCart().subscribe((data:any) => {
+      data.orders.map((a:any) => {
+      })
+      data.orders = [];
+      data.cartTotalQuantity = 0;
+      data.grandTotal = 0; 
+      this.apiService.updateUserCart(data, data.id)
+      this.orderNumberSubject.next(data.cartTotalQuantity);
+      this.setCartToLocalStorage();
+    })
   }
 
   minusToCart(product: any){
-    this.uniqueItems.map((a: any, index:any) => {
-      if(a.id === product.id){
-        a.quantity = a.quantity - 1;
-        a.total = a.price * a.quantity;
-      }
+    product.stock++;
+    product.totalItemSale--;
+    // let orderProduct: any;
+    this.userCartService.getUserCart().subscribe((data:any) => {
+      let item = data;
+      item.cartTotalQuantity = data.cartTotalQuantity - 1;
+      item.grandTotal -= product.price; 
+      data.orders.map((a: any) => {
+        if(a.id === product.id){
+          item.orders.itemQuantity = a.itemQuantity - 1;
+          item.orders.itemTotalPrice = product.price*a.itemQuantity;
+          this.OrderProduct = this.updateOrderProduct(a, -1);
+          item.orders.splice(item.orders.indexOf(a),1, this.OrderProduct)
+        }
+      })
+    this.apiService.updateUserCart(item, data.id)
+    this.orderNumberSubject.next(item.cartTotalQuantity);
     })
-    this.orderNumber = this.orderNumber - 1;
-    product.stock = product.stock + 1;
-    product.totalItemSale = product.totalItemSale - 1; 
-    this.uniqueProductList.next(this.uniqueItems);
-    this.orderNumberSubject.next(this.orderNumber);
     this.setCartToLocalStorage();
   }
 
+  getTotalCount(){
+    return this.orderNumberSubject.asObservable();
+  }
+
   private setCartToLocalStorage(): void{
-    const cartJson = JSON.stringify(this.uniqueItems);
-    localStorage.setItem('Cart', cartJson)
+    // const cartJson = JSON.stringify(this.cartProducts);
+    // localStorage.setItem('Cart', cartJson)
   }
 
   private getCartFromLocalStorage(): void{
     const cartJson = localStorage.getItem('Cart');
     return cartJson? JSON.parse(cartJson) : [];
-  }
-
-  // getCart(){
-  //   return this.uniqueProductList.value;
-  // }
-
-  // getTotalCount(){
-  //   let grandTotalCount = 0;
-  //   this.uniqueItems.map((a: any) => {
-  //     grandTotalCount += a.quantity;
-  //     console.log(grandTotalCount)
-  //   })
-  //   return grandTotalCount;
-  // }
-  getTotalCount(){
-    return this.orderNumberSubject.asObservable();
   }
 }
 

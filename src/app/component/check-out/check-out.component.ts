@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/service/auth.service';
 import { CartService } from 'src/app/service/cart.service';
+import { UserCartService } from 'src/app/service/userCart.service';
 
 @Component({
   selector: 'app-check-out',
@@ -17,16 +18,12 @@ export class CheckOutComponent implements OnInit {
   public products: any = [];
   public grandTotal : number = 0;
   
-  constructor(private auth: AuthService, private http : HttpClient, private cartService: CartService) { }
+  constructor(private auth: AuthService, private http : HttpClient, 
+    private cartService: CartService, private userCart:UserCartService) { }
 
   ngOnInit(): void {
     this.city = this.auth.city();
-    this.cartService.getUniqueProducts()
-    .subscribe((data:any) => {
-      console.log(data)
-      this.products = data;
-      this.grandTotal = this.cartService.getTotalPrice();
-    });
+    this.setCartDetails();
   }
   city:any=[];
   barangay:any=[];
@@ -43,5 +40,12 @@ export class CheckOutComponent implements OnInit {
 
   save(){
     this.visibility = false;
+  }
+
+  setCartDetails(){
+    this.userCart.getUserCart().subscribe((data:any) => {
+      this.grandTotal = data.grandTotal;
+      this.products = data.orders
+    })
   }
 }
