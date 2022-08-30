@@ -3,6 +3,7 @@
         <h1>Admin Dashboard</h1>
         <div class="d-flex">
             <button (click)="clickAddUser()" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Add User</button>
+            <button  routerLink="../product-admin-dashboard" type="button" class="btn btn-success">All Products</button>
         </div>
     </div>
 </nav>
@@ -29,7 +30,8 @@
             
             <td>
                 <button (click)="onEdit(data)" class="btn btn-info" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
-                <button (click)="deleteUser(data)" class="btn btn-danger mx-3">Deactivate</button>
+                <button *ngIf="showDeactivate" (click)="onUpdate(data)" class="btn btn-danger mx-3" data-bs-toggle="modal" data-bs-target="#deactivateModal">Deactivate</button>
+                <button *ngIf="showActivate"  (click)="onUpdate(data)" class="btn btn-danger mx-3" data-bs-toggle="modal" data-bs-target="#activateModal">Activate</button>
             </td>
         </tr>
     </tbody>
@@ -49,15 +51,6 @@
 
         <div class="modal-body">
             <form [formGroup]="formValue">
-                <div class="form-group mb-3">
-                  <label for="exampleInputUsername1">Username</label>
-                  <input type="text" formControlName="username" class="form-control" id="exampleInputUsername1" aria-describedby="emailHelp" placeholder="Username">
-                </div>
-                
-                <div class="form-group mb-3">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
                 <div class="form-group mb-3">
                     <label for="exampleInputFirstName1">First Name</label>
                     <input type="text" formControlName="firstname" class="form-control" id="exampleInputFirstName1" aria-describedby="emailHelp" placeholder="First Name">
@@ -84,3 +77,55 @@
       </div>
     </div>
   </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="deactivateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Deactivate Confirmation</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+
+        <div class="modal-body">
+                <div class="form-group mb-3">
+                    <label for="exampleInputFirstName1">Are you sure you want to deactivate this user?</label>
+                 </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button (click)="updateUserStatus()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Modal -->
+   <div class="modal fade" id="activateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Deactivate Confirmation</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+
+        <div class="modal-body">
+                <div class="form-group mb-3">
+                    <label for="exampleInputFirstName1">Are you sure you want to reactivate this user?</label>
+                 </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button (click)="activateStatus()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

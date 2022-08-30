@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminDashboardComponent } from './component/admin-dashboard/admin-dashboard.component';
 import { CartComponent } from './component/cart/cart.component';
@@ -9,7 +9,11 @@ import { ForgotPasswordComponent } from './component/forgot-password/forgot-pass
 import { AcknowledgementComponent } from './component/acknowledgement/acknowledgement.component';
 
 import { CheckOutComponent } from './component/check-out/check-out.component';
+import { ProductAdminDashboardComponent } from './component/product-admin-dashboard/product-admin-dashboard.component';
+import { HasRoleGuard } from './guard/has-role.guard';
+import { ProfileComponent } from './component/profile/profile.component';
 import { PendingOrderComponent } from './component/pending-orders/pending-order.component';
+
 
 
 const routes: Routes = [
@@ -20,7 +24,8 @@ const routes: Routes = [
   },
   {
     path: "product",
-    component: ProductComponent
+    component: ProductComponent,
+    canActivate: [HasRoleGuard]
   },
   {
     path: "cart",
@@ -32,7 +37,7 @@ const routes: Routes = [
   },
   {
     path: "login",
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: "signup",
@@ -49,7 +54,15 @@ const routes: Routes = [
 {
     path: "checkout",
     component: CheckOutComponent
-},
+  },
+  {
+    path: "product-admin-dashboard",
+    component: ProductAdminDashboardComponent
+  },
+  {
+    path : "profile",
+    component : ProfileComponent
+  },
 {
   path: "pendingpage",
   component: PendingOrderComponent

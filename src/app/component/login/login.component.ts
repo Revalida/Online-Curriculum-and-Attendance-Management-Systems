@@ -13,7 +13,7 @@ import { UserCartService } from 'src/app/service/userCart.service';
 export class LoginComponent implements OnInit {
   visible: boolean = true;
   changetype: boolean = true;
-  submitted:boolean = false;
+  submitted: boolean = false;
   loading = false;
 
   loginForm !: FormGroup;
@@ -28,8 +28,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.formbuilder.group({
-      username: ['',Validators.required],
-      password: ['',Validators.required]
+      username: ['', Validators.required],
+      password: ['', Validators.required]
     })
   }
 
@@ -43,23 +43,31 @@ export class LoginComponent implements OnInit {
             a.password === this.loginForm.value.password
         });
         if (user && user.role === 'admin') {
+          if (user.status === 'activated') {
             this.loginForm.reset();
             this.router.navigate(['admin-dashboard'])
-            console.log(user.role)
-        }else if(user && user.role === 'user'){
-          this.loginForm.reset();
-          console.log(user.role)
-          this.userCartService.loadUserCart(cartName, cartPassword),
-          localStorage.setItem('token', cartPassword+cartName)
-          this.router.navigate(['product'])
-        } 
-        else{
+          } else {
+            alert("User deactivated!")
+            this.loginForm.reset();
+          }
+        } else if (user && user.role === 'user') {
+          if (user.status === 'activated') {
+            this.loginForm.reset();
+            this.userCartService.loadUserCart(cartName, cartPassword),
+            localStorage.setItem('token', cartPassword+cartName)
+		this.router.navigate(['product'])
+          } else {
+            alert("User deactivated!")
+            this.loginForm.reset();
+          }
+        }
+        else {
+
           alert("User not found!")
-          console.log(user.role)
+          this.loginForm.reset();
         }
       }, err => {
         alert("Something went wrong!")
         this.loading = false;
       })
   }
-}
