@@ -33,6 +33,35 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  // login() {
+  //   const cartName = this.loginForm.value.username;
+  //   const cartPassword = this.loginForm.value.password;
+  //   this.http.get<any>("http://localhost:3000/post")
+  //     .subscribe(res => {
+  //       const user = res.find((a: any) => {
+  //         return a.username === this.loginForm.value.username &&
+  //           a.password === this.loginForm.value.password
+  //       });
+  //       if (user && user.role === 'admin') {
+  //           this.loginForm.reset();
+  //           this.router.navigate(['admin-dashboard'])
+  //           console.log(user.role)
+  //       }else if(user && user.role === 'user'){
+  //         this.loginForm.reset();
+  //         console.log(user.role)
+  //         this.userCartService.loadUserCart(cartName, cartPassword),
+  //         localStorage.setItem('token', cartPassword+cartName)
+  //         this.router.navigate(['product'])
+  //       } 
+  //       else{
+  //         alert("User not found!")
+  //         console.log(user.role)
+  //       }
+  //     }, err => {
+  //       alert("Something went wrong!")
+  //       this.loading = false;
+  //     })
+  // }
   login() {
     const cartName = this.loginForm.value.username;
     const cartPassword = this.loginForm.value.password;
@@ -43,19 +72,28 @@ export class LoginComponent implements OnInit {
             a.password === this.loginForm.value.password
         });
         if (user && user.role === 'admin') {
+          if (user.status === 'activated') {
             this.loginForm.reset();
             this.router.navigate(['admin-dashboard'])
-            console.log(user.role)
-        }else if(user && user.role === 'user'){
-          this.loginForm.reset();
-          console.log(user.role)
-          this.userCartService.loadUserCart(cartName, cartPassword),
-          localStorage.setItem('token', cartPassword+cartName)
-          this.router.navigate(['product'])
-        } 
-        else{
+          } else {
+            alert("User deactivated!")
+            this.loginForm.reset();
+          }
+        } else if (user && user.role === 'user') {
+          if (user.status === 'activated') {
+            this.loginForm.reset();
+            this.userCartService.loadUserCart(cartName, cartPassword),
+            localStorage.setItem('token', cartPassword+cartName)
+		        this.router.navigate(['product'])
+          } else {
+            alert("User deactivated!")
+            this.loginForm.reset();
+          }
+        }
+        else {
+
           alert("User not found!")
-          console.log(user.role)
+          this.loginForm.reset();
         }
       }, err => {
         alert("Something went wrong!")
