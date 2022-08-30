@@ -22,7 +22,6 @@ import { ForgotPasswordComponent } from './component/forgot-password/forgot-pass
 
 import { PriceFilterPipe } from './filter/pricefilter.pipe';
 
-import { AcknowledgementComponent } from './component/acknowledgement/acknowledgement.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { CheckOutComponent } from './component/check-out/check-out.component';
 import { ProductAdminDashboardComponent } from './component/product-admin-dashboard/product-admin-dashboard.component';
@@ -48,7 +47,6 @@ import { PendingOrderComponent } from './component/pending-orders/pending-order.
     HomeComponent,
     ProfileComponent,
     ForgotPasswordComponent,
-    AcknowledgementComponent,
     NotFoundComponent,
     CheckOutComponent,
     ProductAdminDashboardComponent,

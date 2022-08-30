@@ -6,7 +6,6 @@ import { ProductComponent } from './component/product/product.component';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
-import { AcknowledgementComponent } from './component/acknowledgement/acknowledgement.component';
 
 import { CheckOutComponent } from './component/check-out/check-out.component';
 import { ProductAdminDashboardComponent } from './component/product-admin-dashboard/product-admin-dashboard.component';
@@ -48,10 +47,6 @@ const routes: Routes = [
     component: ForgotPasswordComponent
   },
   {
-    path: "acknowledgement",
-    component: AcknowledgementComponent
-},
-{
     path: "checkout",
     component: CheckOutComponent
   },
@@ -60,14 +55,13 @@ const routes: Routes = [
     component: ProductAdminDashboardComponent
   },
   {
-    path : "profile",
-    component : ProfileComponent
-  }
-},
-{
-  path: "pendingpage",
-  component: PendingOrderComponent
-},
+    path: "profile",
+    component: ProfileComponent
+  },
+  {
+    path: "pendingpage",
+    component: PendingOrderComponent
+  },
 ];
 
 @NgModule({
