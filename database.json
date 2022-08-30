@@ -1,40 +1,48 @@
 {
   "post": [
     {
-      "id": 14,
+      "username": "admin",
+      "password": "admin",
       "firstname": "edrick",
       "middlename": "chua",
       "lastname": "carreon",
-      "username": "admin",
       "email": "edrickpogi@gmail.com",
-      "password": "user",
-      "mobilenumber": "09196719638",
-      "role": "user",
-      "status": "activated"
-    },
-    {
-      "id": 1,
-      "firstname": "John Hedrick",
-      "middlename": "Magana",
-      "lastname": "Pontilla",
-      "username": "admin",
-      "email": "pontzy@gmail.com",
-      "password": "admin",
-      "mobilenumber": "09196719638",
+      "mobilenumber": "12345678",
       "role": "admin",
-      "status": "activated"
+      "id": 1
     },
     {
-      "username": "user",
-      "password": "user",
-      "firstname": "John",
-      "middlename": "FASDGAGA",
-      "lastname": "safafafa",
-      "email": "user@yahoo.com",
-      "mobilenumber": "09196719638",
+      "username": "chuapogi",
+      "password": "chuapogi",
+      "firstname": "edrick",
+      "middlename": "chua",
+      "lastname": "carreon",
+      "email": "edrickpogi@gmail.com",
+      "mobilenumber": "1234567890",
       "role": "user",
-      "status": "activated",
-      "id": 15
+      "id": 2
+    },
+    {
+      "username": "edrickpogi",
+      "password": "edrickpogi",
+      "firstname": "edrick",
+      "middlename": "chua",
+      "lastname": "carreon",
+      "email": "edrickpogi@gmail.com",
+      "mobilenumber": "09123456789",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "username": "belle",
+      "password": "alohahello",
+      "firstname": "belle",
+      "middlename": "l",
+      "lastname": "lala",
+      "email": "jcruzem@gmail.com",
+      "mobilenumber": "09164567890",
+      "role": "user",
+      "id": 4
     }
   ],
   "products": [
@@ -536,7 +544,7 @@
   ],
   "cart": [
     {
-      "id": 2,
+      "id": 1,
       "username": "belle",
       "password": "alohahello",
       "orders": [
@@ -548,8 +556,8 @@
           "description": "Originally designed to protect your toes, now a signature streetwear feature. Unmistakably adidas.",
           "category": "adidas",
           "image": "assets/images/products/shoes/adidas/superstar.png",
-          "itemQuantity": 1,
-          "itemTotalPrice": 5300
+          "itemQuantity": 2,
+          "itemTotalPrice": 10600
         },
         {
           "id": 2,
@@ -570,39 +578,8 @@
           "description": "The supportive BOOST cushioning and sleek textile upper keep you comfy every step of the way.",
           "category": "adidas",
           "image": "assets/images/products/shoes/adidas/nmd_s1.png",
-          "itemQuantity": 1,
-          "itemTotalPrice": 9000
-        }
-      ],
-      "cartTotalQuantity": 3,
-      "grandTotal": 19600
-    },
-    {
-      "id": 3,
-      "username": "ab",
-      "password": "aloha",
-      "orders": [
-        {
-          "id": 1,
-          "name": "Adidas",
-          "title": "SuperStar",
-          "price": 5300,
-          "description": "Originally designed to protect your toes, now a signature streetwear feature. Unmistakably adidas.",
-          "category": "adidas",
-          "image": "assets/images/products/shoes/adidas/superstar.png",
-          "itemQuantity": 3,
-          "itemTotalPrice": 15900
-        },
-        {
-          "id": 3,
-          "name": "Adidas",
-          "title": "NMD S1",
-          "price": 9000,
-          "description": "The supportive BOOST cushioning and sleek textile upper keep you comfy every step of the way.",
-          "category": "adidas",
-          "image": "assets/images/products/shoes/adidas/nmd_s1.png",
-          "itemQuantity": 1,
-          "itemTotalPrice": 9000
+          "itemQuantity": 2,
+          "itemTotalPrice": 18000
         },
         {
           "id": 4,
@@ -616,16 +593,8 @@
           "itemTotalPrice": 8000
         }
       ],
-      "cartTotalQuantity": 5,
-      "grandTotal": 32900
-    },
-    {
-      "id": 4,
-      "username": "jaz",
-      "password": "aloha",
-      "orders": [],
-      "cartTotalQuantity": 0,
-      "grandTotal": 0
+      "cartTotalQuantity": 6,
+      "grandTotal": 41900
     }
   ]
 }

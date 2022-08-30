@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/service/cart.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { Router } from '@angular/router';
+import { UserCartService } from 'src/app/service/userCart.service';
 
 @Component({
   selector: 'app-nav',
@@ -11,11 +12,13 @@ import { Router } from '@angular/router';
 export class NavComponent implements OnInit {
 
   public searchTerm: string = "";
+  public username : string = "";
 
-  constructor(private cartService: CartService, public authService: AuthService, private router: Router) { }
+  constructor(private cartService: CartService, public authService: AuthService, 
+    private router: Router, private userCartService: UserCartService) { }
 
   ngOnInit(): void {
-
+    this.getUserName();
   }
 
   search(event: any){
@@ -30,5 +33,11 @@ export class NavComponent implements OnInit {
   logout() {                            
     this.router.navigate(['/product']);
     localStorage.clear();
+  }
+
+  getUserName(){
+    this.userCartService.getUserCart().subscribe((data:any) => {
+      this.username = data.username
+    })
   }
 }

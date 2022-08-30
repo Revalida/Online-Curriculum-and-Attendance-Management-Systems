@@ -18,6 +18,7 @@ export class CartComponent implements OnInit {
     private apiService: ApiService, private userCart:UserCartService) { }
 
   ngOnInit(): void {
+    
     this.setCartDetails();
   }
 
@@ -70,16 +71,15 @@ export class CartComponent implements OnInit {
           x.grandTotal += a.itemTotalPrice 
       })
       this.apiService.updateUserCart(x, x.id)
-      this.cartService.orderNumberSubject.next(x.cartTotalQuantity);
     })
     this.setCartDetails();
   }
 }
 
   setCartDetails(){
-    this.userCart.getUserCart().subscribe((data:any) => {
+      this.userCart.getUserCart().subscribe((data:any) => {
       this.grandTotal = data.grandTotal;
-      this.products = data.orders
+      this.products = data
     })
   }
 }

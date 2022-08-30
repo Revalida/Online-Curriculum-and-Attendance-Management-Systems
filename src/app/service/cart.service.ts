@@ -1,25 +1,25 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 import { UserCartService } from './userCart.service';
 import { ApiService } from './api.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  
-  public orderNumberSubject = new BehaviorSubject<number>(0)
+  public orderNumber = this.getCartFromLocalStoragecartTotalItem()
+  public orderNumberSubject = new BehaviorSubject<number>(this.orderNumber)
   public search = new BehaviorSubject<string>("");
   public OrderProduct: any = {}
+
 
   constructor(private http: HttpClient, private userCartService: UserCartService,
     private apiService: ApiService) {}
 
   ngOnInIt(): void{
-
   }
 
   addToCart(product : any){
@@ -27,7 +27,6 @@ export class CartService {
     product.totalItemSale++; 
     let status = "";
     let index = 0;
-    // let orderProduct: any;
     this.userCartService.getUserCart().subscribe((data:any) => {
       let item = data;
       item.cartTotalQuantity = data.cartTotalQuantity + 1;
@@ -54,7 +53,6 @@ export class CartService {
       }else{
         item.orders.push(this.OrderProduct)
       }
-      
       this.apiService.updateUserCart(item, data.id)
       this.orderNumberSubject.next(item.cartTotalQuantity);
     })
@@ -94,7 +92,6 @@ export class CartService {
   removeCartItem(product: any){
     this.userCartService.getUserCart().subscribe((data:any) => {
       let item = data;
-      // let orderProduct: any;
       for(let a of data.orders){
         if(a.id === product.id){
          item.grandTotal -= a.itemTotalPrice;
@@ -129,7 +126,6 @@ export class CartService {
   minusToCart(product: any){
     product.stock++;
     product.totalItemSale--;
-    // let orderProduct: any;
     this.userCartService.getUserCart().subscribe((data:any) => {
       let item = data;
       item.cartTotalQuantity = data.cartTotalQuantity - 1;
@@ -152,14 +148,27 @@ export class CartService {
     return this.orderNumberSubject.asObservable();
   }
 
-  private setCartToLocalStorage(): void{
-    // const cartJson = JSON.stringify(this.cartProducts);
-    // localStorage.setItem('Cart', cartJson)
+  setCartToLocalStorage(): void{
+    this.userCartService.getUserCart().subscribe((data:any) => {
+      const cartJson = JSON.stringify(data);
+      localStorage.setItem('Cart', cartJson)
+      const cartTotalItem = JSON.stringify(data.cartTotalQuantity);
+      localStorage.setItem('CartTotalItem', cartTotalItem)
+    })
+    // this.cartProductsSubject.next(this.cartProducts);
+  }
+  getCartFromLocalStoragecartTotalItem(){
+    const cartTotalItem = localStorage.getItem('CartTotalItem');
+    return cartTotalItem? JSON.parse(cartTotalItem) : [];
   }
 
-  private getCartFromLocalStorage(): void{
-    const cartJson = localStorage.getItem('Cart');
-    return cartJson? JSON.parse(cartJson) : [];
-  }
+  // getCartFromLocalStorage(){
+  //   const cartJson = localStorage.getItem('Cart');
+  //   return cartJson? JSON.parse(cartJson) : [];
+  // }
+
+  // getCartObservable(): Observable<any>{
+  //   return this.cartProductsSubject.asObservable();
+  // }
 }
 

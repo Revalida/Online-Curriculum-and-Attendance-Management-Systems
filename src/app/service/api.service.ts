@@ -9,7 +9,8 @@ import { environment } from 'src/environments/environment';
 })
 export class ApiService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {  
+  }
 
   getProducts() : Observable<any>{
     return this.http.get<any>(`${environment.url}/products`).pipe(map((data:any) => {

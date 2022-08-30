@@ -55,13 +55,13 @@ const routes: Routes = [
     component: ProductAdminDashboardComponent
   },
   {
-    path: "profile",
-    component: ProfileComponent
+    path : "profile",
+    component : ProfileComponent
   },
-  {
-    path: "pendingpage",
-    component: PendingOrderComponent
-  },
+{
+  path: "pendingpage",
+  component: PendingOrderComponent
+}
 ];
 
 @NgModule({
