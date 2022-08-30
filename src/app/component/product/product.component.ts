@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ApiService } from 'src/app/service/api.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { CartService } from 'src/app/service/cart.service';
+import { UserCartService } from 'src/app/service/userCart.service';
 
 @Component({
   selector: 'app-product',
@@ -19,8 +20,10 @@ export class ProductComponent implements OnInit {
   public filterByPriceList: any;
   min = 0;
   max = 0;
-
-  constructor(private api: ApiService, private cartService: CartService, private authService: AuthService, private router: Router) { }
+  firstName = "";
+  
+  constructor(private api: ApiService, private cartService: CartService, private authService: AuthService, 
+    private router: Router, private userCartService: UserCartService) { }
 
   ngOnInit(): void {
     this.api.getProducts().subscribe(data => {
@@ -31,6 +34,8 @@ export class ProductComponent implements OnInit {
     this.cartService.search.subscribe((val: any) => {
       this.searchKey = val;
     })
+
+    this.getUserName();
   }
 
   addToCart(item: any){
@@ -60,5 +65,13 @@ export class ProductComponent implements OnInit {
   resetFilterByPrice(){
     this.min = 0;
     this.max = 0;
+  }
+
+  getUserName(){
+    this.userCartService.getUserDetails().subscribe((data:any) => {
+      console.log(data)
+      this.firstName = data.firstname
+      console.log(this.firstName)
+    })
   }
 }
