@@ -34,8 +34,6 @@ export class ProductComponent implements OnInit {
   }
 
   addToCart(item: any){
-    console.log("productpage")
-    console.log(item)
     if(this.authService.isLoggedIn()){
       this.cartService.addToCart(item);
     }else{
@@ -57,5 +55,10 @@ export class ProductComponent implements OnInit {
     }else{
       this.SortDirection = 'desc';
     }
+  }
+
+  resetFilterByPrice(){
+    this.min = 0;
+    this.max = 0;
   }
 }

@@ -33,8 +33,6 @@ export class LoginComponent implements OnInit {
     })
   }
 
-
-
   login() {
     const cartName = this.loginForm.value.username;
     const cartPassword = this.loginForm.value.password;
@@ -56,8 +54,8 @@ export class LoginComponent implements OnInit {
           if (user.status === 'activated') {
             this.loginForm.reset();
             this.userCartService.loadUserCart(cartName, cartPassword),
-            this.router.navigate(['product'])
             localStorage.setItem('token', cartPassword+cartName)
+		this.router.navigate(['product'])
           } else {
             alert("User deactivated!")
             this.loginForm.reset();
@@ -73,4 +71,3 @@ export class LoginComponent implements OnInit {
         this.loading = false;
       })
   }
-}

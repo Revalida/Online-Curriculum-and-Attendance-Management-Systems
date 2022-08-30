@@ -3,6 +3,7 @@ import { CartService } from 'src/app/service/cart.service';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { AuthService } from 'src/app/service/auth.service';
+import { UserCartService } from 'src/app/service/userCart.service';
 
 @Component({
   selector: 'app-header',
@@ -11,19 +12,17 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 export class HeaderComponent implements OnInit {
 
-  public totalItem : number = 0;
+  public totalItem : any;
   public searchTerm: string = "";
 
-  constructor(private cartService: CartService, private router: Router, public authService: AuthService) { }
+  constructor(private cartService: CartService, private router: Router, 
+    public authService: AuthService, private userCartService: UserCartService) { }
 
   ngOnInit(): void {
-    // this.cartService.getUniqueProducts().subscribe(data => {
-    //   this.totalItem = data.length;
-    // });
+    this.setCartDetails();
     this.cartService.getTotalCount().subscribe(data => {
       this.totalItem = data;
     });
-    
   }
 
   search(event: any){
@@ -35,14 +34,9 @@ export class HeaderComponent implements OnInit {
     this.searchTerm = "";
   }
 
-  // goToCart(){
-  //   console.log("1")
-  //   if(this.authService.isLoggedIn()){
-  //     console.log("2")
-  //     this.router.navigate(['/cart']);
-  //   }else{
-  //     console.log("3")
-  //     this.router.navigate(['/login']);
-  //   }
-  // }
+  setCartDetails(){
+    this.userCartService.getUserCartQuantity().subscribe((data:any) => {
+      this.totalItem = data
+    })
+  }
 }

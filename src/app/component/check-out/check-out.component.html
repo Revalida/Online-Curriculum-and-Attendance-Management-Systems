@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-md-2"><br>
         <ng-container *ngIf="visibility">
+            <h4>Delivery Information</h4>
             <div class="mb-3">
                 <label for="fullname">Full Name</label><br/>
                 <input disabled placeholder="{{fullname}}" type="text" [(ngModel)]="fullname" id="fullname" aria-describedby="emailHelp">
@@ -36,7 +37,6 @@
           <button type="submit" class="btn btn-primary" (click) = save()>Confirm</button>  
     </ng-container>
     <ng-container *ngIf="!visibility">
-        <h4>Delivery Information</h4>
         <h6>Full Name: {{fullname}}</h6>
         <h6>Mobile Number: {{mobile}}</h6>
         <h6>Address:{{address}}</h6>
@@ -82,7 +82,8 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><button class="btn btn-primary" (click)="placeOrder()">Place Order</button></td>
+                        <td><button class="btn btn-primary" (click)="placeOrder()" [disabled]="visibility">Place Order</button></td>
+                        <p *ngIf = "visibility"><i> Confirm Delivery Information </i></p>
                     </tr>
                 </tbody>
             </table>

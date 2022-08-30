@@ -4,6 +4,7 @@
         <tr>
             <th><label> Sort by </label></th>
             <th><span> Filter by Price Range</span></th>
+            
         </tr>
         <tr>
             <td>
@@ -11,6 +12,7 @@
                     <option value="" selected> Select </option>
                     <option value="price"> Price </option>
                     <option value="title"> Name </option>
+                    <option value="category" selected> Brand </option>
                 </select>
                 <button type="button" (click) = "onSortDirection()"> 
                     <i *ngIf="SortDirection === 'asc'" class="fas fa-sort-up"></i>
@@ -27,6 +29,7 @@
             </td>
         </tr>
     </table>
+    <button (click) = "resetFilterByPrice()">Reset</button>
      <br/>
 <ng-container *ngIf="(filterByCategory | filter:searchKey:'title') as result">    
     <div class="card shadow-sm">
@@ -55,6 +58,6 @@
             </ng-container>
         </div>
     </div>
-    <app-not-found [visible]="result.length<=0"></app-not-found>
+    <app-not-found [visible]="result.length<=0 || !(result | pricefilter:[min, max])?.length"></app-not-found>
     </ng-container>
 </div>
