@@ -22,10 +22,10 @@ import { ForgotPasswordComponent } from './component/forgot-password/forgot-pass
 
 import { PriceFilterPipe } from './filter/pricefilter.pipe';
 
-import { AcknowledgementComponent } from './component/acknowledgement/acknowledgement.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { CheckOutComponent } from './component/check-out/check-out.component';
 import { ProductAdminDashboardComponent } from './component/product-admin-dashboard/product-admin-dashboard.component';
+import { HasRoleGuard } from './guard/has-role.guard';
 import { PendingOrderComponent } from './component/pending-orders/pending-order.component';
 
 
@@ -47,7 +47,6 @@ import { PendingOrderComponent } from './component/pending-orders/pending-order.
     HomeComponent,
     ProfileComponent,
     ForgotPasswordComponent,
-    AcknowledgementComponent,
     NotFoundComponent,
     CheckOutComponent,
     ProductAdminDashboardComponent,
@@ -61,7 +60,7 @@ import { PendingOrderComponent } from './component/pending-orders/pending-order.
     ReactiveFormsModule
   ],
   exports:[HeaderComponent],
-  providers: [],
+  providers: [HasRoleGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

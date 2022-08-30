@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { EmployeeModel } from './admin-dashboard.model';
 import { ApiService } from '../../service/api.service';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -15,9 +17,12 @@ export class AdminDashboardComponent implements OnInit {
   userData !: any;
   showAdd !: boolean;
   showUpdate !: boolean;
+  showActivate !: boolean;
+  showDeactivate: boolean = true;
 
   constructor(private formbuilder: FormBuilder,
-    private api: ApiService) { }
+    private api: ApiService, private http: HttpClient,
+    private router: Router,) { }
 
   ngOnInit(): void {
     this.formValue = this.formbuilder.group({
@@ -28,8 +33,10 @@ export class AdminDashboardComponent implements OnInit {
       lastname: [''],
       email: [''],
       role: [''],
+      status: ['']
     })
     this.getAllUser();
+    this.checkStatus();
   }
   clickAddUser() {
     this.formValue.reset();
@@ -66,21 +73,21 @@ export class AdminDashboardComponent implements OnInit {
       })
   }
 
-  deleteUser(data: any) {
-    this.api.deleteUser(data.id)
-      .subscribe(res => {
-        alert("Employee Deleted!")
-        this.getAllUser();
-      })
+  activate() {
+    this.showActivate = false;
+    this.showDeactivate = true;
+  }
 
+  deactivate() {
+    alert("Account has been deactivated!")
+    this.showActivate = true;
+    this.showDeactivate = false;
   }
 
   onEdit(data: any) {
     this.showAdd = false;
     this.showUpdate = true;
     this.dashboardObj.id = data.id
-    this.formValue.controls['username'].setValue(data.username)
-    this.formValue.controls['password'].setValue(data.password)
     this.formValue.controls['firstname'].setValue(data.firstname)
     this.formValue.controls['middlename'].setValue(data.middlename)
     this.formValue.controls['lastname'].setValue(data.lastname)
@@ -105,4 +112,63 @@ export class AdminDashboardComponent implements OnInit {
       })
   }
 
+
+  onUpdate(data: any) {
+    this.dashboardObj.id = data.id
+    this.dashboardObj.email = data.email;
+    this.dashboardObj.firstname = data.firstname;
+    this.dashboardObj.username = data.username;
+    this.dashboardObj.middlename = data.middlename;
+    this.dashboardObj.lastname = data.lastname;
+    this.dashboardObj.password = data.password;
+    this.dashboardObj.mobilenumber = data.mobilenumber;
+  }
+
+  updateUserStatus(){
+    this.showActivate = true;
+    this.showDeactivate = false;
+    this.dashboardObj.status = "deactivated"
+    this.api.updateUser(this.dashboardObj, this.dashboardObj.id)
+      .subscribe(res => {
+        let ref = document.getElementById('cancel')
+        ref?.click();
+        this.formValue.reset();
+        this.getAllUser();
+      })
+  }
+
+  activateStatus(){
+    this.showActivate = false;
+    this.showDeactivate = true;
+    this.dashboardObj.status = "activated"
+    this.api.updateUser(this.dashboardObj, this.dashboardObj.id)
+      .subscribe(res => {
+        let ref = document.getElementById('cancel')
+        ref?.click();
+        this.formValue.reset();
+        this.getAllUser();
+      })
+  }
+
+  checkStatus(){
+    this.http.get<any>("http://localhost:3000/post")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.role === "activated"
+        });
+        if (user){
+          this.showActivate = true;
+          this.showDeactivate = false;
+        }else{
+          this.showActivate = false;
+          this.showDeactivate = true;
+        }
+  }, err => {
+    alert("Something went wrong!")
+  })
 }
+
+}
+
+
+

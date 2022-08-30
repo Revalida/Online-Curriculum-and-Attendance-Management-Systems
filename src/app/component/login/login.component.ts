@@ -13,7 +13,7 @@ import { UserCartService } from 'src/app/service/userCart.service';
 export class LoginComponent implements OnInit {
   visible: boolean = true;
   changetype: boolean = true;
-  submitted:boolean = false;
+  submitted: boolean = false;
   loading = false;
 
   loginForm !: FormGroup;
@@ -28,40 +28,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.formbuilder.group({
-      username: ['',Validators.required],
-      password: ['',Validators.required]
+      username: ['', Validators.required],
+      password: ['', Validators.required]
     })
   }
 
-  // login() {
-  //   const cartName = this.loginForm.value.username;
-  //   const cartPassword = this.loginForm.value.password;
-  //   this.http.get<any>("http://localhost:3000/post")
-  //     .subscribe(res => {
-  //       const user = res.find((a: any) => {
-  //         return a.username === this.loginForm.value.username &&
-  //           a.password === this.loginForm.value.password
-  //       });
-  //       if (user && user.role === 'admin') {
-  //           this.loginForm.reset();
-  //           this.router.navigate(['admin-dashboard'])
-  //           console.log(user.role)
-  //       }else if(user && user.role === 'user'){
-  //         this.loginForm.reset();
-  //         console.log(user.role)
-  //         this.userCartService.loadUserCart(cartName, cartPassword),
-  //         localStorage.setItem('token', cartPassword+cartName)
-  //         this.router.navigate(['product'])
-  //       } 
-  //       else{
-  //         alert("User not found!")
-  //         console.log(user.role)
-  //       }
-  //     }, err => {
-  //       alert("Something went wrong!")
-  //       this.loading = false;
-  //     })
-  // }
   login() {
     const cartName = this.loginForm.value.username;
     const cartPassword = this.loginForm.value.password;
@@ -84,7 +55,7 @@ export class LoginComponent implements OnInit {
             this.loginForm.reset();
             this.userCartService.loadUserCart(cartName, cartPassword),
             localStorage.setItem('token', cartPassword+cartName)
-		        this.router.navigate(['product'])
+		this.router.navigate(['product'])
           } else {
             alert("User deactivated!")
             this.loginForm.reset();
@@ -100,4 +71,3 @@ export class LoginComponent implements OnInit {
         this.loading = false;
       })
   }
-}
