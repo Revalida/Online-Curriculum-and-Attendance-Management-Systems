@@ -11,6 +11,21 @@
       "role": "admin",
       "status": "activated",
       "id": 1
+    },
+    {
+      "username": "belle",
+      "password": "aloha",
+      "firstname": "belle",
+      "middlename": "ruz",
+      "lastname": "carla",
+      "email": "jcruzem@gmail.com",
+      "mobilenumber": "09164567890",
+      "role": "user",
+      "status": "activated",
+      "birthdate": null,
+      "interest": "",
+      "address": "",
+      "id": 2
     }
   ],
   "products": [
@@ -511,5 +526,14 @@
     }
   ],
   "cart": [
+    {
+      "id": 1,
+      "username": "belle",
+      "password": "aloha",
+      "orders": [
+      ],
+      "cartTotalQuantity": 2,
+      "grandTotal": 10600
+    }
   ]
 }

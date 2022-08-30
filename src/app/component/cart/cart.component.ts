@@ -40,20 +40,21 @@ export class CartComponent implements OnInit {
   }
 
   inc(item:any){
-    this.cartService.addToCart(item)
+    this.cartService.addToCart(item);
     this.setCartDetails();
   }
 
   dec(item:any){
     if(item.itemQuantity === 1){
-      this.removeItem(item)
+      this.removeItem(item);
     }else{
-      this.cartService.minusToCart(item)
+      this.cartService.minusToCart(item);
     }
     this.setCartDetails();
   }
 
   updateQty(item : any){
+    console.log(item)
     if(item.itemQuantity<=0){
       this.removeItem(item);
     }else{
@@ -64,22 +65,22 @@ export class CartComponent implements OnInit {
         data.orders.map((a:any) => {
           if(a.id === item.id){
             let cartOrder = a;
-            cartOrder.itemTotalPrice = cartOrder.itemQuantity * cartOrder.price
-            x.orders.splice(x.orders.indexOf(a), 1, cartOrder)
+            cartOrder.itemTotalPrice = cartOrder.itemQuantity * cartOrder.price;
+            x.orders.splice(x.orders.indexOf(a), 1, cartOrder);
           }
           x.cartTotalQuantity += a.itemQuantity;
-          x.grandTotal += a.itemTotalPrice 
+          x.grandTotal += a.itemTotalPrice;
+        })
       })
-      this.apiService.updateUserCart(x, x.id)
-    })
     this.setCartDetails();
+    // this.apiService.updateProducts(item.id, item);
   }
 }
 
   setCartDetails(){
       this.userCart.getUserCart().subscribe((data:any) => {
       this.grandTotal = data.grandTotal;
-      this.products = data
+      this.products = data;
     })
   }
 }

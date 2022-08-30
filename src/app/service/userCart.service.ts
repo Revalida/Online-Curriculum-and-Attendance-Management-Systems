@@ -12,6 +12,8 @@ export class UserCartService {
   public userCartDetailsSubject = new BehaviorSubject<any>(this.userCartDetails)
   public userCartQuantity: any = this. getCartFromLocalStoragecartTotalItem();
   public userCartQuantitySubject = new BehaviorSubject<any>(this.userCartQuantity)
+  public userDetails: any = this.getCartFromLocalStorage();
+  public userDetailsSubject = new BehaviorSubject<any>(this.userDetails)
 
   constructor(private http: HttpClient) { 
 
@@ -56,8 +58,32 @@ export class UserCartService {
     })
   }
 
+  loadUserDetails(username:string, password: string){
+    this.http.get<any>(`${environment.url}/post`).subscribe(res => {
+      for(let x of res){
+        if(x.username === username && x.password === password){
+          this.userDetails = {
+            id: x.id,
+            username: x.username,
+            password: x.password,
+            firstname: x.firstname,
+            middlename: x.middlename,
+            lastname: x.lastname,
+            email: x.email,
+            mobilenumber: x.mobilenumber,
+          }
+          this.userDetailsSubject.next(this.userDetails);
+        }
+      }
+    })
+  }
+
   getUserCart(){
     return this.userCartDetailsSubject.asObservable();
+  }
+
+  getUserDetails(){
+    return this.userDetailsSubject.asObservable();
   }
 
   getUserCartQuantity(){
