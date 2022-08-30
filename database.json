@@ -9,6 +9,7 @@
       "email": "edrickpogi@gmail.com",
       "mobilenumber": "12345678",
       "role": "admin",
+      "status": "activated",
       "id": 1
     },
     {
@@ -20,29 +21,8 @@
       "email": "edrickpogi@gmail.com",
       "mobilenumber": "1234567890",
       "role": "user",
+      "status": "activated",
       "id": 2
-    },
-    {
-      "username": "edrickpogi",
-      "password": "edrickpogi",
-      "firstname": "edrick",
-      "middlename": "chua",
-      "lastname": "carreon",
-      "email": "edrickpogi@gmail.com",
-      "mobilenumber": "09123456789",
-      "role": "user",
-      "id": 3
-    },
-    {
-      "username": "belle",
-      "password": "alohahello",
-      "firstname": "belle",
-      "middlename": "l",
-      "lastname": "lala",
-      "email": "jcruzem@gmail.com",
-      "mobilenumber": "09164567890",
-      "role": "user",
-      "id": 4
     }
   ],
   "products": [
