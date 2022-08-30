@@ -11,18 +11,6 @@
       "role": "admin",
       "status": "activated",
       "id": 1
-    },
-    {
-      "username": "chuapogi",
-      "password": "chuapogi",
-      "firstname": "edrick",
-      "middlename": "chua",
-      "lastname": "carreon",
-      "email": "edrickpogi@gmail.com",
-      "mobilenumber": "1234567890",
-      "role": "user",
-      "status": "activated",
-      "id": 2
     }
   ],
   "products": [
@@ -523,58 +511,5 @@
     }
   ],
   "cart": [
-    {
-      "id": 1,
-      "username": "belle",
-      "password": "alohahello",
-      "orders": [
-        {
-          "id": 1,
-          "name": "Adidas",
-          "title": "SuperStar",
-          "price": 5300,
-          "description": "Originally designed to protect your toes, now a signature streetwear feature. Unmistakably adidas.",
-          "category": "adidas",
-          "image": "assets/images/products/shoes/adidas/superstar.png",
-          "itemQuantity": 2,
-          "itemTotalPrice": 10600
-        },
-        {
-          "id": 2,
-          "name": "Adidas",
-          "title": "Stan Smith",
-          "price": 5300,
-          "description": "Stan Smith logos on the tongue and heel tab are paired with perforated stripes.",
-          "category": "adidas",
-          "image": "assets/images/products/shoes/adidas/stansmith.png",
-          "itemQuantity": 1,
-          "itemTotalPrice": 5300
-        },
-        {
-          "id": 3,
-          "name": "Adidas",
-          "title": "NMD S1",
-          "price": 9000,
-          "description": "The supportive BOOST cushioning and sleek textile upper keep you comfy every step of the way.",
-          "category": "adidas",
-          "image": "assets/images/products/shoes/adidas/nmd_s1.png",
-          "itemQuantity": 2,
-          "itemTotalPrice": 18000
-        },
-        {
-          "id": 4,
-          "name": "Adidas",
-          "title": "Forum 84 Low AEC",
-          "price": 8000,
-          "description": "The premium leather upper is hand-treated and detailed with nylon and synthetic leather accents.",
-          "category": "adidas",
-          "image": "assets/images/products/shoes/adidas/forum84.png",
-          "itemQuantity": 1,
-          "itemTotalPrice": 8000
-        }
-      ],
-      "cartTotalQuantity": 6,
-      "grandTotal": 41900
-    }
   ]
 }
