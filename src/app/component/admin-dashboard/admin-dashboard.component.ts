@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { EmployeeModel } from './admin-dashboard.model';
 import { ApiService } from '../../service/api.service';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -19,7 +21,8 @@ export class AdminDashboardComponent implements OnInit {
   showDeactivate: boolean = true;
 
   constructor(private formbuilder: FormBuilder,
-    private api: ApiService) { }
+    private api: ApiService, private http: HttpClient,
+    private router: Router,) { }
 
   ngOnInit(): void {
     this.formValue = this.formbuilder.group({
@@ -33,6 +36,7 @@ export class AdminDashboardComponent implements OnInit {
       status: ['']
     })
     this.getAllUser();
+    this.checkStatus();
   }
   clickAddUser() {
     this.formValue.reset();
@@ -147,8 +151,22 @@ export class AdminDashboardComponent implements OnInit {
   }
 
   checkStatus(){
-    
-  }
+    this.http.get<any>("http://localhost:3000/post")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.role === "activated"
+        });
+        if (user){
+          this.showActivate = true;
+          this.showDeactivate = false;
+        }else{
+          this.showActivate = false;
+          this.showDeactivate = true;
+        }
+  }, err => {
+    alert("Something went wrong!")
+  })
+}
 
 }
 
