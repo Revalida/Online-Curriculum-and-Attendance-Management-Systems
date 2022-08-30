@@ -1,36 +1,39 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <app-header></app-header>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <app-header></app-header>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+        </li>
+        <li class="nav-item">
+        </li>
+      </ul>
+      <input id="searchBar" type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search Products">&nbsp;&nbsp;
+          <a id="clearbtn" class="btn btn-outline-success" type="button" (click) = "clear()" href="/product">CLEAR</a>&nbsp;&nbsp;
+          <form class="d-flex" role="search">     
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-          </li>
-          <li class="nav-item">
-          </li>
-        </ul>
-        <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search Products">
-            <a class="btn btn-outline-success" type="button" (click) = "clear()" href="/product">CLEAR</a>
-            <form class="d-flex" role="search">     
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li *ngIf="!authService.isLoggedIn()" class="nav-item">
-                <a class="nav-link" href="/signup">SignUp</a>
-              </li>
+            <li *ngIf="!authService.isLoggedIn()" class="nav-item">
+              <a class="nav-link" href="/signup" id="signup">SignUp</a>
+            </li>
 
-              <li *ngIf="!authService.isLoggedIn()" class="nav-item">
-                <a class="nav-link" href="/login">Login</a>
-              </li>
-              <li *ngIf="authService.isLoggedIn()" class="nav-item">
-                <p id="username">{{username}}</p>
-                <button (click)="logout()" class="btn btn-danger mx-2">Logout</button>
-              </li>
-              </ul>
-        </form>
-      </div>
+            <li *ngIf="!authService.isLoggedIn()" class="nav-item">
+              <a class="nav-link" href="/login" id="login">Login</a>
+            </li>
+            <li *ngIf="authService.isLoggedIn()" class="nav-item">
+              <a class="btn btn-outline-success" id="profile" href="/profile">Profile</a>
+            </li>
+            <li *ngIf="authService.isLoggedIn()" class="nav-item">
+              <p id="username">{{username}}</p>
+              <button id="logoutbtn" (click)="logout()" class="btn btn-danger mx-2">Logout</button>
+            </li>
+            </ul>
+      </form>
     </div>
-  </nav>
-  <br><br><br>
+  </div>
+</nav>
+<br><br><br>

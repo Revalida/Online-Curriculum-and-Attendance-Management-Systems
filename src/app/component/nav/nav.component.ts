@@ -14,12 +14,11 @@ export class NavComponent implements OnInit {
   public searchTerm: string = "";
   public username : string = "";
 
-  firstname = "";
-
   constructor(private cartService: CartService, public authService: AuthService, 
     private router: Router, private userCartService: UserCartService) { }
 
   ngOnInit(): void {
+    this.getUserName();
   }
 
   search(event: any){
@@ -34,5 +33,11 @@ export class NavComponent implements OnInit {
   logout() {                            
     this.router.navigate(['/product']);
     localStorage.clear();
+  }
+
+  getUserName(){
+    this.userCartService.getUserCart().subscribe((data:any) => {
+      this.username = data.username
+    })
   }
 }
