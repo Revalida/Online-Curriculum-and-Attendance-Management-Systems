@@ -1,17 +1,6 @@
 {
   "post": [
     {
-      "username": "chuapogi",
-      "password": "chuapogi",
-      "firstname": "edrick",
-      "middlename": "chua",
-      "lastname": "carreon",
-      "email": "edrickpogi@gmail.com",
-      "mobilenumber": "1234567890",
-      "role": "user",
-      "id": 14
-    },
-    {
       "username": "admin",
       "password": "admin",
       "firstname": "edrick",
@@ -23,26 +12,15 @@
       "id": 1
     },
     {
-      "username": "",
-      "password": "",
-      "firstname": "",
-      "middlename": "",
-      "lastname": "",
-      "email": "",
-      "mobilenumber": "",
+      "username": "chuapogi",
+      "password": "chuapogi",
+      "firstname": "edrick",
+      "middlename": "chua",
+      "lastname": "carreon",
+      "email": "edrickpogi@gmail.com",
+      "mobilenumber": "1234567890",
       "role": "user",
-      "id": 15
-    },
-    {
-      "username": "jaz",
-      "password": "alohahello",
-      "firstname": "ja",
-      "middlename": "ruz",
-      "lastname": "cruz",
-      "email": "jcruzem@gmail.com",
-      "mobilenumber": "09164567890",
-      "role": "user",
-      "id": 16
+      "id": 2
     },
     {
       "username": "edrickpogi",
@@ -53,7 +31,7 @@
       "email": "edrickpogi@gmail.com",
       "mobilenumber": "09123456789",
       "role": "user",
-      "id": 17
+      "id": 3
     },
     {
       "username": "belle",
@@ -64,29 +42,7 @@
       "email": "jcruzem@gmail.com",
       "mobilenumber": "09164567890",
       "role": "user",
-      "id": 17
-    },
-    {
-      "username": "ab",
-      "password": "aloha",
-      "firstname": "anna",
-      "middlename": "r",
-      "lastname": "cruz",
-      "email": "carla@gmail.com",
-      "mobilenumber": "09164567890",
-      "role": "user",
-      "id": 18
-    },
-    {
-      "username": "jaz",
-      "password": "aloha",
-      "firstname": "belle",
-      "middlename": "ruz",
-      "lastname": "carla",
-      "email": "jcruzem@gmail.com",
-      "mobilenumber": "09164567890",
-      "role": "user",
-      "id": 19
+      "id": 4
     }
   ],
   "products": [
@@ -588,7 +544,7 @@
   ],
   "cart": [
     {
-      "id": 2,
+      "id": 1,
       "username": "belle",
       "password": "alohahello",
       "orders": [
@@ -600,8 +556,8 @@
           "description": "Originally designed to protect your toes, now a signature streetwear feature. Unmistakably adidas.",
           "category": "adidas",
           "image": "assets/images/products/shoes/adidas/superstar.png",
-          "itemQuantity": 1,
-          "itemTotalPrice": 5300
+          "itemQuantity": 2,
+          "itemTotalPrice": 10600
         },
         {
           "id": 2,
@@ -622,39 +578,8 @@
           "description": "The supportive BOOST cushioning and sleek textile upper keep you comfy every step of the way.",
           "category": "adidas",
           "image": "assets/images/products/shoes/adidas/nmd_s1.png",
-          "itemQuantity": 1,
-          "itemTotalPrice": 9000
-        }
-      ],
-      "cartTotalQuantity": 3,
-      "grandTotal": 19600
-    },
-    {
-      "id": 3,
-      "username": "ab",
-      "password": "aloha",
-      "orders": [
-        {
-          "id": 1,
-          "name": "Adidas",
-          "title": "SuperStar",
-          "price": 5300,
-          "description": "Originally designed to protect your toes, now a signature streetwear feature. Unmistakably adidas.",
-          "category": "adidas",
-          "image": "assets/images/products/shoes/adidas/superstar.png",
-          "itemQuantity": 3,
-          "itemTotalPrice": 15900
-        },
-        {
-          "id": 3,
-          "name": "Adidas",
-          "title": "NMD S1",
-          "price": 9000,
-          "description": "The supportive BOOST cushioning and sleek textile upper keep you comfy every step of the way.",
-          "category": "adidas",
-          "image": "assets/images/products/shoes/adidas/nmd_s1.png",
-          "itemQuantity": 1,
-          "itemTotalPrice": 9000
+          "itemQuantity": 2,
+          "itemTotalPrice": 18000
         },
         {
           "id": 4,
@@ -668,16 +593,8 @@
           "itemTotalPrice": 8000
         }
       ],
-      "cartTotalQuantity": 5,
-      "grandTotal": 32900
-    },
-    {
-      "id": 4,
-      "username": "jaz",
-      "password": "aloha",
-      "orders": [],
-      "cartTotalQuantity": 0,
-      "grandTotal": 0
+      "cartTotalQuantity": 6,
+      "grandTotal": 41900
     }
   ]
 }

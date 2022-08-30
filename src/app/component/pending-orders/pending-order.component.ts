@@ -25,5 +25,4 @@ export class PendingOrderComponent implements OnInit {
       this.products = data.orders
     })
   }
-
 }

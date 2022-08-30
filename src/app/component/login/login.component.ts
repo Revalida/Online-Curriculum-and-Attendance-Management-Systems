@@ -33,8 +33,6 @@ export class LoginComponent implements OnInit {
     })
   }
 
-
-
   login() {
     const cartName = this.loginForm.value.username;
     const cartPassword = this.loginForm.value.password;
@@ -52,8 +50,8 @@ export class LoginComponent implements OnInit {
           this.loginForm.reset();
           console.log(user.role)
           this.userCartService.loadUserCart(cartName, cartPassword),
-          this.router.navigate(['product'])
           localStorage.setItem('token', cartPassword+cartName)
+          this.router.navigate(['product'])
         } 
         else{
           alert("User not found!")

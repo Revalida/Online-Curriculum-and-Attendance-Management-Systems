@@ -8,10 +8,14 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class UserCartService {
 
-  public userCartDetails: any = {};
+  public userCartDetails: any = this.getCartFromLocalStorage();
   public userCartDetailsSubject = new BehaviorSubject<any>(this.userCartDetails)
+  public userCartQuantity: any = this. getCartFromLocalStoragecartTotalItem();
+  public userCartQuantitySubject = new BehaviorSubject<any>(this.userCartQuantity)
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+
+  }
 
   createCart(username: string, password: string){
     let cartDetail = {
@@ -42,15 +46,31 @@ export class UserCartService {
             grandTotal: x.grandTotal
           }
           this.userCartDetailsSubject.next(this.userCartDetails);
+          this.userCartQuantitySubject.next(this.userCartDetails.cartTotalQuantity);
+          const cartJson = JSON.stringify(this.userCartDetails);
+          localStorage.setItem('Cart', cartJson)
+          const cartTotalItem = JSON.stringify(this.userCartDetails.cartTotalQuantity);
+          localStorage.setItem('CartTotalItem', cartTotalItem)
         }
       }
     })
   }
 
   getUserCart(){
-    this.userCartDetailsSubject.subscribe((value) => {
-      console.log(value)
-    })
     return this.userCartDetailsSubject.asObservable();
+  }
+
+  getUserCartQuantity(){
+    return this.userCartQuantitySubject.asObservable();
+  }
+
+  getCartFromLocalStorage(){
+    const cartJson = localStorage.getItem('Cart');
+    return cartJson? JSON.parse(cartJson) : [];
+  }
+
+  getCartFromLocalStoragecartTotalItem(){
+    const cartTotalItem = localStorage.getItem('CartTotalItem');
+    return cartTotalItem? JSON.parse(cartTotalItem) : [];
   }
 }
