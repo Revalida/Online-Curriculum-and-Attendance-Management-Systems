@@ -35,8 +35,6 @@ export class CheckOutComponent implements OnInit {
     this.router.navigate(['/pendingpage']);
   }
 
-
-
   save(){
     this.visibility = false;
   }
