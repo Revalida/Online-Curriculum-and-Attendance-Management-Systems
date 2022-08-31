@@ -11,7 +11,6 @@ import { FilterPipe } from './filter/filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SortPipe } from './filter/sort.pipe';
 
-
 import { AdminDashboardComponent } from './component/admin-dashboard/admin-dashboard.component';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
@@ -60,7 +59,7 @@ import { TopFivePipe } from './filter/topItems.pipe';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports:[HeaderComponent],
   providers: [HasRoleGuard],

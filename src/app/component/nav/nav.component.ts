@@ -3,6 +3,9 @@ import { CartService } from 'src/app/service/cart.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { Router } from '@angular/router';
 import { UserCartService } from 'src/app/service/userCart.service';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-nav',
@@ -14,10 +17,12 @@ export class NavComponent implements OnInit {
   public searchTerm: string = "";
   public username : string = "";
   userOption: string[] = [];
-  selected: string = "";
+
+
 
   constructor(private cartService: CartService, public authService: AuthService, 
-    private router: Router, private userCartService: UserCartService) { }
+    private router: Router, private userCartService: UserCartService,
+    private http: HttpClient) { }
 
   ngOnInit(): void {
     this.getUserName();
@@ -43,4 +48,13 @@ export class NavComponent implements OnInit {
       this.username = data.username
     })
   }
+
+  getUserName(){
+    this.userCartService.getUserCart().subscribe((data:any) => {
+      this.username = data.username
+      console.log(data.password)
+    })
+  }
+
+  
 }

@@ -27,9 +27,9 @@ export class SignupComponent implements OnInit {
       mobilenumber : ['',[Validators.required, Validators.pattern(/[0-9\+\-\ ]/)]],
       role : ['user'],
       status: ['activated'],
-      birthdate : [],
-      interest : [''],
-      address : [''],
+      birthdate : ['',Validators.required],
+      interest : ['',Validators.required],
+      address : ['',Validators.required],
     }) 
   }
   signUp(){
