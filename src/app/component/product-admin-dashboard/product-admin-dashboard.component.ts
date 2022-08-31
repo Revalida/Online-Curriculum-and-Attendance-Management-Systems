@@ -14,6 +14,7 @@ export class ProductAdminDashboardComponent implements OnInit {
   productData !: any;
   showAdd !: boolean;
   showUpdate !: boolean;
+  productList : any;
 
   constructor(private formbuilder: FormBuilder,
     private api: ApiService) { }
@@ -28,6 +29,9 @@ export class ProductAdminDashboardComponent implements OnInit {
     image : [''],
     })
     this.getAllProducts();
+    this.api.getProducts().subscribe(data => {
+      this.productList = data;
+    });
   }
 
   getAllProducts() {

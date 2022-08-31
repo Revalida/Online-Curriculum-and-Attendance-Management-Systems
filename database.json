@@ -530,10 +530,9 @@
       "id": 1,
       "username": "belle",
       "password": "aloha",
-      "orders": [
-      ],
-      "cartTotalQuantity": 2,
-      "grandTotal": 10600
+      "orders": [],
+      "cartTotalQuantity": 0,
+      "grandTotal": 0
     }
   ]
 }
