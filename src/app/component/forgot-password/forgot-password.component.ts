@@ -29,10 +29,9 @@ export class ForgotPasswordComponent implements OnInit {
       .subscribe(res => {
         const user = res.find((a: any) => {
           return a.username === this.forgotPassword.value.username &&
-             a.email === this.forgotPassword.value.email 
+            (a.email === this.forgotPassword.value.email && a.mobilenumber === this.forgotPassword.value.mobilenumber) 
         });
         if (user) {
-            console.log(user.password)
             this.password = user.password
             alert( "Your password is " + this.password)
             this.forgotPassword.reset();

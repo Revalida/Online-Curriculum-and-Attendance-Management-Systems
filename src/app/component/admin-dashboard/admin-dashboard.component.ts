@@ -92,15 +92,16 @@ export class AdminDashboardComponent implements OnInit {
     this.formValue.controls['middlename'].setValue(data.middlename)
     this.formValue.controls['lastname'].setValue(data.lastname)
     this.formValue.controls['email'].setValue(data.email)
+    this.dashboardObj.username = data.username
+    this.dashboardObj.password = data.password
+    this.dashboardObj.mobilenumber = data.mobilenumber
   }
 
   updateUserDetails() {
     this.dashboardObj.email = this.formValue.value.email;
     this.dashboardObj.firstname = this.formValue.value.firstname;
-    this.dashboardObj.username = this.formValue.value.username;
     this.dashboardObj.middlename = this.formValue.value.middlename;
     this.dashboardObj.lastname = this.formValue.value.lastname;
-    this.dashboardObj.password = this.formValue.value.password;
 
     this.api.updateUser(this.dashboardObj, this.dashboardObj.id)
       .subscribe(res => {
