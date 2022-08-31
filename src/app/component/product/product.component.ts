@@ -20,8 +20,7 @@ export class ProductComponent implements OnInit {
   public filterByPriceList: any;
   min = 0;
   max = 0;
-  firstName = "";
-  
+
   constructor(private api: ApiService, private cartService: CartService, private authService: AuthService, 
     private router: Router, private userCartService: UserCartService) { }
 
@@ -34,8 +33,6 @@ export class ProductComponent implements OnInit {
     this.cartService.search.subscribe((val: any) => {
       this.searchKey = val;
     })
-
-    this.getUserName();
   }
 
   addToCart(item: any){
@@ -65,13 +62,5 @@ export class ProductComponent implements OnInit {
   resetFilterByPrice(){
     this.min = 0;
     this.max = 0;
-  }
-
-  getUserName(){
-    this.userCartService.getUserDetails().subscribe((data:any) => {
-      console.log(data)
-      this.firstName = data.firstname
-      console.log(this.firstName)
-    })
   }
 }

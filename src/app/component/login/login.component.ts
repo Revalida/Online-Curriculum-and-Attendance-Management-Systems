@@ -52,6 +52,7 @@ export class LoginComponent implements OnInit {
           if (user.status === 'activated') {
             this.loginForm.reset();
             this.router.navigate(['admin-dashboard'])
+            localStorage.setItem('token', cartPassword+cartName)
           } else {
             alert("User deactivated!")
             this.loginForm.reset();

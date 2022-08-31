@@ -16,6 +16,9 @@ export class NavComponent implements OnInit {
 
   public searchTerm: string = "";
   public username : string = "";
+  userOption: string[] = [];
+
+
 
   constructor(private cartService: CartService, public authService: AuthService, 
     private router: Router, private userCartService: UserCartService,
@@ -34,9 +37,16 @@ export class NavComponent implements OnInit {
     this.searchTerm = "";
   }
 
-  logout() {                            
+  logout() {   
+    this.cartService.updateStockAndItemSale();                      
     this.router.navigate(['/product']);
     localStorage.clear();
+
+  }
+  getUserName(){
+    this.userCartService.getUserCart().subscribe((data:any) => {
+      this.username = data.username
+    })
   }
 
   getUserName(){

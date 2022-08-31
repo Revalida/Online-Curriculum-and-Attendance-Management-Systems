@@ -54,7 +54,6 @@ export class CartComponent implements OnInit {
   }
 
   updateQty(item : any){
-    console.log(item)
     if(item.itemQuantity<=0){
       this.removeItem(item);
     }else{
@@ -73,7 +72,6 @@ export class CartComponent implements OnInit {
         })
       })
     this.setCartDetails();
-    // this.apiService.updateProducts(item.id, item);
   }
 }
 

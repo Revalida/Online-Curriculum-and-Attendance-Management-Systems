@@ -10,6 +10,7 @@ import { CategoriesComponent } from './component/categories/categories.component
 import { FilterPipe } from './filter/filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SortPipe } from './filter/sort.pipe';
+
 import { AdminDashboardComponent } from './component/admin-dashboard/admin-dashboard.component';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
@@ -26,6 +27,7 @@ import { CheckOutComponent } from './component/check-out/check-out.component';
 import { ProductAdminDashboardComponent } from './component/product-admin-dashboard/product-admin-dashboard.component';
 import { HasRoleGuard } from './guard/has-role.guard';
 import { PendingOrderComponent } from './component/pending-orders/pending-order.component';
+import { TopFivePipe } from './filter/topItems.pipe';
 
 
 @NgModule({
@@ -49,7 +51,8 @@ import { PendingOrderComponent } from './component/pending-orders/pending-order.
     NotFoundComponent,
     CheckOutComponent,
     ProductAdminDashboardComponent,
-    PendingOrderComponent
+    PendingOrderComponent,
+    TopFivePipe
   ],
   imports: [
     BrowserModule,
