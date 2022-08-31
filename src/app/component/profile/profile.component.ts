@@ -1,10 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/service/api.service';
 import { UserCartService } from 'src/app/service/userCart.service';
 import { ProfileModel } from './profile.model';
+
+
+import { AuthService } from 'src/app/service/auth.service';
+
 
 @Component({
   selector: 'app-profile',
@@ -12,6 +17,7 @@ import { ProfileModel } from './profile.model';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+
   formValue !: FormGroup;
   userData !: any;
   dashboardObj: ProfileModel = new ProfileModel();
@@ -104,4 +110,4 @@ export class ProfileComponent implements OnInit {
   }
 
 
-}
+

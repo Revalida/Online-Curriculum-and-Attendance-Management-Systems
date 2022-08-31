@@ -1,10 +1,10 @@
 <div class="row">
     <div class="col-md-2"><br>
+        <h4>Delivery Information</h4>
         <ng-container *ngIf="visibility">
-            <h4>Delivery Information</h4>
             <div class="mb-3">
                 <label for="fullname">Full Name</label><br/>
-                <input disabled placeholder="{{fullname}}" type="text" [(ngModel)]="fullname" id="fullname" aria-describedby="emailHelp">
+                <input disabled placeholder="{{firstName}} {{middleName}} {{lastName}}" type="text" [(ngModel)]="fullname" id="fullname" aria-describedby="emailHelp">
              </div>
     
             <div class="form-group mb-3">
@@ -15,38 +15,42 @@
           </div>
           <div class="form-group mb-3">
               <div class="form-group mb-3">
-                  <!-- <label for="address">Complete Address</label><br/>
-                  <input type="text" [(ngModel)]="address" id="address" aria-describedby="emailHelp"> -->
-                  <label for="city">House No</label><br>
-                  <input type="text" [(ngModel)]="address" id="houseno" aria-describedby="emailHelp">
-                  <label for="city">Street</label><br>
-                  <input type="text" [(ngModel)]="address" id="street" aria-describedby="emailHelp">
-                  <label for="city">City</label><br>
-                  <select (change)="onSelect($event)">
-                    <option>Select City</option>
-                    <option *ngFor="let cities of city" value="{{ cities.id }}">{{ cities.name }}</option>
-                  </select>
-                  <br>
+                  <label for="housestreet">House No & Street</label><br>
+                  <input type="text" [(ngModel)]="houseStreet" id="housestreet" aria-describedby="emailHelp" placeholder="House No & Street">
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <div class="form-group mb-3">
                   <label for="barangay">Barangay</label><br>
-                  <select>
-                    <option>Select Barangay</option>
-                    <option *ngFor="let barangays of barangay">{{ barangays.name }}</option>
-                  </select>
+                  <input type="text" [(ngModel)]="barangay" id="barangay" aria-describedby="emailHelp" placeholder="Barangay">
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <div class="form-group mb-3">
+                  <label for="city">City</label><br>
+                  <input type="text" [(ngModel)]="city" id="city" aria-describedby="emailHelp" placeholder="City">
               </div>
           </div>
           <button type="submit" class="btn btn-primary" (click) = save()>Confirm</button>  
     </ng-container>
     <ng-container *ngIf="!visibility">
-        <h6>Full Name: {{fullname}}</h6>
-        <h6>Mobile Number: {{mobile}}</h6>
-        <h6>Address:{{address}}</h6>
+        <h6> Full Name:</h6>
+        <input disabled type="text" value="{{firstName}} {{middleName}} {{lastName}}">
+        <h6> Mobile Number:<br></h6>
+        <input disabled type="text" value="{{mobile}}">
+        <h6> House No & Street:<br></h6>
+        <input disabled type="text" value="{{houseStreet}}">
+        <h6> Barangay: </h6>
+        <input disabled type="text" value="{{barangay}}">
+        <h6> City: </h6>
+        <input disabled type="text" value="{{city}}">
     </ng-container>
     </div>
   
-    <div class="col-md-10">
-        <h4>Order Lists</h4>
+    <div class="col-md-10"><br><br>
+        <h4 class="OL">Order Lists</h4>
 <ng-container *ngIf="products.length != 0">
-    <div class="card-table">
+    <div id="cardtable" class="card-table">
         <div class="cart-product">
             <table class="tablecheck">
                 <thead class="tbhead">

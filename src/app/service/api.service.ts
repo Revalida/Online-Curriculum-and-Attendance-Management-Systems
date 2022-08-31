@@ -27,6 +27,7 @@ export class ApiService {
     return this.http.put<any>("http://localhost:3000/products/"+id , data)
     .pipe(map((res:any)=>{return res}))
   }
+
   deleteProduct(id : number){
     return this.http.delete<any>("http://localhost:3000/products/"+id)
     .pipe(map((res:any)=>{return res}))
