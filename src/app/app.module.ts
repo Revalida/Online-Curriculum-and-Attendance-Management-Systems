@@ -10,7 +10,6 @@ import { CategoriesComponent } from './component/categories/categories.component
 import { FilterPipe } from './filter/filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SortPipe } from './filter/sort.pipe';
-
 import { AdminDashboardComponent } from './component/admin-dashboard/admin-dashboard.component';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
@@ -57,7 +56,7 @@ import { PendingOrderComponent } from './component/pending-orders/pending-order.
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports:[HeaderComponent],
   providers: [HasRoleGuard],

@@ -52,15 +52,20 @@ export class ApiService {
   }
   getUser(){
     return this.http.get<any>("http://localhost:3000/post")
-    .pipe(map((res:any)=>{return res;}))
+    .pipe(map((res:any)=>res))
   }
   updateUser(data : any , id : number){
     return this.http.put<any>("http://localhost:3000/post/"+id , data)
     .pipe(map((res:any)=>{return res}))
   }
-  deleteUser(id : number){
-    return this.http.delete<any>("http://localhost:3000/post/"+id)
-    .pipe(map((res:any)=>{return res}))
+  getProfile(){
+    return this.http.get<any>("http://localhost:3000/user")
+    .pipe(map((res:any)=>res))
+  }
+
+  postProfile(data : any){
+    return this.http.post<any>("http://localhost:3000/user" , data)
+    .pipe(map((res:any)=>{return res;}))
   }
 
 }

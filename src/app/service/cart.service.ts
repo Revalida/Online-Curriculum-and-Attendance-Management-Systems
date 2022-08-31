@@ -10,10 +10,10 @@ import { ApiService } from './api.service';
 })
 export class CartService {
 
-  public orderNumber = this.getCartFromLocalStoragecartTotalItem()
-  public orderNumberSubject = new BehaviorSubject<number>(this.orderNumber)
+  public orderNumber = this.getCartFromLocalStoragecartTotalItem();
+  public orderNumberSubject = new BehaviorSubject<number>(this.orderNumber);
   public search = new BehaviorSubject<string>("");
-  public OrderProduct: any = {}
+  public OrderProduct: any = {};
 
 
   constructor(private http: HttpClient, private userCartService: UserCartService,
@@ -23,6 +23,8 @@ export class CartService {
   }
 
   addToCart(product : any){
+    console.log("product")
+    console.log(product)
     product.stock--;
     product.totalItemSale++; 
     let status = "";
@@ -34,7 +36,7 @@ export class CartService {
       if(Object.keys(data.orders).length>0){  
         for(let a of data.orders){
           if(a.id === product.id){
-            status = "existing"
+            status = "existing";
             this.OrderProduct = this.updateOrderProduct(a, 1);
             index = item.orders.indexOf(a);
             break;
@@ -49,14 +51,16 @@ export class CartService {
       }
 
       if(status === "existing"){
-        item.orders.splice(index,1, this.OrderProduct)
+        item.orders.splice(index,1, this.OrderProduct);
       }else{
-        item.orders.push(this.OrderProduct)
+        item.orders.push(this.OrderProduct);
       }
-      this.apiService.updateUserCart(item, data.id)
+      this.apiService.updateUserCart(item, data.id);
       this.orderNumberSubject.next(item.cartTotalQuantity);
+      
     })
     this.setCartToLocalStorage();
+    // this.apiService.updateProducts(product.id, product);
   }
 
   updateOrderProduct(product: any, factor: number){
@@ -90,6 +94,8 @@ export class CartService {
   }
 
   removeCartItem(product: any){
+    console.log("product")
+    console.log(product)
     this.userCartService.getUserCart().subscribe((data:any) => {
       let item = data;
       for(let a of data.orders){
@@ -99,31 +105,32 @@ export class CartService {
          product.stock = product.stock + a.itemQuantity;
          product.totalItemSale = product.totalItemSale - a.itemQuantity; 
          item.cartTotalQuantity = data.cartTotalQuantity - a.itemQuantity;   
-         item.orders.splice(item.orders.indexOf(a), 1)
+         item.orders.splice(item.orders.indexOf(a), 1);
         }
       }
-      this.apiService.updateUserCart(item, data.id)
+      this.apiService.updateUserCart(item, data.id);
       this.orderNumberSubject.next(item.cartTotalQuantity);
     })
     this.setCartToLocalStorage();
-    // this.updateProductApi(product.productid, product)
+    // this.apiService.updateProducts(product.id, product);
   }
 
   emptyCart(){
-    let productQuantity = 0;
     this.userCartService.getUserCart().subscribe((data:any) => {
       data.orders.map((a:any) => {
       })
       data.orders = [];
       data.cartTotalQuantity = 0;
       data.grandTotal = 0; 
-      this.apiService.updateUserCart(data, data.id)
+      this.apiService.updateUserCart(data, data.id);
       this.orderNumberSubject.next(data.cartTotalQuantity);
       this.setCartToLocalStorage();
     })
+    // this.apiService.updateProducts(product.id, product);
   }
 
   minusToCart(product: any){
+    console.log(product)
     product.stock++;
     product.totalItemSale--;
     this.userCartService.getUserCart().subscribe((data:any) => {
@@ -135,13 +142,14 @@ export class CartService {
           item.orders.itemQuantity = a.itemQuantity - 1;
           item.orders.itemTotalPrice = product.price*a.itemQuantity;
           this.OrderProduct = this.updateOrderProduct(a, -1);
-          item.orders.splice(item.orders.indexOf(a),1, this.OrderProduct)
+          item.orders.splice(item.orders.indexOf(a),1, this.OrderProduct);
         }
       })
-    this.apiService.updateUserCart(item, data.id)
+    this.apiService.updateUserCart(item, data.id);
     this.orderNumberSubject.next(item.cartTotalQuantity);
     })
     this.setCartToLocalStorage();
+    // this.apiService.updateProducts(product.id, product);
   }
 
   getTotalCount(){
@@ -151,24 +159,19 @@ export class CartService {
   setCartToLocalStorage(): void{
     this.userCartService.getUserCart().subscribe((data:any) => {
       const cartJson = JSON.stringify(data);
-      localStorage.setItem('Cart', cartJson)
+      localStorage.setItem('Cart', cartJson);
       const cartTotalItem = JSON.stringify(data.cartTotalQuantity);
-      localStorage.setItem('CartTotalItem', cartTotalItem)
+      localStorage.setItem('CartTotalItem', cartTotalItem);
     })
-    // this.cartProductsSubject.next(this.cartProducts);
+
   }
   getCartFromLocalStoragecartTotalItem(){
     const cartTotalItem = localStorage.getItem('CartTotalItem');
     return cartTotalItem? JSON.parse(cartTotalItem) : [];
   }
 
-  // getCartFromLocalStorage(){
-  //   const cartJson = localStorage.getItem('Cart');
-  //   return cartJson? JSON.parse(cartJson) : [];
-  // }
-
-  // getCartObservable(): Observable<any>{
-  //   return this.cartProductsSubject.asObservable();
+  // updateProductApi(id:number, product: any){
+  //   this.apiService.updateProducts(id, product).subscribe((result) => {
+  //   })
   // }
 }
-

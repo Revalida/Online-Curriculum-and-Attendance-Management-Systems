@@ -1,48 +1,63 @@
 {
   "post": [
     {
-      "username": "admin",
-      "password": "admin",
+      "id": 2,
       "firstname": "edrick",
       "middlename": "chua",
       "lastname": "carreon",
-      "email": "edrickpogi@gmail.com",
-      "mobilenumber": "12345678",
-      "role": "admin",
-      "id": 1
-    },
-    {
       "username": "chuapogi",
-      "password": "chuapogi",
-      "firstname": "edrick",
-      "middlename": "chua",
-      "lastname": "carreon",
       "email": "edrickpogi@gmail.com",
+      "password": "chuapogi",
       "mobilenumber": "1234567890",
       "role": "user",
-      "id": 2
+      "status": "activated",
+      "birthdate": "2022-08-30",
+      "interest": "biking",
+      "address": "Taguig City"
     },
     {
-      "username": "edrickpogi",
-      "password": "edrickpogi",
+      "username": "admin",
+      "password": "admin",
+      "firstname": "John",
+      "middlename": "Magana",
+      "lastname": "Pontilla",
+      "email": "fasfsa@gmail.com",
+      "mobilenumber": "09196719638",
+      "role": "admin",
+      "status": "activated",
+      "birthdate": "2022-08-30",
+      "interest": "biking",
+      "address": "Taguig City",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "firstname": "",
+      "middlename": "",
+      "lastname": "",
+      "username": "",
+      "email": "",
+      "password": "",
+      "mobilenumber": "",
+      "role": "user",
+      "status": "activated"
+    }
+  ],
+  "user": [
+    {
+      "id": 2,
       "firstname": "edrick",
       "middlename": "chua",
       "lastname": "carreon",
+      "username": "chuapogi",
       "email": "edrickpogi@gmail.com",
-      "mobilenumber": "09123456789",
+      "password": "chuapogi",
+      "mobilenumber": "1234567890",
       "role": "user",
-      "id": 3
-    },
-    {
-      "username": "belle",
-      "password": "alohahello",
-      "firstname": "belle",
-      "middlename": "l",
-      "lastname": "lala",
-      "email": "jcruzem@gmail.com",
-      "mobilenumber": "09164567890",
-      "role": "user",
-      "id": 4
+      "status": "activated",
+      "birthdate": "2022-08-30",
+      "interest": "biking",
+      "address": "Taguig City"
     }
   ],
   "products": [
@@ -595,6 +610,38 @@
       ],
       "cartTotalQuantity": 6,
       "grandTotal": 41900
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "user",
+      "orders": [],
+      "cartTotalQuantity": 0,
+      "grandTotal": 0
+    },
+    {
+      "id": 3,
+      "username": "user",
+      "password": "user",
+      "orders": [],
+      "cartTotalQuantity": 0,
+      "grandTotal": 0
+    },
+    {
+      "id": 4,
+      "username": "admin21",
+      "password": "admin",
+      "orders": [],
+      "cartTotalQuantity": 0,
+      "grandTotal": 0
+    },
+    {
+      "id": 5,
+      "username": "admin212",
+      "password": "user",
+      "orders": [],
+      "cartTotalQuantity": 0,
+      "grandTotal": 0
     }
   ]
 }

@@ -1,4 +1,4 @@
-export class EmployeeModel{
+export class ProfileModel{
     id : number = 0;
     firstname : string = '';
     middlename : string = '';
@@ -9,5 +9,4 @@ export class EmployeeModel{
     mobilenumber : string = '';
     role :string = 'user'
     status : string = 'activated'
-
 }
