@@ -8,6 +8,8 @@ import { MatToolbarModule} from '@angular/material/toolbar';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatMenuModule} from '@angular/material/menu';
 import { CoursesComponent } from './courses/courses.component';
+import { StudentLayoutComponent } from './student-layout/student-layout.component';
+import { SidenavbarComponent } from './sidenavbar/sidenavbar.component';
 
 
 @NgModule({
@@ -15,6 +17,8 @@ import { CoursesComponent } from './courses/courses.component';
     DetailsComponent,
     InformationComponent,
     CoursesComponent,
+    SidenavbarComponent,
+    StudentLayoutComponent
   ],
   imports: [
     MatMenuModule,

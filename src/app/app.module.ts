@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,18 +10,19 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { SidenavbarComponent } from './shared/components/sidenavbar/sidenavbar.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     AppComponent, 
-    SidenavbarComponent, 
+ 
   ],
 
   imports: [
     StudentModule,
+    PagesModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

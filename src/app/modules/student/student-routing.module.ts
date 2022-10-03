@@ -7,11 +7,6 @@ import { CoursesComponent } from './courses/courses.component';
 
 const routes: Routes = [
   { 
-    path: '', 
-    redirectTo: 'information', 
-    pathMatch: 'full' 
-  },
-  { 
     path: 'information', 
     component: InformationComponent 
   },
